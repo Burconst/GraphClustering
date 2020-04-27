@@ -13,80 +13,71 @@
 namespace GraphClustering 
 {
     using namespace std;
+
     vector<int> mixNodeOrder(Partition* partition);
     double MoveNodesFast(Partition* partition);
     bool isValidPartition(Graph* g, Partition* p);
     bool findImprovement(Partition* partition, vector<int> order);
     Partition refinePartition(Partition* p);
+    void maintain_partition(Partition* partition, Partition* ref_partition);
+    pair<int, int> findBestNeighCommFor(int node, Partition* partition);
+    void MergeNodesSubset(Partition* p, Community community_num);
+    vector<Community> getWellConnectedCommunities();
 
-    // TODO
+    // FIX
     double GetLeidenPartitionOf(Partition* partition, double precision)
     {
-        double mod = partition->Modularity();
-        double new_mod = MoveNodesFast(partition);
-        Graph new_g = partition->AggregatePartition();
-        while(new_mod-mod>precision)
+        double res_mod = -1.;
+        bool done = false;
+        // ??
+        Graph new_g = *(partition->g);
+        Partition new_partition = *partition;
+        
+        do
         {
-            mod=new_mod;      
-            Partition new_partition(&new_g);
-            new_mod = MoveNodesFast(&new_partition);
-            new_g = new_partition.AggregatePartition();
-        }
+            res_mod = MoveNodesFast(&new_partition);
+            done = new_partition.size == new_g.NodesCount ? true : false;
+            Partition ref_partition = refinePartition(&new_partition);
+            new_g = ref_partition.AggregatePartition();
+            maintain_partition(&new_partition, &ref_partition);
 
-        return new_mod;
-        // Нужно как-то вывести
+            // Нужно обновить partition
+        } while (!done);
+
+        return res_mod;
     }
 
-    // TODO
     double MoveNodesFast(Partition* partition)
     {
         bool wasImprovement = false;
-        int nb_pass_done = 0;
         double new_mod = partition->Modularity();
-        double cur_mod = new_mod;
-
-        vector<int> random_order = mixNodeOrder(partition);
+        vector<int> considered_nodes = mixNodeOrder(partition);
         do
         {
-            cur_mod = new_mod;
-            nb_pass_done++;
-            wasImprovement = findImprovement(partition, random_order);
+            wasImprovement = findImprovement(partition, considered_nodes);
             new_mod = partition->Modularity();
+            considered_nodes = getMarkedNodes(partition);
         } while (wasImprovement);
         
         return new_mod;
     }
 
-    // TODO
-    bool findImprovement(Partition* partition, vector<int> order) 
+    bool findImprovement(Partition* partition, vector<int> nodes) 
     {
         bool wasImprovement = false;
 
-        for (int node_tmp = 0 ; node_tmp<partition->size ; node_tmp++)
+        for(auto node_tmp = nodes.begin(); node_tmp!=nodes.end(); ++node_tmp) 
         {
-            int node = order[node_tmp];
+            int node = nodes[*node_tmp];
             int node_comm = partition->n2c[node];
 
-            map<int,int> neighcomm = partition->neighComm(node);
-            partition->Remove(node, node_comm, neighcomm.find(node_comm)->second);
+            partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
 
-            int best_comm = node_comm;
-            int best_nblinks = 0;
-            double best_increase = 0.;
-            for (map<int,int>::iterator it=neighcomm.begin(); it!=neighcomm.end(); it++)
-            {
-                double increase = partition->ModularityGain(node, it->first, it->second);
-                if (increase>best_increase)
-                {
-                    best_comm = it->first;
-                    best_nblinks = it->second;
-                    best_increase = increase;
-                }
-            }
+            pair<int, int> newCommunity = findBestNeighCommFor(node, partition);
 
-            partition->Insert(node, best_comm, best_nblinks);
+            partition->Insert(node, newCommunity.first, newCommunity.second);
                 
-            if (best_comm!=node_comm)
+            if (newCommunity.first!=node_comm)
             {
                 wasImprovement = true;
             }
@@ -95,38 +86,62 @@ namespace GraphClustering
         return wasImprovement;
     }
 
-    // TODO
+    pair<int, int> findBestNeighCommFor(int node, Partition* partition) 
+    {
+        pair<int, int> res;
+        res.first = partition->n2c[node];
+        res.second = 0;
+        double best_increase = 0.;
+        map<int,int> neighcomm = partition->neighComm(node);
+        for (map<int,int>::iterator it=neighcomm.begin(); it!=neighcomm.end(); it++)
+        {
+            double increase = partition->ModularityGain(node, it->first, it->second);
+            if (increase>best_increase)
+            {
+                res.first = it->first;
+                res.second = it->second;
+                best_increase = increase;
+            }
+        }
+
+        return res;
+    }
+    
     Partition refinePartition(Partition* p) 
     {
         Partition refPartition(p->g);
-
-
+        vector<Community> communities = p->GetCommunities();
+        for(int i = 0; i < communities.size; ++i) 
+        {
+            MergeNodesSubset(p, communities[i]);
+        }
         return refPartition;
     }
 
     // TODO
-    void MergeNodesSubset(Partition* p, int community_num) 
+    vector<int> getMarkedNodes(Partition* partition) 
     {
-        
+    }
+
+    // TODO
+    void MergeNodesSubset(Partition* p, Community community_num)
+    {
+    }
+
+    // TODO
+    void maintain_partition(Partition* partition, Partition* ref_partition) 
+    {
     }
 
     // TODO
     vector<int> getWellConnectedNodes() 
     {
-
     }
 
- // 
-
-    bool isValidPartition(Graph* g, Partition* p)
+    // TODO
+    vector<Community> getWellConnectedCommunities() 
     {
-        if (p->g == g) 
-        {
-            return true;
-        }
-        return false;
     }
-    
     
     vector<int> mixNodeOrder(Partition* partition)
     {

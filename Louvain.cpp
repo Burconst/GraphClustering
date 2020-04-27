@@ -35,7 +35,6 @@ namespace GraphClustering
         // Нужно как-то вывести
     }
 
-
     vector<int> mixNodeOrder(Partition* partition)
     {
         vector<int> randomOrder(partition->size);
@@ -52,7 +51,6 @@ namespace GraphClustering
         }
         return randomOrder;
     }
-
 
     double MoveNodes(Partition* partition)
     {
@@ -73,47 +71,48 @@ namespace GraphClustering
         return new_mod;
     }
 
-
-    bool findImprovement(Partition* partition, vector<int> order) 
+    bool findImprovement(Partition* partition, vector<int> nodes) 
     {
         bool wasImprovement = false;
 
-        for (int node_tmp = 0 ; node_tmp<partition->size ; node_tmp++)
+        for(auto node_tmp = nodes.begin(); node_tmp!=nodes.end(); ++node_tmp) 
         {
-            int node = order[node_tmp];
+            int node = nodes[*node_tmp];
             int node_comm = partition->n2c[node];
 
-            map<int,int> neighcomm = partition->neighComm(node);
-            partition->Remove(node, node_comm, neighcomm.find(node_comm)->second);
+            partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
 
-            int best_comm = node_comm;
-            int best_nblinks = 0;
-            double best_increase = 0.;
-            for (map<int,int>::iterator it=neighcomm.begin(); it!=neighcomm.end(); it++)
-            {
-                double increase = partition->ModularityGain(node, it->first, it->second);
-                if (increase>best_increase)
-                {
-                    best_comm = it->first;
-                    best_nblinks = it->second;
-                    best_increase = increase;
-                }
-            }
+            pair<int, int> newCommunity = findBestNeighCommFor(node, partition);
 
-            partition->Insert(node, best_comm, best_nblinks);
+            partition->Insert(node, newCommunity.first, newCommunity.second);
                 
-            if (best_comm!=node_comm)
+            if (newCommunity.first!=node_comm)
             {
                 wasImprovement = true;
             }
         }
-
         return wasImprovement;
     }
 
-    // TODO
-    bool isValidPartition(Partition* p)
+    pair<int, int> findBestNeighCommFor(int node, Partition* partition) 
     {
-        return true;
+        pair<int, int> res;
+        res.first = partition->n2c[node];
+        res.second = 0;
+        double best_increase = 0.;
+        map<int,int> neighcomm = partition->neighComm(node);
+        for (map<int,int>::iterator it=neighcomm.begin(); it!=neighcomm.end(); it++)
+        {
+            double increase = partition->ModularityGain(node, it->first, it->second);
+            if (increase>best_increase)
+            {
+                res.first = it->first;
+                res.second = it->second;
+                best_increase = increase;
+            }
+        }
+
+        return res;
     }
+
 }

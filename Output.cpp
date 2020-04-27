@@ -71,7 +71,7 @@ namespace Output
     // Graph
     void Display(Graph* g) 
     {
-        for (int node=0 ; node<g->nbNodes ; node++) 
+        for (int node=0 ; node<g->NodesCount ; node++) 
         {
             pair<int *,int *> p = g->Neighbors(node);
             for (int i=0 ; i<g->GetDergeeOf(node) ; i++) 
@@ -93,8 +93,8 @@ namespace Output
         ofstream foutput;
         foutput.open(outfile ,fstream::out | fstream::binary);
 
-        foutput.write((char *)(&(g->nbNodes)),4);
-        foutput.write((char *)(g->degrees),4*g->nbNodes);
+        foutput.write((char *)(&(g->NodesCount)),4);
+        foutput.write((char *)(g->degrees),4*g->NodesCount);
         foutput.write((char *)(g->links),8*g->nbLinks);
     }
 }

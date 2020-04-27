@@ -7,40 +7,41 @@
 #define WEIGHTED   0
 #define UNWEIGHTED 1
 
-struct Graph {
-      int nbNodes;
-      int nbLinks;
-      int totalWeight;
+struct Graph
+{
+  int NodesCount;
+  int nbLinks;
+  int totalWeight;
 
-      int *degrees;
-      int *links;
-      int *weights;
+  int *degrees;
+  int *links;
+  int *weights;
 
-      Graph();
+  Graph();
 
-      // binary file format is
-      // 4 bytes for the number of nodes in the graph
-      // 4*(nb_nodes) bytes for the cumulative degree for each node:
-      //    deg(0)=degrees[0]
-      //    deg(k)=degrees[k]-degrees[k-1]
-      // 4*(sum_degrees) bytes for the links
-      // IF WEIGHTED 4*(sum_degrees) bytes for the weights
-      Graph(std::string filename, int type);
+  // binary file format is
+  // 4 bytes for the number of nodes in the graph
+  // 4*(nb_nodes) bytes for the cumulative degree for each node:
+  //    deg(0)=degrees[0]
+  //    deg(k)=degrees[k]-degrees[k-1]
+  // 4*(sum_degrees) bytes for the links
+  // IF WEIGHTED 4*(sum_degrees) bytes for the weights
+  Graph(std::string filename, int type);
 
-      inline int GetDergeeOf(int node);
+  inline int GetDergeeOf(int node);
 
-      inline int GetCountSelfloopsOf(int node);
+  inline int GetCountSelfloopsOf(int node);
 
-      inline int WeightedDegree(int node);
+  inline int WeightedDegree(int node);
 
-      // return pointers to the first neighbor and first weight of the node
-      inline std::pair<int *, int *> Neighbors(int node);
+  // return pointers to the first neighbor and first weight of the node
+  inline std::pair<int *, int *> Neighbors(int node);
+
 };
-
 
 inline int Graph::GetDergeeOf(int node)
 {
-  assert(node>=0 && node<nbNodes);
+  assert(node>=0 && node<NodesCount);
 
   if (node==0)
   {
@@ -54,7 +55,7 @@ inline int Graph::GetDergeeOf(int node)
 
 inline int Graph::GetCountSelfloopsOf(int node)
 {
-  assert(node>=0 && node<nbNodes);
+  assert(node>=0 && node<NodesCount);
 
   std::pair<int *,int *> p = Neighbors(node);
   for (int i=0 ; i<GetDergeeOf(node) ; i++)
@@ -76,7 +77,7 @@ inline int Graph::GetCountSelfloopsOf(int node)
 
 inline int Graph::WeightedDegree(int node)
 {
-    assert(node>=0 && node<nbNodes);
+    assert(node>=0 && node<NodesCount);
 
     std::pair<int *,int *> p = Neighbors(node);
     if (p.second==NULL)
@@ -95,7 +96,7 @@ inline int Graph::WeightedDegree(int node)
 
 inline std::pair<int *,int *> Graph::Neighbors(int node)
 {
-  assert(node>=0 && node<nbNodes);
+  assert(node>=0 && node<NodesCount);
 
   if (node==0)
   {

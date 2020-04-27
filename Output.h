@@ -1,9 +1,12 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
 
+#include <string>
+
 #include "partition.h"
 #include "graph_binary.h"
 
+// ??
 namespace Output 
 {
     // Partition

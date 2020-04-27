@@ -5,7 +5,7 @@ using namespace std;
 Partition::Partition(Graph* g)
   : g(g)
 {
-  size = g->nbNodes;
+  size = g->NodesCount;
 
   n2c.resize(size);
   in.resize(size);
@@ -94,7 +94,7 @@ Graph Partition::AggregatePartition()
 Graph Partition::MakeGraph(vector<vector<int> > comm_nodes, vector<int> renumber)
 {
   Graph graph;
-  graph.nbNodes = comm_nodes.size();
+  graph.NodesCount = comm_nodes.size();
   graph.degrees  = (int *)malloc(comm_nodes.size()*4);
   graph.links = (int *)malloc((long)10000000*8);
   graph.weights  = (int *)malloc((long)10000000*8);
@@ -142,4 +142,10 @@ Graph Partition::MakeGraph(vector<vector<int> > comm_nodes, vector<int> renumber
   realloc(g->weights, (long)graph.nbLinks*4);
 
   return graph;
+}
+
+// TODO
+std::vector<Community> Partition::GetCommunities()
+{
+
 }
