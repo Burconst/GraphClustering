@@ -1,0 +1,12 @@
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles/rebuild_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/rebuild_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/GraphClustering.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/CMakeFiles/rebuild_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/rebuild_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest1.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest2.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest3.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/edit_cache.dir

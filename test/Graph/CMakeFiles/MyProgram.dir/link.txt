@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/MyProgram.dir/GraphTest1.cpp.o  -o MyProgram ../../src/libMyProgramCore.a 

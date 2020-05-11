@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/progress.marks
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,70 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named GraphClustering
+# Convenience name for target.
+src/CMakeFiles/GraphClustering.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/GraphClustering.dir/rule
+.PHONY : src/CMakeFiles/GraphClustering.dir/rule
 
-# Build rule for target.
-GraphClustering: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GraphClustering
+# Convenience name for target.
+GraphClustering: src/CMakeFiles/GraphClustering.dir/rule
+
 .PHONY : GraphClustering
 
 # fast build rule for target.
 GraphClustering/fast:
-	$(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/build
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/build
 .PHONY : GraphClustering/fast
 
-#=============================================================================
-# Target rules for targets named GraphTest1
+GraphBinary.o: GraphBinary.cpp.o
 
-# Build rule for target.
-GraphTest1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GraphTest1
-.PHONY : GraphTest1
+.PHONY : GraphBinary.o
 
-# fast build rule for target.
-GraphTest1/fast:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/build
-.PHONY : GraphTest1/fast
+# target to build an object file
+GraphBinary.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o
+.PHONY : GraphBinary.cpp.o
 
-#=============================================================================
-# Target rules for targets named GraphTest2
+GraphBinary.i: GraphBinary.cpp.i
 
-# Build rule for target.
-GraphTest2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GraphTest2
-.PHONY : GraphTest2
+.PHONY : GraphBinary.i
 
-# fast build rule for target.
-GraphTest2/fast:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/build
-.PHONY : GraphTest2/fast
+# target to preprocess a source file
+GraphBinary.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.i
+.PHONY : GraphBinary.cpp.i
 
-#=============================================================================
-# Target rules for targets named GraphTest3
+GraphBinary.s: GraphBinary.cpp.s
 
-# Build rule for target.
-GraphTest3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GraphTest3
-.PHONY : GraphTest3
+.PHONY : GraphBinary.s
 
-# fast build rule for target.
-GraphTest3/fast:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/build
-.PHONY : GraphTest3/fast
+# target to generate assembly for a file
+GraphBinary.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.s
+.PHONY : GraphBinary.cpp.s
 
 # Help Target
 help:
@@ -171,9 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GraphClustering"
-	@echo "... GraphTest1"
-	@echo "... GraphTest2"
-	@echo "... GraphTest3"
+	@echo "... GraphBinary.o"
+	@echo "... GraphBinary.i"
+	@echo "... GraphBinary.s"
 .PHONY : help
 
 
@@ -185,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
+# Build directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(G1Test1 "GraphTest1" "./TestData/test1.bin" "2" "0" "9")
+set_tests_properties(G1Test1 PROPERTIES  PASS_REGULAR_EXPRESSION "3 4 1" TIMEOUT "1")
+add_test(G1Test2 "GraphTest1" "./TestData/test2.bin" "8" "1" "0")
+set_tests_properties(G1Test2 PROPERTIES  PASS_REGULAR_EXPRESSION "3 2 3" TIMEOUT "1")
+add_test(G1Test3 "GraphTest1" "./TestData/test3.bin" "17" "0" "24")
+set_tests_properties(G1Test3 PROPERTIES  PASS_REGULAR_EXPRESSION "2 14 1" TIMEOUT "1")
+add_test(G1Test4 "GraphTest1" "./TestData/test4.bin" "16" "0" "20")
+set_tests_properties(G1Test4 PROPERTIES  PASS_REGULAR_EXPRESSION "2 4 1" TIMEOUT "1")
+add_test(G1Test5 "GraphTest1" "./TestData/test5.bin" "10" "4" "6")
+set_tests_properties(G1Test5 PROPERTIES  PASS_REGULAR_EXPRESSION "2 6 4" TIMEOUT "1")
+add_test(G2Test1 "GraphTest2" "./TestData/test1.bin" "8" "3" "2")
+set_tests_properties(G2Test1 PROPERTIES  PASS_REGULAR_EXPRESSION "0 1 0" TIMEOUT "1")
+add_test(G2Test2 "GraphTest2" "./TestData/test2.bin" "8" "6" "7")
+set_tests_properties(G2Test2 PROPERTIES  PASS_REGULAR_EXPRESSION "1 0 1" TIMEOUT "1")
+add_test(G2Test3 "GraphTest2" "./TestData/test3.bin" "0" "16" "29")
+set_tests_properties(G2Test3 PROPERTIES  PASS_REGULAR_EXPRESSION "1 0 0" TIMEOUT "1")
+add_test(G2Test4 "GraphTest2" "./TestData/test4.bin" "5" "18" "7")
+set_tests_properties(G2Test4 PROPERTIES  PASS_REGULAR_EXPRESSION "0 0 0" TIMEOUT "1")
+add_test(G2Test5 "GraphTest2" "./TestData/test5.bin" "4" "5" "0")
+set_tests_properties(G2Test5 PROPERTIES  PASS_REGULAR_EXPRESSION "1 1 0" TIMEOUT "1")
+add_test(G3Test1 "GraphTest3" "./TestData/test1.bin" "0" "1" "9")
+set_tests_properties(G3Test1 PROPERTIES  PASS_REGULAR_EXPRESSION "1 4 8 ;0 2 3 5 ;5 ;" TIMEOUT "1")
+add_test(G3Test2 "GraphTest3" "./TestData/test2.bin" "5" "7" "3")
+set_tests_properties(G3Test2 PROPERTIES  PASS_REGULAR_EXPRESSION "1 2 ;0 6 ;8 2 1 9 ;" TIMEOUT "1")
+add_test(G3Test3 "GraphTest3" "./TestData/test3.bin" "27" "10" "0")
+set_tests_properties(G3Test3 PROPERTIES  PASS_REGULAR_EXPRESSION "0 28 ;9 12 ;0 2 3 6 11 12 13 18 19 24 26 27 29 30 ;" TIMEOUT "1")
+add_test(G3Test4 "GraphTest3" "./TestData/test4.bin" "21" "9" "14")
+set_tests_properties(G3Test4 PROPERTIES  PASS_REGULAR_EXPRESSION "0 15 22 23 ;6 ;10 19 20 ;" TIMEOUT "1")
+add_test(G3Test5 "GraphTest3" "./TestData/test5.bin" "8" "7" "11")
+set_tests_properties(G3Test5 PROPERTIES  PASS_REGULAR_EXPRESSION "1 4 5 9 ;3 6 ;5 6 13 ;" TIMEOUT "1")
