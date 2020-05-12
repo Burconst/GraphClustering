@@ -1,5 +1,6 @@
-#include "include/Partition.h"
+#include <algorithm>
 
+#include "include/Partition.h"
 
 using namespace std;
 
@@ -18,6 +19,30 @@ Partition::Partition(Graph* g)
         in[i]  = g->GetCountSelfloopsOf(i);
         tot[i] = g->WeightedDegree(i);
     }
+}
+
+// Debug
+Partition::Partition(const Partition &partition)
+{
+    Partition newPartition(partition.g);
+    newPartition.n2c = partition.n2c;
+    newPartition.size = partition.size;
+    newPartition.tot = partition.tot;
+    newPartition.in = partition.in;
+}
+
+// Debug
+bool Partition::operator==(Partition partition) 
+{
+    if (g != partition.g) 
+    {
+        return false;
+    }
+    if (n2c != partition.n2c||size != partition.size||tot != partition.tot||in != partition.in) 
+    {
+        return false;
+    }
+    return true;
 }
 
 double Partition::Modularity()
@@ -51,15 +76,15 @@ map<int,int> Partition::neighComm(int node)
 
         if (neigh!=node)
         {
-        map<int,int>::iterator it = res.find(neigh_comm);
-        if (it!=res.end())
-        {
-            it->second+=neigh_weight;
-        }
-        else
-        {
-            res.insert(make_pair(neigh_comm,neigh_weight));
-        }
+            map<int,int>::iterator it = res.find(neigh_comm);
+            if (it!=res.end())
+            {
+                it->second+=neigh_weight;
+            }
+            else
+            {
+                res.insert(make_pair(neigh_comm,neigh_weight));
+            }
         }
     }
 
@@ -144,8 +169,22 @@ Graph Partition::MakeGraph(vector<vector<int> > comm_nodes, vector<int> renumber
     return graph;
 }
 
-// TODO
 vector<int> Partition::GetCommunities()
 {
-
+    vector<int> res;
+    if (n2c.size() == 0) 
+    {
+        return res;
+    }
+    vector<int> tmp = n2c;
+    sort(tmp.begin(), tmp.end());
+    res.push_back(tmp[0]);
+    for (int i = 1; i < tmp.size(); i++) 
+    {
+        if(tmp[i] != tmp[i-1]) 
+        {
+            res.push_back(tmp[i]);            
+        }
+    }
+    return res;
 }

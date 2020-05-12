@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/Graph/CMakeFiles/GraphTest5.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest5.dir/rule
+.PHONY : test/Graph/CMakeFiles/GraphTest5.dir/rule
+
+# Convenience name for target.
+GraphTest5: test/Graph/CMakeFiles/GraphTest5.dir/rule
+
+.PHONY : GraphTest5
+
+# fast build rule for target.
+GraphTest5/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/build
+.PHONY : GraphTest5/fast
+
+# Convenience name for target.
 test/Graph/CMakeFiles/GraphTest1.dir/rule:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest1.dir/rule
 .PHONY : test/Graph/CMakeFiles/GraphTest1.dir/rule
@@ -154,6 +169,21 @@ GraphTest3: test/Graph/CMakeFiles/GraphTest3.dir/rule
 GraphTest3/fast:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/build
 .PHONY : GraphTest3/fast
+
+# Convenience name for target.
+test/Graph/CMakeFiles/GraphTest4.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest4.dir/rule
+.PHONY : test/Graph/CMakeFiles/GraphTest4.dir/rule
+
+# Convenience name for target.
+GraphTest4: test/Graph/CMakeFiles/GraphTest4.dir/rule
+
+.PHONY : GraphTest4
+
+# fast build rule for target.
+GraphTest4/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/build
+.PHONY : GraphTest4/fast
 
 GraphTest1.o: GraphTest1.cpp.o
 
@@ -236,6 +266,60 @@ GraphTest3.cpp.s:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/GraphTest3.cpp.s
 .PHONY : GraphTest3.cpp.s
 
+GraphTest4.o: GraphTest4.cpp.o
+
+.PHONY : GraphTest4.o
+
+# target to build an object file
+GraphTest4.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/GraphTest4.cpp.o
+.PHONY : GraphTest4.cpp.o
+
+GraphTest4.i: GraphTest4.cpp.i
+
+.PHONY : GraphTest4.i
+
+# target to preprocess a source file
+GraphTest4.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/GraphTest4.cpp.i
+.PHONY : GraphTest4.cpp.i
+
+GraphTest4.s: GraphTest4.cpp.s
+
+.PHONY : GraphTest4.s
+
+# target to generate assembly for a file
+GraphTest4.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/GraphTest4.cpp.s
+.PHONY : GraphTest4.cpp.s
+
+GraphTest5.o: GraphTest5.cpp.o
+
+.PHONY : GraphTest5.o
+
+# target to build an object file
+GraphTest5.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/GraphTest5.cpp.o
+.PHONY : GraphTest5.cpp.o
+
+GraphTest5.i: GraphTest5.cpp.i
+
+.PHONY : GraphTest5.i
+
+# target to preprocess a source file
+GraphTest5.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/GraphTest5.cpp.i
+.PHONY : GraphTest5.cpp.i
+
+GraphTest5.s: GraphTest5.cpp.s
+
+.PHONY : GraphTest5.s
+
+# target to generate assembly for a file
+GraphTest5.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/GraphTest5.cpp.s
+.PHONY : GraphTest5.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,10 +327,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... GraphTest5"
 	@echo "... GraphTest1"
 	@echo "... GraphTest2"
 	@echo "... GraphTest3"
 	@echo "... edit_cache"
+	@echo "... GraphTest4"
 	@echo "... GraphTest1.o"
 	@echo "... GraphTest1.i"
 	@echo "... GraphTest1.s"
@@ -256,6 +342,12 @@ help:
 	@echo "... GraphTest3.o"
 	@echo "... GraphTest3.i"
 	@echo "... GraphTest3.s"
+	@echo "... GraphTest4.o"
+	@echo "... GraphTest4.i"
+	@echo "... GraphTest4.s"
+	@echo "... GraphTest5.o"
+	@echo "... GraphTest5.i"
+	@echo "... GraphTest5.s"
 .PHONY : help
 
 

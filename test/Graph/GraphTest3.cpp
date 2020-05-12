@@ -1,5 +1,3 @@
-// Test int Graph::GetDegreeOf(int node);
-
 #include <iostream>
 #include <string>
 

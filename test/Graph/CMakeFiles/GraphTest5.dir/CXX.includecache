@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
+string
+-
+assert.h
+-
+vector
+-
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest5.cpp
+iostream
+-
+string
+-
+../../src/include/GraphBinary.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
+

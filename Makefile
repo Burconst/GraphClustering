@@ -124,6 +124,19 @@ GraphClustering/fast:
 .PHONY : GraphClustering/fast
 
 #=============================================================================
+# Target rules for targets named GraphTest5
+
+# Build rule for target.
+GraphTest5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GraphTest5
+.PHONY : GraphTest5
+
+# fast build rule for target.
+GraphTest5/fast:
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/build
+.PHONY : GraphTest5/fast
+
+#=============================================================================
 # Target rules for targets named GraphTest1
 
 # Build rule for target.
@@ -162,6 +175,71 @@ GraphTest3/fast:
 	$(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/build
 .PHONY : GraphTest3/fast
 
+#=============================================================================
+# Target rules for targets named GraphTest4
+
+# Build rule for target.
+GraphTest4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GraphTest4
+.PHONY : GraphTest4
+
+# fast build rule for target.
+GraphTest4/fast:
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/build
+.PHONY : GraphTest4/fast
+
+#=============================================================================
+# Target rules for targets named PartitionTest1
+
+# Build rule for target.
+PartitionTest1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PartitionTest1
+.PHONY : PartitionTest1
+
+# fast build rule for target.
+PartitionTest1/fast:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/build
+.PHONY : PartitionTest1/fast
+
+#=============================================================================
+# Target rules for targets named PartitionTest4
+
+# Build rule for target.
+PartitionTest4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PartitionTest4
+.PHONY : PartitionTest4
+
+# fast build rule for target.
+PartitionTest4/fast:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/build
+.PHONY : PartitionTest4/fast
+
+#=============================================================================
+# Target rules for targets named PartitionTest2
+
+# Build rule for target.
+PartitionTest2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PartitionTest2
+.PHONY : PartitionTest2
+
+# fast build rule for target.
+PartitionTest2/fast:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/build
+.PHONY : PartitionTest2/fast
+
+#=============================================================================
+# Target rules for targets named PartitionTest3
+
+# Build rule for target.
+PartitionTest3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PartitionTest3
+.PHONY : PartitionTest3
+
+# fast build rule for target.
+PartitionTest3/fast:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/build
+.PHONY : PartitionTest3/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -171,9 +249,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GraphClustering"
+	@echo "... GraphTest5"
 	@echo "... GraphTest1"
 	@echo "... GraphTest2"
 	@echo "... GraphTest3"
+	@echo "... GraphTest4"
+	@echo "... PartitionTest1"
+	@echo "... PartitionTest4"
+	@echo "... PartitionTest2"
+	@echo "... PartitionTest3"
 .PHONY : help
 
 

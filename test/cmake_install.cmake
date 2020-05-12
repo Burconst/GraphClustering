@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/cmake_install.cmake")
+  include("/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/cmake_install.cmake")
 
 endif()
 

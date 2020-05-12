@@ -152,6 +152,33 @@ GraphBinary.cpp.s:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.s
 .PHONY : GraphBinary.cpp.s
 
+Partition.o: Partition.cpp.o
+
+.PHONY : Partition.o
+
+# target to build an object file
+Partition.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Partition.cpp.o
+.PHONY : Partition.cpp.o
+
+Partition.i: Partition.cpp.i
+
+.PHONY : Partition.i
+
+# target to preprocess a source file
+Partition.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Partition.cpp.i
+.PHONY : Partition.cpp.i
+
+Partition.s: Partition.cpp.s
+
+.PHONY : Partition.s
+
+# target to generate assembly for a file
+Partition.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Partition.cpp.s
+.PHONY : Partition.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... GraphBinary.o"
 	@echo "... GraphBinary.i"
 	@echo "... GraphBinary.s"
+	@echo "... Partition.o"
+	@echo "... Partition.i"
+	@echo "... Partition.s"
 .PHONY : help
 
 

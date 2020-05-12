@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o"
+  "CMakeFiles/GraphClustering.dir/Partition.cpp.o"
   "libGraphClustering.pdb"
   "libGraphClustering.a"
 )

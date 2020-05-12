@@ -2,7 +2,7 @@
 set(MULTIPLY_TIMEOUT 1)
 
 
-# GraphTest1
+# GraphTest1 Degree of node
 
 add_executable(GraphTest1 GraphTest1.cpp)
 target_link_libraries(GraphTest1 GraphClustering)
@@ -27,7 +27,7 @@ set_tests_properties(G1Test5 PROPERTIES
 PASS_REGULAR_EXPRESSION "2 6 4")
 
 
-# GraphTest2
+# GraphTest2 Selfloops of node
 
 add_executable(GraphTest2 GraphTest2.cpp)
 target_link_libraries(GraphTest2 GraphClustering)
@@ -51,7 +51,7 @@ PASS_REGULAR_EXPRESSION "0 0 0")
 set_tests_properties(G2Test5 PROPERTIES
 PASS_REGULAR_EXPRESSION "1 1 0")
 
-# GraphTest3
+# GraphTest3 Neigh. nodes
 
 add_executable(GraphTest3 GraphTest3.cpp)
 target_link_libraries(GraphTest3 GraphClustering)
@@ -74,3 +74,46 @@ set_tests_properties(G3Test4 PROPERTIES
 PASS_REGULAR_EXPRESSION "0 15 22 23 ;6 ;10 19 20 ;")
 set_tests_properties(G3Test5 PROPERTIES
 PASS_REGULAR_EXPRESSION "1 4 5 9 ;3 6 ;5 6 13 ;")
+
+# GraphTest4 Copy operator
+
+add_executable(GraphTest4 GraphTest4.cpp)
+target_link_libraries(GraphTest4 GraphClustering)
+
+add_test(G4Test1 GraphTest4 ./TestData/test1.bin)
+add_test(G4Test2 GraphTest4 ./TestData/test2.bin)
+add_test(G4Test3 GraphTest4 ./TestData/test3.bin)
+add_test(G4Test4 GraphTest4 ./TestData/test4.bin)
+add_test(G4Test5 GraphTest4 ./TestData/test5.bin)
+
+set_tests_properties(G4Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "Success"
+FAIL_REGULAR_EXPRESSION "Error")
+set_tests_properties(G4Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION "Success"
+FAIL_REGULAR_EXPRESSION "Error")
+set_tests_properties(G4Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION "Success"
+FAIL_REGULAR_EXPRESSION "Error")
+set_tests_properties(G4Test4 PROPERTIES
+PASS_REGULAR_EXPRESSION "Success"
+FAIL_REGULAR_EXPRESSION "Error")
+set_tests_properties(G4Test5 PROPERTIES
+PASS_REGULAR_EXPRESSION "Success"
+FAIL_REGULAR_EXPRESSION "Error")
+
+# GraphTest5 operator ==
+
+add_executable(GraphTest5 GraphTest5.cpp)
+target_link_libraries(GraphTest5 GraphClustering)
+
+add_test(G5Test1 GraphTest5 ./TestData/test1.bin ./TestData/test1.bin)
+add_test(G5Test2 GraphTest5 ./TestData/test1.bin ./TestData/test2.bin)
+add_test(G5Test3 GraphTest5 ./TestData/test1.bin ./TestData/nottest1.bin)
+
+set_tests_properties(G5Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "Equal")
+set_tests_properties(G5Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION "Not Equal")
+set_tests_properties(G5Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION "Not Equal")

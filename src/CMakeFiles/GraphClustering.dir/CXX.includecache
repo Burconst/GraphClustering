@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/GraphBinary.cpp
-fstream
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Partition.cpp
+algorithm
 -
-iostream
--
-include/GraphBinary.h
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
+include/Partition.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
 
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
 string
@@ -21,4 +19,22 @@ assert.h
 -
 vector
 -
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
+stdlib.h
+-
+stdio.h
+-
+iostream
+-
+iomanip
+-
+fstream
+-
+vector
+-
+map
+-
+GraphBinary.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
 

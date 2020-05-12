@@ -10,28 +10,29 @@
 #include <map>
 
 #include "GraphBinary.h"
-// #include "Community.h"
-// #include "Node.h"
 
 struct Partition
 {   
     private: 
-        // std::vector<Community> communities;
         int size;               // number of nodes in the network and size of all vectors
         std::vector<int> n2c;   // community to which each node belongs
         std::vector<int> in,tot;// used to compute the modularity participation of each community
+                
+        Graph MakeGraph(std::vector<std::vector<int> > comm_nodes, std::vector<int> renumber);
     public:
         Graph* g;
         Partition (Graph* g);
+        Partition(const Partition &partition);
 
-        Graph MakeGraph(std::vector<std::vector<int> > comm_nodes, std::vector<int> renumber);
+        bool operator==(Partition partition);
+        
         // remove the node from its current community with which it has dnodecomm links
         inline void Remove(int node, int comm, int dnodecomm);
-
         // insert the node in comm with which it shares dnodecomm links
         inline void Insert(int node, int comm, int dnodecomm);
         inline int GetSize();
         inline int GetCommunityNumber(int node); 
+        inline void SetCommunityOf(int node, int comm);
         // compute the gain of modularity if node where inserted in comm
         // given that node has dnodecomm links to comm.  The formula is:
         // [(In(comm)+2d(node,comm))/2m - ((tot(comm)+deg(node))/2m)^2]-
@@ -46,16 +47,8 @@ struct Partition
         // compute the set of neighboring communities of node
         // for each community, gives the number of links from node to comm
         std::map<int,int> neighComm(int node);
-
         // compute the modularity of the current partition
         double Modularity();
-
-        // displays the graph of communities as computed by one_level
-        void Partition2graph();
-        // displays the current partition (with communities renumbered from 0 to k-1)
-        // void DisplayPartition();
-        double OneLevel();
-        // generates the binary graph of communities as computed by one_level
         Graph AggregatePartition();
         std::vector<int> GetCommunities();
 };
@@ -98,6 +91,11 @@ inline int Partition::GetSize()
 inline int Partition::GetCommunityNumber(int node)
 {
     return n2c[node];
+}
+
+inline void Partition::SetCommunityOf(int node, int comm)
+{
+    n2c[node] = comm;
 }
 
 #endif // PARTITION_H

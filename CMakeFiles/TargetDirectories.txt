@@ -6,7 +6,15 @@
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/CMakeFiles/rebuild_cache.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/CMakeFiles/edit_cache.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/rebuild_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest5.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest1.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest2.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest3.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/CMakeFiles/GraphTest4.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/rebuild_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest1.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest4.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest2.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest3.dir

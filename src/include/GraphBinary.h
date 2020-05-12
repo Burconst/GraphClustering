@@ -10,12 +10,12 @@
 
 struct Graph 
 {
-    //private:
+    // private:
         int NodesCount;
         int nbLinks;
         int totalWeight;
         int *degrees;
-        int *norms;
+        // int *norms;
         int *links;
         int *weights;
 
@@ -32,19 +32,16 @@ struct Graph
         Graph(const Graph &graph);
         ~Graph();
 
+        bool operator==(Graph g);
         inline int GetDergeeOf(int node);
-
         inline int GetCountSelfloopsOf(int node);
-
         inline int WeightedDegree(int node);
-
         inline int GetNodesCount();
-
+        inline int GetEdgesCount();
         inline int GetTotalWeight();
         inline void isValidNode(int node);
         // return pointers to the first neighbor and first weight of the node
         inline std::pair<int *, int *> Neighbors(int node);
-
     
 };
 
@@ -135,6 +132,11 @@ inline int Graph::GetNodesCount()
 inline int Graph::GetTotalWeight()
 {
     return totalWeight;
+}
+
+inline int Graph::GetEdgesCount() 
+{
+    return nbLinks;
 }
 
 #endif // GRAPH_H

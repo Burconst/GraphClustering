@@ -51,19 +51,30 @@ Graph::Graph(const Graph &graph)
     , nbLinks(graph.nbLinks)
     , totalWeight(graph.totalWeight)
 {
-    degrees = (int *)malloc((long)NodesCount*4);
-    norms = (int *)malloc((long)NodesCount*4);
-    for (int i = 0; i < NodesCount*4; i++) 
+    
+    degrees = (int *)malloc(sizeof(int)*graph.NodesCount);
+    // // norms = (int *)malloc((long)NodesCount*4);
+    for (int i = 0; i < graph.NodesCount; i++) 
     {
         degrees[i] = graph.degrees[i];
-        norms[i] = graph.norms[i];
+        // norms[i] = graph.norms[i];
     }
-    links = (int *)malloc((long)nbLinks*8);
-    weights = (int *)malloc((long)nbLinks*8);
-    for (int i = 0; i < nbLinks*8; i++) 
+    links = (int *)malloc(sizeof(int)*graph.nbLinks);
+    for (int i = 0; i < graph.nbLinks; i++) 
     {
         links[i] = graph.links[i];
-        weights[i] = graph.weights[i];
+    }
+    if (graph.weights != NULL) 
+    {
+        weights = (int *)malloc(sizeof(int)*graph.nbLinks);
+        for (int i = 0; i < graph.nbLinks; i++) 
+        {
+            weights[i] = graph.weights[i];
+        }
+    }
+    else
+    {
+        weights = NULL;
     }
 }
 
@@ -74,3 +85,55 @@ Graph::~Graph()
     free(links);
     free(weights);
 }
+
+bool Graph::operator==(Graph g) 
+{
+    if (g.NodesCount != NodesCount) 
+    {
+        return false;
+    }
+    if (g.nbLinks != nbLinks) 
+    {
+        return false;
+    }
+    if (g.totalWeight != totalWeight) 
+    {
+        return false;
+    } 
+
+    for (int i = 0; i < g.NodesCount; i++) 
+    {
+        if (g.degrees[i] != degrees[i]) 
+        {
+            return false;
+        }
+    }
+    for (int i = 0; i < g.nbLinks; i++) 
+    {
+        if (g.links[i] != links[i]) 
+        {
+            return false;
+        }
+    }
+    if (g.weights != NULL) 
+    {
+        for (int i = 0; i < g.nbLinks; i++) 
+        {
+            if (g.weights[i] != weights[i]) 
+            {
+                return false;
+            }
+        }
+    }
+    else
+    {
+        if (weights != NULL)
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+

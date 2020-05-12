@@ -4,3 +4,7 @@
 src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o: src/GraphBinary.cpp
 src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o: src/include/GraphBinary.h
 
+src/CMakeFiles/GraphClustering.dir/Partition.cpp.o: src/Partition.cpp
+src/CMakeFiles/GraphClustering.dir/Partition.cpp.o: src/include/GraphBinary.h
+src/CMakeFiles/GraphClustering.dir/Partition.cpp.o: src/include/Partition.h
+
