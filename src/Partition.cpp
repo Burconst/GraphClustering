@@ -21,17 +21,15 @@ Partition::Partition(Graph* g)
     }
 }
 
-// Debug
 Partition::Partition(const Partition &partition)
 {
-    Partition newPartition(partition.g);
-    newPartition.n2c = partition.n2c;
-    newPartition.size = partition.size;
-    newPartition.tot = partition.tot;
-    newPartition.in = partition.in;
+    g = partition.g;
+    n2c = partition.n2c;
+    size = partition.size;
+    tot = partition.tot;
+    in = partition.in;
 }
 
-// Debug
 bool Partition::operator==(Partition partition) 
 {
     if (g != partition.g) 
@@ -119,18 +117,22 @@ Graph Partition::AggregatePartition()
 
 Graph Partition::MakeGraph(vector<vector<int> > comm_nodes, vector<int> renumber)
 {
+    
+    int comm_deg = comm_nodes.size();
     Graph graph;
-    graph.NodesCount = comm_nodes.size();
-    graph.degrees  = (int *)malloc(comm_nodes.size()*4);
+    graph.NodesCount = comm_deg;
+    graph.degrees  = (int *)malloc(comm_deg*4);
+    graph.norms = (int *)malloc(comm_deg*4);
     graph.links = (int *)malloc((long)10000000*8);
     graph.weights  = (int *)malloc((long)10000000*8);
     long where = 0;
-    int comm_deg = comm_nodes.size();
+    
     for (int comm=0 ; comm<comm_deg ; comm++)
     {
         map<int,int> m;
         map<int,int>::iterator it;
         int comm_size = comm_nodes[comm].size();
+        graph.norms[comm] = comm_size;
         for (int node=0 ; node<comm_size ; node++)
         {
             pair<int *,int *> p = g->Neighbors(comm_nodes[comm][node]);
@@ -188,3 +190,32 @@ vector<int> Partition::GetCommunities()
     }
     return res;
 }
+
+int Partition::GetCommunityNorm(int comm_num)
+{
+    int res = 0;
+    vector<int> nodes = GetNodesInCommunity(comm_num);
+    int size = nodes.size();
+    for(int i = 0; i < size; i++) 
+    {
+        res += g->GetNodeNorm(nodes[i]);
+    }
+    return res;
+}
+
+vector<int> Partition::GetNodesInCommunity(int comm_num)
+{
+    vector<int> nodes;
+    int size = n2c.size();
+    for (int node = 0; node < size; node++) 
+    {
+        if (n2c[node] == comm_num)
+        {
+            nodes.push_back(node);
+        }
+    }
+    return nodes;
+}
+
+
+

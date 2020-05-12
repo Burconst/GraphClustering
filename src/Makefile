@@ -152,6 +152,33 @@ GraphBinary.cpp.s:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.s
 .PHONY : GraphBinary.cpp.s
 
+Leiden.o: Leiden.cpp.o
+
+.PHONY : Leiden.o
+
+# target to build an object file
+Leiden.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o
+.PHONY : Leiden.cpp.o
+
+Leiden.i: Leiden.cpp.i
+
+.PHONY : Leiden.i
+
+# target to preprocess a source file
+Leiden.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Leiden.cpp.i
+.PHONY : Leiden.cpp.i
+
+Leiden.s: Leiden.cpp.s
+
+.PHONY : Leiden.s
+
+# target to generate assembly for a file
+Leiden.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Leiden.cpp.s
+.PHONY : Leiden.cpp.s
+
 Partition.o: Partition.cpp.o
 
 .PHONY : Partition.o
@@ -191,6 +218,9 @@ help:
 	@echo "... GraphBinary.o"
 	@echo "... GraphBinary.i"
 	@echo "... GraphBinary.s"
+	@echo "... Leiden.o"
+	@echo "... Leiden.i"
+	@echo "... Leiden.s"
 	@echo "... Partition.o"
 	@echo "... Partition.i"
 	@echo "... Partition.s"

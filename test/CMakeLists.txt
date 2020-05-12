@@ -5,3 +5,4 @@ enable_testing()
 
 add_subdirectory(Graph)
 add_subdirectory(Partition)
+add_subdirectory(GraphClustering/Leiden)

@@ -23,9 +23,7 @@ struct Partition
         Graph* g;
         Partition (Graph* g);
         Partition(const Partition &partition);
-
         bool operator==(Partition partition);
-        
         // remove the node from its current community with which it has dnodecomm links
         inline void Remove(int node, int comm, int dnodecomm);
         // insert the node in comm with which it shares dnodecomm links
@@ -43,7 +41,8 @@ struct Partition
         //       deg(node)   = node degree
         //       m           = number of links
         inline double ModularityGain(int node, int comm, int dnodecomm);
-
+        int GetCommunityNorm(int comm_num);
+        std::vector<int> GetNodesInCommunity(int comm_num);
         // compute the set of neighboring communities of node
         // for each community, gives the number of links from node to comm
         std::map<int,int> neighComm(int node);

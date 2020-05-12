@@ -124,6 +124,19 @@ GraphClustering/fast:
 .PHONY : GraphClustering/fast
 
 #=============================================================================
+# Target rules for targets named GraphTest6
+
+# Build rule for target.
+GraphTest6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GraphTest6
+.PHONY : GraphTest6
+
+# fast build rule for target.
+GraphTest6/fast:
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/build
+.PHONY : GraphTest6/fast
+
+#=============================================================================
 # Target rules for targets named GraphTest5
 
 # Build rule for target.
@@ -135,6 +148,19 @@ GraphTest5: cmake_check_build_system
 GraphTest5/fast:
 	$(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/build
 .PHONY : GraphTest5/fast
+
+#=============================================================================
+# Target rules for targets named GraphTest7
+
+# Build rule for target.
+GraphTest7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GraphTest7
+.PHONY : GraphTest7
+
+# fast build rule for target.
+GraphTest7/fast:
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/build
+.PHONY : GraphTest7/fast
 
 #=============================================================================
 # Target rules for targets named GraphTest1
@@ -189,6 +215,19 @@ GraphTest4/fast:
 .PHONY : GraphTest4/fast
 
 #=============================================================================
+# Target rules for targets named PartitionTest5
+
+# Build rule for target.
+PartitionTest5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PartitionTest5
+.PHONY : PartitionTest5
+
+# fast build rule for target.
+PartitionTest5/fast:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/build
+.PHONY : PartitionTest5/fast
+
+#=============================================================================
 # Target rules for targets named PartitionTest1
 
 # Build rule for target.
@@ -213,6 +252,19 @@ PartitionTest4: cmake_check_build_system
 PartitionTest4/fast:
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/build
 .PHONY : PartitionTest4/fast
+
+#=============================================================================
+# Target rules for targets named PartitionTest6
+
+# Build rule for target.
+PartitionTest6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PartitionTest6
+.PHONY : PartitionTest6
+
+# fast build rule for target.
+PartitionTest6/fast:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/build
+.PHONY : PartitionTest6/fast
 
 #=============================================================================
 # Target rules for targets named PartitionTest2
@@ -240,6 +292,19 @@ PartitionTest3/fast:
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/build
 .PHONY : PartitionTest3/fast
 
+#=============================================================================
+# Target rules for targets named LeidenTest1
+
+# Build rule for target.
+LeidenTest1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest1
+.PHONY : LeidenTest1
+
+# fast build rule for target.
+LeidenTest1/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build
+.PHONY : LeidenTest1/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,15 +314,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GraphClustering"
+	@echo "... GraphTest6"
 	@echo "... GraphTest5"
+	@echo "... GraphTest7"
 	@echo "... GraphTest1"
 	@echo "... GraphTest2"
 	@echo "... GraphTest3"
 	@echo "... GraphTest4"
+	@echo "... PartitionTest5"
 	@echo "... PartitionTest1"
 	@echo "... PartitionTest4"
+	@echo "... PartitionTest6"
 	@echo "... PartitionTest2"
 	@echo "... PartitionTest3"
+	@echo "... LeidenTest1"
 .PHONY : help
 
 

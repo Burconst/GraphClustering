@@ -1,7 +1,6 @@
 
 set(MULTIPLY_TIMEOUT 1)
 
-
 # GraphTest1 Degree of node
 
 add_executable(GraphTest1 GraphTest1.cpp)
@@ -117,3 +116,55 @@ set_tests_properties(G5Test2 PROPERTIES
 PASS_REGULAR_EXPRESSION "Not Equal")
 set_tests_properties(G5Test3 PROPERTIES
 PASS_REGULAR_EXPRESSION "Not Equal")
+
+# GraphTest6 Norm of node
+
+add_executable(GraphTest6 GraphTest6.cpp)
+target_link_libraries(GraphTest6 GraphClustering)
+
+add_test(G6Test1 GraphTest6 ./TestData/test1.bin 2 0 9)
+add_test(G6Test2 GraphTest6 ./TestData/test2.bin 8 1 0)
+add_test(G6Test3 GraphTest6 ./TestData/test3.bin 17 0 24)
+add_test(G6Test4 GraphTest6 ./TestData/test4.bin 16 0 20)
+add_test(G6Test5 GraphTest6 ./TestData/test5.bin 10 4 6)
+
+set_tests_properties(G1Test1 G1Test2 G1Test3 G1Test4 G1Test5
+PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+set_tests_properties(G6Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "1 1 1")
+set_tests_properties(G6Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION "1 1 1")
+set_tests_properties(G6Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION "1 1 1")
+set_tests_properties(G6Test4 PROPERTIES
+PASS_REGULAR_EXPRESSION "1 1 1")
+set_tests_properties(G6Test5 PROPERTIES
+PASS_REGULAR_EXPRESSION "1 1 1")
+
+
+# GraphTest7 Norm of node in agr network
+
+add_executable(GraphTest7 GraphTest7.cpp)
+target_link_libraries(GraphTest7 GraphClustering)
+
+add_test(G7Test1 GraphTest7 ./TestData/test1.bin ./TestData/comm1.txt 1 0 2)
+add_test(G7Test2 GraphTest7 ./TestData/test2.bin ./TestData/comm2.txt 0 1 2)
+add_test(G7Test3 GraphTest7 ./TestData/test3.bin ./TestData/comm3.txt 4 3 0)
+add_test(G7Test4 GraphTest7 ./TestData/test4.bin ./TestData/comm4.txt 0 3 1)
+add_test(G7Test5 GraphTest7 ./TestData/test5.bin ./TestData/comm5.txt 0 2 3)
+
+set_tests_properties(G7Test1 G7Test2 G7Test3 G7Test4 G7Test5
+PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+set_tests_properties(G7Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "5 2 3")
+set_tests_properties(G7Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION "3 4 3")
+set_tests_properties(G7Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION "4 7 8")
+set_tests_properties(G7Test4 PROPERTIES
+PASS_REGULAR_EXPRESSION "9 6 5")
+set_tests_properties(G7Test5 PROPERTIES
+PASS_REGULAR_EXPRESSION "5 5 2")
+
+
+

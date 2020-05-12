@@ -23,6 +23,7 @@ namespace GraphClustering
     pair<int, int> findBestNeighCommFor(int node, Partition* partition);
     void MergeNodesSubset(Partition* p, int community_num);
     vector<int> getWellConnectedCommunities();
+    vector<int> getMarkedNodes(Partition* partition);
 
     // DEBUG
     double GetLeidenPartitionOf(Partition* partition, double precision)
@@ -119,24 +120,16 @@ namespace GraphClustering
         return refPartition;
     }
 
-    // DEBUG
     vector<int> getMarkedNodes(Partition* partition) 
     {
         vector<int> res;
-        int deg = 0;
-        int comm = 0;
-        for (int node = 0; node < partition->g->GetNodesCount(); node++) 
+        int nodesCount = partition->g->GetNodesCount();
+        for (int node = 0; node < nodesCount; node++) 
         {
-            pair<int *,int *> neugh = partition->g->Neighbors(node);
-            deg = partition->g->GetDergeeOf(node);
-            comm = partition->GetCommunityNumber(node);
-            for (int j = 0; j < deg; j++) 
+            map<int, int> neigh = partition->neighComm(node);
+            if (neigh.size() > 1) 
             {
-                if (partition->GetCommunityNumber(neugh.first[j]) != comm) 
-                {
-                    res.push_back(node);
-                    continue;
-                }
+                res.push_back(node);
             }
         }
         return res;
@@ -145,23 +138,25 @@ namespace GraphClustering
     // TODO
     void MergeNodesSubset(Partition* p, int community_num)
     {
-        vector<int> wellConnNodes = getWellConnectedNodes(p, community_num);
-        for(int node = 0; node < wellConnNodes.size(); node++)
-        {  
-            // ??
-            if (1) 
-            {
-                int commNum = ChooseRandomComm(getWellConnectedCommunities(p));
-                p->Remove(node, community_num, p->neighComm(node).find(community_num)->second);
-                p->Insert(node, commNum, newCommunity.second);
-            }
-        }
+        // vector<int> wellConnNodes = getWellConnectedNodes(p, community_num);
+        // for(int node = 0; node < wellConnNodes.size(); node++)
+        // {  
+        //     // ??
+        //     if (1) 
+        //     {
+        //         int commNum = ChooseRandomComm(getWellConnectedCommunities(p));
+        //         p->Remove(node, community_num, p->neighComm(node).find(community_num)->second);
+        //         p->Insert(node, commNum, newCommunity.second);
+        //     }
+        // }
     }
 
     // TODO
     int ChooseRandomComm(vector<int> wellConnNodes)
     {
+        int res = 0;
 
+        return res;
     }
 
     // TODO
@@ -173,13 +168,17 @@ namespace GraphClustering
     // TODO
     vector<int> getWellConnectedNodes(Partition* partition, int community_num) 
     {
+        vector<int> res;
 
+        return res;
     }
 
     // TODO
     vector<int> getWellConnectedCommunities(Partition* partition) 
     {
+        vector<int> res;
 
+        return res;
     }
     
     vector<int> mixNodeOrder(Partition* partition)

@@ -15,7 +15,7 @@ struct Graph
         int nbLinks;
         int totalWeight;
         int *degrees;
-        // int *norms;
+        int *norms;
         int *links;
         int *weights;
 
@@ -39,6 +39,7 @@ struct Graph
         inline int GetNodesCount();
         inline int GetEdgesCount();
         inline int GetTotalWeight();
+        inline int GetNodeNorm(int node);
         inline void isValidNode(int node);
         // return pointers to the first neighbor and first weight of the node
         inline std::pair<int *, int *> Neighbors(int node);
@@ -137,6 +138,11 @@ inline int Graph::GetTotalWeight()
 inline int Graph::GetEdgesCount() 
 {
     return nbLinks;
+}
+
+inline int Graph::GetNodeNorm(int node)
+{
+    return norms[node];
 }
 
 #endif // GRAPH_H

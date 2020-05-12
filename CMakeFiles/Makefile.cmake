@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "src/CMakeLists.txt"
   "test/CMakeLists.txt"
   "test/Graph/CMakeLists.txt"
+  "test/GraphClustering/Leiden/CMakeLists.txt"
   "test/Partition/CMakeLists.txt"
   "/usr/local/share/cmake-3.12/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.12/Modules/CMakeCXXInformation.cmake"
@@ -47,18 +48,24 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/Graph/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/Partition/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/GraphClustering.dir/DependInfo.cmake"
+  "test/Graph/CMakeFiles/GraphTest6.dir/DependInfo.cmake"
   "test/Graph/CMakeFiles/GraphTest5.dir/DependInfo.cmake"
+  "test/Graph/CMakeFiles/GraphTest7.dir/DependInfo.cmake"
   "test/Graph/CMakeFiles/GraphTest1.dir/DependInfo.cmake"
   "test/Graph/CMakeFiles/GraphTest2.dir/DependInfo.cmake"
   "test/Graph/CMakeFiles/GraphTest3.dir/DependInfo.cmake"
   "test/Graph/CMakeFiles/GraphTest4.dir/DependInfo.cmake"
+  "test/Partition/CMakeFiles/PartitionTest5.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest1.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest4.dir/DependInfo.cmake"
+  "test/Partition/CMakeFiles/PartitionTest6.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest2.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest3.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/DependInfo.cmake"
   )

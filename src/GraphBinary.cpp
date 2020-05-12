@@ -44,6 +44,12 @@ Graph::Graph(std::string filename, int type)
         weights = NULL;
         totalWeight = 2*nbLinks;
     }
+
+    norms = (int *)malloc((long)NodesCount*sizeof(int));
+    for (int i = 0; i < NodesCount; i++) 
+    {
+        norms[i] = 1;
+    }
 }
 
 Graph::Graph(const Graph &graph) 
@@ -53,11 +59,11 @@ Graph::Graph(const Graph &graph)
 {
     
     degrees = (int *)malloc(sizeof(int)*graph.NodesCount);
-    // // norms = (int *)malloc((long)NodesCount*4);
+    norms = (int *)malloc(sizeof(int)*graph.NodesCount);
     for (int i = 0; i < graph.NodesCount; i++) 
     {
         degrees[i] = graph.degrees[i];
-        // norms[i] = graph.norms[i];
+        norms[i] = graph.norms[i];
     }
     links = (int *)malloc(sizeof(int)*graph.nbLinks);
     for (int i = 0; i < graph.nbLinks; i++) 
@@ -80,10 +86,22 @@ Graph::Graph(const Graph &graph)
 
 Graph::~Graph() 
 {
-    free(degrees);
-    // free(norms);
-    free(links);
-    free(weights);
+    if (degrees != nullptr) 
+    {
+         free(degrees);
+    }
+    if (norms != nullptr) 
+    {
+         free(norms);
+    }
+    if (links != nullptr) 
+    {
+        free(links);
+    }
+    if (weights != nullptr) 
+    {
+       free(weights);
+    }
 }
 
 bool Graph::operator==(Graph g) 
@@ -104,6 +122,13 @@ bool Graph::operator==(Graph g)
     for (int i = 0; i < g.NodesCount; i++) 
     {
         if (g.degrees[i] != degrees[i]) 
+        {
+            return false;
+        }
+    }
+    for (int i = 0; i < g.NodesCount; i++) 
+    {
+        if (g.norms[i] != norms[i]) 
         {
             return false;
         }

@@ -1,3 +1,5 @@
+set(MULTIPLY_TIMEOUT 1)
+
 # Test1 NeighComm
 add_executable(PartitionTest1 PartitionTest1.cpp)
 target_link_libraries(PartitionTest1 GraphClustering)
@@ -78,3 +80,51 @@ PASS_REGULAR_EXPRESSION "Equal")
 set_tests_properties(P4Test5 PROPERTIES
 PASS_REGULAR_EXPRESSION "Equal")
 
+# PartitionTest5 AggregatePartition
+
+add_executable(PartitionTest5 PartitionTest5.cpp)
+target_link_libraries(PartitionTest5 GraphClustering)
+
+add_test(P5Test1 PartitionTest5 ./TestData/test1.bin ./TestData/comm1.txt ./TestData/agrtest1.bin)
+add_test(P5Test2 PartitionTest5 ./TestData/test2.bin ./TestData/comm2.txt ./TestData/agrtest2.bin)
+add_test(P5Test3 PartitionTest5 ./TestData/test3.bin ./TestData/comm3.txt ./TestData/agrtest3.bin)
+add_test(P5Test4 PartitionTest5 ./TestData/test4.bin ./TestData/comm4.txt ./TestData/agrtest4.bin)
+add_test(P5Test5 PartitionTest5 ./TestData/test5.bin ./TestData/comm5.txt ./TestData/agrtest5.bin)
+add_test(P5Test6 PartitionTest5 ./TestData/test1.bin ./TestData/comm1.txt ./TestData/notagrtest1.bin)
+
+set_tests_properties(P5Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "Equal")
+set_tests_properties(P5Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION "Equal")
+set_tests_properties(P5Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION "Equal")
+set_tests_properties(P5Test4 PROPERTIES
+PASS_REGULAR_EXPRESSION "Equal")
+set_tests_properties(P5Test5 PROPERTIES
+PASS_REGULAR_EXPRESSION "Equal")
+set_tests_properties(P5Test6 PROPERTIES
+PASS_REGULAR_EXPRESSION "Not Equal")
+
+# PartitionTest6 Norm of community
+
+add_executable(PartitionTest6 PartitionTest6.cpp)
+target_link_libraries(PartitionTest6 GraphClustering)
+
+add_test(P6Test1 PartitionTest6 ./TestData/test1.bin ./TestData/comm1.txt 1 0 2)
+add_test(P6Test2 PartitionTest6 ./TestData/test2.bin ./TestData/comm2.txt 0 1 2)
+add_test(P6Test3 PartitionTest6 ./TestData/test3.bin ./TestData/comm3.txt 4 3 0)
+add_test(P6Test4 PartitionTest6 ./TestData/test4.bin ./TestData/comm4.txt 0 3 1)
+add_test(P6Test5 PartitionTest6 ./TestData/test5.bin ./TestData/comm5.txt 0 2 3)
+
+set_tests_properties(P6Test1 P6Test2 P6Test3 P6Test4 P6Test5
+PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+set_tests_properties(P6Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "5 2 3")
+set_tests_properties(P6Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION "3 4 3")
+set_tests_properties(P6Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION "4 7 8")
+set_tests_properties(P6Test4 PROPERTIES
+PASS_REGULAR_EXPRESSION "9 6 5")
+set_tests_properties(P6Test5 PROPERTIES
+PASS_REGULAR_EXPRESSION "5 5 2")
