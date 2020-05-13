@@ -67,5 +67,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/Partition/CMakeFiles/PartitionTest6.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest2.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest3.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/DependInfo.cmake"
   "test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/DependInfo.cmake"
   )

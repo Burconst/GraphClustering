@@ -203,6 +203,18 @@ int Partition::GetCommunityNorm(int comm_num)
     return res;
 }
 
+// Catch errors!!!
+int Partition::GetSubsetNorm(vector<int> subset)
+{
+    int res = 0;
+    int size = subset.size();
+    for(int i = 0; i < size; i++) 
+    {
+        res += g->GetNodeNorm(subset[i]);
+    }
+    return res;
+}
+
 vector<int> Partition::GetNodesInCommunity(int comm_num)
 {
     vector<int> nodes;

@@ -467,7 +467,7 @@ test/Partition/preinstall:
 test/Partition/CMakeFiles/PartitionTest5.dir/all: src/CMakeFiles/GraphClustering.dir/all
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/depend
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=29,30 "Built target PartitionTest5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=31,32 "Built target PartitionTest5"
 .PHONY : test/Partition/CMakeFiles/PartitionTest5.dir/all
 
 # Include target in all.
@@ -504,7 +504,7 @@ clean: test/Partition/CMakeFiles/PartitionTest5.dir/clean
 test/Partition/CMakeFiles/PartitionTest1.dir/all: src/CMakeFiles/GraphClustering.dir/all
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/depend
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=21,22 "Built target PartitionTest1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=23,24 "Built target PartitionTest1"
 .PHONY : test/Partition/CMakeFiles/PartitionTest1.dir/all
 
 # Include target in all.
@@ -541,7 +541,7 @@ clean: test/Partition/CMakeFiles/PartitionTest1.dir/clean
 test/Partition/CMakeFiles/PartitionTest4.dir/all: src/CMakeFiles/GraphClustering.dir/all
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/depend
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=27,28 "Built target PartitionTest4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=29,30 "Built target PartitionTest4"
 .PHONY : test/Partition/CMakeFiles/PartitionTest4.dir/all
 
 # Include target in all.
@@ -578,7 +578,7 @@ clean: test/Partition/CMakeFiles/PartitionTest4.dir/clean
 test/Partition/CMakeFiles/PartitionTest6.dir/all: src/CMakeFiles/GraphClustering.dir/all
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/depend
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=31,32 "Built target PartitionTest6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=33,34 "Built target PartitionTest6"
 .PHONY : test/Partition/CMakeFiles/PartitionTest6.dir/all
 
 # Include target in all.
@@ -615,7 +615,7 @@ clean: test/Partition/CMakeFiles/PartitionTest6.dir/clean
 test/Partition/CMakeFiles/PartitionTest2.dir/all: src/CMakeFiles/GraphClustering.dir/all
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/depend
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=23,24 "Built target PartitionTest2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=25,26 "Built target PartitionTest2"
 .PHONY : test/Partition/CMakeFiles/PartitionTest2.dir/all
 
 # Include target in all.
@@ -652,7 +652,7 @@ clean: test/Partition/CMakeFiles/PartitionTest2.dir/clean
 test/Partition/CMakeFiles/PartitionTest3.dir/all: src/CMakeFiles/GraphClustering.dir/all
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/depend
 	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=25,26 "Built target PartitionTest3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=27,28 "Built target PartitionTest3"
 .PHONY : test/Partition/CMakeFiles/PartitionTest3.dir/all
 
 # Include target in all.
@@ -686,11 +686,13 @@ clean: test/Partition/CMakeFiles/PartitionTest3.dir/clean
 # Directory level rules for directory test/GraphClustering/Leiden
 
 # Convenience name for "all" pass in the directory.
+test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
 test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/all
 
 .PHONY : test/GraphClustering/Leiden/all
 
 # Convenience name for "clean" pass in the directory.
+test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
 test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/clean
 
 .PHONY : test/GraphClustering/Leiden/clean
@@ -699,6 +701,43 @@ test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/Leiden
 test/GraphClustering/Leiden/preinstall:
 
 .PHONY : test/GraphClustering/Leiden/preinstall
+
+#=============================================================================
+# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir
+
+# All Build rule for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all: src/CMakeFiles/GraphClustering.dir/all
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/depend
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=21,22 "Built target LeidenTest2"
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
+
+# Include target in all.
+all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule
+
+# Convenience name for target.
+LeidenTest2: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule
+
+.PHONY : LeidenTest2
+
+# clean rule for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
+
+# clean rule for target.
+clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir

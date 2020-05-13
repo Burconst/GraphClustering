@@ -293,6 +293,19 @@ PartitionTest3/fast:
 .PHONY : PartitionTest3/fast
 
 #=============================================================================
+# Target rules for targets named LeidenTest2
+
+# Build rule for target.
+LeidenTest2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest2
+.PHONY : LeidenTest2
+
+# fast build rule for target.
+LeidenTest2/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build
+.PHONY : LeidenTest2/fast
+
+#=============================================================================
 # Target rules for targets named LeidenTest1
 
 # Build rule for target.
@@ -327,6 +340,7 @@ help:
 	@echo "... PartitionTest6"
 	@echo "... PartitionTest2"
 	@echo "... PartitionTest3"
+	@echo "... LeidenTest2"
 	@echo "... LeidenTest1"
 .PHONY : help
 

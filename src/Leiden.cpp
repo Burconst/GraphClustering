@@ -5,6 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 #include "include/GraphClustering.h"
 #include "include/Output.h"
@@ -16,14 +17,17 @@ namespace GraphClustering
 
     vector<int> mixNodeOrder(Partition* partition);
     double MoveNodesFast(Partition* partition);
-    bool isValidPartition(Graph* g, Partition* p);
     bool findImprovement(Partition* partition, vector<int> order);
     Partition refinePartition(Partition* p);
     void maintain_partition(Partition* partition, Partition* ref_partition);
     pair<int, int> findBestNeighCommFor(int node, Partition* partition);
     void MergeNodesSubset(Partition* p, int community_num);
-    vector<int> getWellConnectedCommunities();
+    pair<int, int> ChooseRandomComm(vector<int> wellConnNodes);
+    bool isInSingletonCommunity(Partition* p, int node, vector<int>* subset);
+    bool isValidPartition(Graph* g, Partition* p);
     vector<int> getMarkedNodes(Partition* partition);
+    vector<int> getWellConnectedCommunities(Partition* partition, vector<int> subset);
+    vector<int> getWellConnectedNodes(Partition* partition, vector<int> subset);
 
     // DEBUG
     double GetLeidenPartitionOf(Partition* partition, double precision)
@@ -87,6 +91,7 @@ namespace GraphClustering
         return wasImprovement;
     }
 
+    // Change!
     pair<int, int> findBestNeighCommFor(int node, Partition* partition) 
     {
         pair<int, int> res;
@@ -110,7 +115,6 @@ namespace GraphClustering
     
     Partition refinePartition(Partition* p) 
     {
-
         Partition refPartition(p->g);
         vector<int> communities = p->GetCommunities();
         for(int i = 0; i < communities.size(); ++i) 
@@ -135,52 +139,89 @@ namespace GraphClustering
         return res;
     }
 
-    // TODO
+    // Debug
     void MergeNodesSubset(Partition* p, int community_num)
     {
-        // vector<int> wellConnNodes = getWellConnectedNodes(p, community_num);
-        // for(int node = 0; node < wellConnNodes.size(); node++)
-        // {  
-        //     // ??
-        //     if (1) 
-        //     {
-        //         int commNum = ChooseRandomComm(getWellConnectedCommunities(p));
-        //         p->Remove(node, community_num, p->neighComm(node).find(community_num)->second);
-        //         p->Insert(node, commNum, newCommunity.second);
-        //     }
-        // }
+        vector<int> subset = p->GetNodesInCommunity(community_num);
+        vector<int> wellConnNodes = getWellConnectedNodes(p, subset);
+        for(int node = 0; node < wellConnNodes.size(); node++)
+        {  
+            if (isInSingletonCommunity(p, node, &subset)) 
+            {
+                pair<int, int> commNum = ChooseRandomComm(getWellConnectedCommunities(p, subset));
+                p->Remove(node, community_num, p->neighComm(node).find(community_num)->second);
+                p->Insert(node, commNum.first, commNum.second);
+            }
+        }
     }
 
-    // TODO
-    int ChooseRandomComm(vector<int> wellConnNodes)
+    // Debug
+    bool isInSingletonCommunity(Partition* p, int node, vector<int> subset) 
     {
-        int res = 0;
-
-        return res;
+        int size = subset.size();
+        int nodeComm = p->GetCommunityNumber(node);
+        for (int i = 0; i < size; i++) 
+        {
+            if (nodeComm == p->GetCommunityNumber(subset[i])) 
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     // TODO
-    void maintain_partition(Partition* partition, Partition* ref_partition) 
+    pair<int, int> ChooseRandomComm(vector<int> wellConnNodes)
     {
+        assert(wellConnNodes.size() > 0);
+        // int res = wellConnNodes[0];
 
+        // return res;
     }
 
-    // TODO
-    vector<int> getWellConnectedNodes(Partition* partition, int community_num) 
+    vector<int> getWellConnectedNodes(Partition* partition, vector<int> subset) 
     {
         vector<int> res;
-
+        int size = subset.size();
+        int commNorm = partition->GetSubsetNorm(subset);
+        int nodeNorm = 0;
+        int E = 0;
+        for (int i = 0; i < size; i++) 
+        {
+            nodeNorm = partition->g->GetNodeNorm(subset[i]);
+            auto neigh = partition->g->Neighbors(subset[i]);
+            int deg = partition->g->GetDergeeOf(subset[i]);
+            for (int j = 0; j < deg; j++) 
+            {
+                auto iter = find(subset.begin(), subset.end(), neigh.first[j]);
+                if (iter != subset.end()) 
+                {
+                    E++;
+                }
+            }
+            if (E >= nodeNorm*(commNorm - nodeNorm)) 
+            {
+                res.push_back(subset[i]);
+            }
+            E = 0;
+        }
         return res;
     }
 
     // TODO
-    vector<int> getWellConnectedCommunities(Partition* partition) 
+    vector<int> getWellConnectedCommunities(Partition* partition, vector<int> subset) 
     {
         vector<int> res;
 
         return res;
     }
     
+    // TODO
+    void maintain_partition(Partition* partition, Partition* ref_partition) 
+    {
+
+    }
+
     vector<int> mixNodeOrder(Partition* partition)
     {
         vector<int> randomOrder(partition->GetSize());

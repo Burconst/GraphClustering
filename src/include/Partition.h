@@ -42,6 +42,7 @@ struct Partition
         //       m           = number of links
         inline double ModularityGain(int node, int comm, int dnodecomm);
         int GetCommunityNorm(int comm_num);
+        int GetSubsetNorm(std::vector<int> subset);
         std::vector<int> GetNodesInCommunity(int comm_num);
         // compute the set of neighboring communities of node
         // for each community, gives the number of links from node to comm

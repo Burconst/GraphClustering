@@ -21,6 +21,8 @@ vector
 -
 map
 -
+algorithm
+-
 include/GraphClustering.h
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphClustering.h
 include/Output.h
