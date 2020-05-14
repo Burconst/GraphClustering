@@ -179,6 +179,33 @@ Leiden.cpp.s:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Leiden.cpp.s
 .PHONY : Leiden.cpp.s
 
+Louvain.o: Louvain.cpp.o
+
+.PHONY : Louvain.o
+
+# target to build an object file
+Louvain.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o
+.PHONY : Louvain.cpp.o
+
+Louvain.i: Louvain.cpp.i
+
+.PHONY : Louvain.i
+
+# target to preprocess a source file
+Louvain.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Louvain.cpp.i
+.PHONY : Louvain.cpp.i
+
+Louvain.s: Louvain.cpp.s
+
+.PHONY : Louvain.s
+
+# target to generate assembly for a file
+Louvain.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f src/CMakeFiles/GraphClustering.dir/build.make src/CMakeFiles/GraphClustering.dir/Louvain.cpp.s
+.PHONY : Louvain.cpp.s
+
 Partition.o: Partition.cpp.o
 
 .PHONY : Partition.o
@@ -221,6 +248,9 @@ help:
 	@echo "... Leiden.o"
 	@echo "... Leiden.i"
 	@echo "... Leiden.s"
+	@echo "... Louvain.o"
+	@echo "... Louvain.i"
+	@echo "... Louvain.s"
 	@echo "... Partition.o"
 	@echo "... Partition.i"
 	@echo "... Partition.s"

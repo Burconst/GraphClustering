@@ -58,7 +58,7 @@ inline int Graph::GetDergeeOf(int node)
 
     if (node==0)
     {
-        return degrees[0];
+        return degrees[node];
     }
     else
     {
@@ -142,6 +142,7 @@ inline int Graph::GetEdgesCount()
 
 inline int Graph::GetNodeNorm(int node)
 {
+    isValidNode(node);
     return norms[node];
 }
 

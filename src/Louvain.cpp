@@ -18,6 +18,7 @@ namespace GraphClustering
     double MoveNodes(Partition* partition);
     bool isValidPartition(Partition* p);
     bool findImprovement(Partition* partition, vector<int> order);
+    pair<int, int> findBestNeighCommFor(int node, Partition* partition);
 
     double GetLouvainPartitionOf(Partition* partition, double precision)
     {

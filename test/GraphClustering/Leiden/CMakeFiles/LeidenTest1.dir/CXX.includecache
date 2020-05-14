@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Leiden.cpp
-stdlib.h
--
-stdio.h
--
-iostream
--
-iomanip
--
-fstream
--
-vector
--
-map
--
-algorithm
--
-include/GraphClustering.h
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphClustering.h
-include/Output.h
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Output.h
-
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
 string
 -
@@ -42,14 +20,6 @@ GraphBinary.h
 Partition.h
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
 
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Output.h
-string
--
-Partition.h
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
-GraphBinary.h
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
-
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
 stdlib.h
 -
@@ -67,6 +37,10 @@ map
 -
 GraphBinary.h
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/Leiden.h
+../../../src/include/GraphClustering.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphClustering.h
 
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest1.cpp
 iostream
@@ -85,6 +59,6 @@ map
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
 ../../../src/include/Partition.h
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
-../../../src/Leiden.cpp
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Leiden.cpp
+Leiden.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/Leiden.h
 

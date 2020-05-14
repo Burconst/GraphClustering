@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/GraphBinary.cpp" "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o"
   "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Leiden.cpp" "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o"
+  "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Louvain.cpp" "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o"
   "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Partition.cpp" "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/CMakeFiles/GraphClustering.dir/Partition.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -23,6 +23,7 @@ struct Partition
         Graph* g;
         Partition (Graph* g);
         Partition(const Partition &partition);
+        ~Partition();
         bool operator==(Partition partition);
         // remove the node from its current community with which it has dnodecomm links
         inline void Remove(int node, int comm, int dnodecomm);
@@ -44,6 +45,7 @@ struct Partition
         int GetCommunityNorm(int comm_num);
         int GetSubsetNorm(std::vector<int> subset);
         std::vector<int> GetNodesInCommunity(int comm_num);
+        std::vector<int> GetNodesInCommunity(int comm_num, std::vector<int> subset);
         // compute the set of neighboring communities of node
         // for each community, gives the number of links from node to comm
         std::map<int,int> neighComm(int node);
@@ -51,11 +53,18 @@ struct Partition
         double Modularity();
         Graph AggregatePartition();
         std::vector<int> GetCommunities();
+        void isValidNode(int node);
 };
+
+inline void Partition::isValidNode(int node) 
+{
+    assert(node>=0 && node<size);
+}
+
 
 inline void Partition::Remove(int node, int comm, int dnodecomm)
 {
-    assert(node>=0 && node<size);
+    isValidNode(node);
 
     tot[comm] -= g->WeightedDegree(node);
     in[comm] -= 2*dnodecomm + g->GetCountSelfloopsOf(node);
@@ -64,7 +73,7 @@ inline void Partition::Remove(int node, int comm, int dnodecomm)
 
 inline void Partition::Insert(int node, int comm, int dnodecomm)
 {
-    assert(node>=0 && node<size);
+     isValidNode(node);
 
     tot[comm] += g->WeightedDegree(node);
     in[comm] += 2*dnodecomm + g->GetCountSelfloopsOf(node);
@@ -73,7 +82,7 @@ inline void Partition::Insert(int node, int comm, int dnodecomm)
 
 inline double Partition::ModularityGain(int node, int comm, int dnodecomm)
 {
-    assert(node>=0 && node<size);
+    isValidNode(node);
 
     double totc = (double)tot[comm];
     double degc = (double)g->WeightedDegree(node);
@@ -90,11 +99,13 @@ inline int Partition::GetSize()
 
 inline int Partition::GetCommunityNumber(int node)
 {
+    isValidNode(node);
     return n2c[node];
 }
 
 inline void Partition::SetCommunityOf(int node, int comm)
 {
+    isValidNode(node);
     n2c[node] = comm;
 }
 

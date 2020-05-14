@@ -48,3 +48,77 @@ set_tests_properties(Leid2Test4 PROPERTIES
 PASS_REGULAR_EXPRESSION "{ 21 }")
 set_tests_properties(Leid2Test5 PROPERTIES
 PASS_REGULAR_EXPRESSION "{}")
+
+
+# LeidenTest3 ChooseRandomComm
+
+add_executable(LeidenTest3 LeidenTest3.cpp)
+target_link_libraries(LeidenTest3 GraphClustering)
+
+add_test(Leid3Test1 LeidenTest3 ./TestData/test1.bin ./TestData/ChRandCommTest1.txt 0 1 3 4 4)
+add_test(Leid3Test2 LeidenTest3 ./TestData/test2.bin ./TestData/SinglComm2.txt 1 4 8)
+add_test(Leid3Test3 LeidenTest3 ./TestData/test3.bin ./TestData/SinglComm3.txt 2 4 6 9 8 13 0)
+add_test(Leid3Test4 LeidenTest3 ./TestData/test4.bin ./TestData/SinglComm4.txt 2 6 0)
+add_test(Leid3Test5 LeidenTest3 ./TestData/test5.bin ./TestData/SinglComm5.txt 3 6 3)
+
+set_tests_properties(Leid3Test1 Leid3Test2 Leid3Test4 Leid3Test5 Leid3Test3
+PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+set_tests_properties(Leid3Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION "")
+
+
+
+# LeidenTest4 isInSinlgComm
+
+add_executable(LeidenTest4 LeidenTest4.cpp)
+target_link_libraries(LeidenTest4 GraphClustering)
+
+add_test(Leid4Test1 LeidenTest4 ./TestData/test1.bin ./TestData/SinglComm1.txt 7 1 3)
+add_test(Leid4Test2 LeidenTest4 ./TestData/test2.bin ./TestData/SinglComm2.txt 8 2 4)
+add_test(Leid4Test3 LeidenTest4 ./TestData/test3.bin ./TestData/SinglComm3.txt 29 24 9)
+add_test(Leid4Test4 LeidenTest4 ./TestData/test4.bin ./TestData/SinglComm4.txt 20 1 11)
+add_test(Leid4Test5 LeidenTest4 ./TestData/test5.bin ./TestData/SinglComm5.txt 9 5 2)
+
+set_tests_properties(Leid4Test1 Leid4Test2 Leid4Test4 Leid4Test5 Leid4Test3
+PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+set_tests_properties(Leid4Test1 PROPERTIES
+PASS_REGULAR_EXPRESSION " 0  1  0 ")
+set_tests_properties(Leid4Test2 PROPERTIES
+PASS_REGULAR_EXPRESSION " 1  0  0 ")
+set_tests_properties(Leid4Test3 PROPERTIES
+PASS_REGULAR_EXPRESSION " 1  0  0 ")
+set_tests_properties(Leid4Test4 PROPERTIES
+PASS_REGULAR_EXPRESSION " 0  0  0 ")
+set_tests_properties(Leid4Test5 PROPERTIES
+PASS_REGULAR_EXPRESSION " 1  0  0 ")
+
+# LeidenTest5 wellConnComms
+
+add_executable(LeidenTest5 LeidenTest5.cpp)
+target_link_libraries(LeidenTest5 GraphClustering)
+
+add_test(Leid5Test1 LeidenTest5 ./TestData/test1.bin ./TestData/SinglComm1.txt)
+add_test(Leid5Test2 LeidenTest5 ./TestData/test2.bin ./TestData/SinglComm2.txt)
+add_test(Leid5Test3 LeidenTest5 ./TestData/test3.bin ./TestData/SinglComm3.txt)
+add_test(Leid5Test4 LeidenTest5 ./TestData/test4.bin ./TestData/SinglComm4.txt)
+add_test(Leid5Test5 LeidenTest5 ./TestData/test5.bin ./TestData/SinglComm5.txt)
+
+set_tests_properties(Leid5Test1 Leid5Test2 Leid5Test4 Leid5Test5 Leid5Test3
+PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+
+# LeidenTest6 wellConnComms
+
+add_executable(LeidenTest6 LeidenTest6.cpp)
+target_link_libraries(LeidenTest6 GraphClustering)
+
+# LeidenTest7 refinePartition
+
+add_executable(LeidenTest7 LeidenTest7.cpp)
+target_link_libraries(LeidenTest7 GraphClustering)
+
+
+# LeidenTest8 moveNodes
+
+add_executable(LeidenTest8 LeidenTest8.cpp)
+target_link_libraries(LeidenTest8 GraphClustering)
+

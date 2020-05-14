@@ -7,7 +7,7 @@
 
 #include "../../../src/include/GraphBinary.h"
 #include "../../../src/include/Partition.h"
-#include "../../../src/Leiden.cpp"
+#include "Leiden.h"
 
 using namespace std;
 

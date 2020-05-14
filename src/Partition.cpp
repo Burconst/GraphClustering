@@ -59,6 +59,7 @@ double Partition::Modularity()
 
 map<int,int> Partition::neighComm(int node)
 {
+    assert(node>=0 && node<size);
     map<int,int> res;
     pair<int *,int *> p = g->Neighbors(node);
 
@@ -229,5 +230,22 @@ vector<int> Partition::GetNodesInCommunity(int comm_num)
     return nodes;
 }
 
+vector<int> Partition::GetNodesInCommunity(int comm_num, vector<int> subset) 
+{
+    vector<int> nodes;
+    int size = subset.size();
+    for (int i = 0; i < size; i++) 
+    {
+        if (n2c[subset[i]] == comm_num)
+        {
+            nodes.push_back(subset[i]);
+        }
+    }
+    return nodes;
+}
 
 
+Partition::~Partition()
+{
+    g = NULL;
+}
