@@ -11,9 +11,6 @@
 #include "include/GraphClustering.h"
 #include "include/Output.h"
 
-
-namespace GraphClustering 
-{
     using namespace std;
 
     vector<int> mixNodeOrder(Partition* partition);
@@ -21,7 +18,8 @@ namespace GraphClustering
     bool findImprovement(Partition* partition, vector<int> order);
     Partition refinePartition(Partition* p);
     // void refinePartition(Partition* p, Partition* refp);
-    void maintain_partition(Partition* partition, Partition* ref_partition);
+    // void maintain_partition(Partition* partition, Partition* ref_partition);
+    vector<int> maintain_partition(Partition* partition, Partition* ref_partition); 
     pair<int, int> findBestNeighCommFor(int node, Partition* partition);
     void MergeNodesSubset(Partition* p, vector<int> subset);
     pair<int, int> ChooseRandomComm(Partition* partition, vector<int> commNums, int node);
@@ -31,48 +29,44 @@ namespace GraphClustering
     vector<int> getWellConnectedCommunities(Partition* partition, vector<int> subset);
     vector<int> getWellConnectedNodes(Partition* partition, vector<int> subset);
 
-    // Change, debug
-    double GetLeidenPartitionOf(Partition* partition, double precision)
-    {
-        double res_mod = -1.;
-        bool done = false;
-        // ??
-        Graph new_g = *(partition->g);
-        Partition new_partition = *partition;
-        do
+    // 2 Debug
+    vector<int> maintain_partition(Partition* partition, Partition* ref_partition) 
+    {   
+        vector<int> res;
+        res.resize(ref_partition->GetCommunities().size(), 0);
+        for (int i = 0; i < partition->GetSize(); i++) 
         {
-            res_mod = MoveNodesFast(&new_partition);
-            done = new_partition.GetSize() == new_g.GetNodesCount() ? true : false;
-            Partition ref_partition = refinePartition(&new_partition);
-            new_g = ref_partition.AggregatePartition();
-            new_partition = Partition(&new_g);
-            maintain_partition(&new_partition, &ref_partition);
-
-            // Нужно обновить partition
-        } while (!done);
-        return res_mod;
+            res[ref_partition->n2c[i]] = partition->n2c[i];
+        }
+        return res;
     }
 
-    // TODO
-    void maintain_partition(Partition* partition, Partition* ref_partition) 
-    {
-
-    }
-
-    // Debug
+   // Debug
     double MoveNodesFast(Partition* partition)
     {
-        bool wasImprovement = false;
+        bool wasImprovement = true;
+        
         double new_mod = partition->Modularity();
-        vector<int> considered_nodes = mixNodeOrder(partition);
+        double res_mod = new_mod;
+        vector<int> considered_nodes = ::mixNodeOrder(partition);
         do
         {
-            wasImprovement = findImprovement(partition, considered_nodes);
+            ::findImprovement(partition, considered_nodes);
             new_mod = partition->Modularity();
-            considered_nodes = getMarkedNodes(partition);
+            if (new_mod-res_mod > 0.000001) 
+            {
+                res_mod = new_mod;
+                considered_nodes = ::getMarkedNodes(partition);
+            }
+            else 
+            {
+                wasImprovement = false;
+            }
+
+            cout << res_mod << endl;
         } while (wasImprovement);
         
-        return new_mod;
+        return res_mod;
     }
 
     // Debug
@@ -84,12 +78,11 @@ namespace GraphClustering
         {
             int node = *node_tmp;
             int node_comm = partition->GetCommunityNumber(node);
-            
-            partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
-            pair<int, int> newCommunity = findBestNeighCommFor(node, partition);
-            partition->Insert(node, newCommunity.first, newCommunity.second);
-            if (newCommunity.first!=node_comm)
+            pair<int, int> newCommunity = ::findBestNeighCommFor(node, partition);
+            if (newCommunity.first != -1) 
             {
+                partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
+                partition->Insert(node, newCommunity.first, newCommunity.second);
                 wasImprovement = true;
             }
         }
@@ -101,8 +94,8 @@ namespace GraphClustering
     pair<int, int> findBestNeighCommFor(int node, Partition* partition) 
     {
         pair<int, int> res;
-        res.first = partition->GetCommunityNumber(node);
-        res.second = 0;
+        res.first = -1;
+        res.second = -1;
         double best_increase = 0.;
         map<int,int> neighcomm = partition->neighComm(node);
         for (map<int,int>::iterator it=neighcomm.begin(); it!=neighcomm.end(); it++)
@@ -118,15 +111,15 @@ namespace GraphClustering
         return res;
     }
     
-    // Debug
-    Partition refinePartition(Partition* p)// Partition* refp) 
+    // 1 Debug
+    Partition refinePartition(Partition* p)
     {
         Partition refPartition(p->g);
         vector<int> communities = p->GetCommunities();
         for(int i = 0; i < communities.size(); ++i) 
         {
             vector<int> subset = p->GetNodesInCommunity(communities[i]);
-            MergeNodesSubset(&refPartition, subset);
+            ::MergeNodesSubset(&refPartition, subset);
         }
         return refPartition;
     }
@@ -134,13 +127,13 @@ namespace GraphClustering
     // Debug
     void MergeNodesSubset(Partition* p, vector<int> subset)
     {
-        vector<int> wellConnNodes = getWellConnectedNodes(p, subset);
+        vector<int> wellConnNodes = ::getWellConnectedNodes(p, subset);
         for(int i = 0; i < wellConnNodes.size(); i++)
         {  
             int node = wellConnNodes[i];
-            if (isInSingletonCommunity(p, node, subset)) 
+            if (::isInSingletonCommunity(p, node, subset)) 
             {
-                pair<int, int> commNum = ChooseRandomComm(p, getWellConnectedCommunities(p, subset), node);
+                pair<int, int> commNum = ::ChooseRandomComm(p, ::getWellConnectedCommunities(p, subset), node);
                 if (commNum.first != -1 && commNum.second != -1) 
                 {
                     int community_num = p->GetCommunityNumber(node);
@@ -182,7 +175,6 @@ namespace GraphClustering
 
     pair<int, int> ChooseRandomComm(Partition* partition, vector<int> commNums, int node)
     {
-        assert(commNums.size() > 0);
         random_device gen;
         vector<pair<int,double>> commMod;
         map<int,int> neighcomm = partition->neighComm(node);
@@ -327,4 +319,39 @@ namespace GraphClustering
         return randomOrder;
     }
 
+namespace GraphClustering 
+{
+    // Change, debug
+    double GetLeidenPartitionOf(Graph* graph)
+    {
+        double res_mod = -1.;
+        bool done = false;
+        Partition partition(graph);
+        // res_mod = MoveNodesFast(&new_partition);
+        double new_mod = ::MoveNodesFast(&partition);
+        // Partition ref_partition = refinePartition(&partition);
+        // Graph new_g = ref_partition.AggregatePartition();
+
+        Partition ref_part = ::refinePartition(&partition);
+        Graph new_g = ref_part.AggregatePartition();
+        vector<int> newN2c = ::maintain_partition(&partition, &ref_part);
+        int i = 0;
+        do
+        {
+            done = new_mod - res_mod < 0.000001 ? true : false;
+            res_mod = new_mod;
+            // if (!done) 
+            // {
+            Partition new_partition(&new_g, newN2c);
+            // assert(bug == 0);
+            new_mod = ::MoveNodesFast(&new_partition);
+            // ref_partition = refinePartition(&new_partition);
+            ref_part = ::refinePartition(&partition);
+            new_g = ref_part.AggregatePartition();
+            newN2c = ::maintain_partition(&partition, &ref_part);
+
+            // Нужно обновить partition
+        } while (!done);
+        return res_mod;
+    }
 }

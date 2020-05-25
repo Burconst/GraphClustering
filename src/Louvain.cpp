@@ -9,9 +9,6 @@
 #include "include/GraphClustering.h"
 #include "include/Output.h"
 
-
-namespace GraphClustering 
-{
     using namespace std;
 
     vector<int> mixNodeOrder(Partition* partition);
@@ -20,36 +17,20 @@ namespace GraphClustering
     bool findImprovement(Partition* partition, vector<int> order);
     pair<int, int> findBestNeighCommFor(int node, Partition* partition);
 
-    double GetLouvainPartitionOf(Partition* partition, double precision)
-    {
-        double mod = partition->Modularity();
-        double new_mod = MoveNodes(partition);
-        Graph new_g = partition->AggregatePartition();
-        while(new_mod-mod>precision)
-        {
-            mod=new_mod;            
-            Partition new_partition(&new_g);
-            new_mod = MoveNodes(&new_partition);
-            new_g = new_partition.AggregatePartition();
-        }
-        return new_mod;
-        // Нужно как-то вывести
-    }
-
-    vector<int> mixNodeOrder(Partition* partition)
+   vector<int> mixNodeOrder(Partition* partition)
     {
         vector<int> randomOrder(partition->GetSize());
         for (int i=0 ; i<partition->GetSize() ; i++)
         {
             randomOrder[i]=i;
         }
-        for (int i=0 ; i<partition->GetSize()-1 ; i++)
-        {
-            int rand_pos = rand()%(partition->GetSize()-i)+i;
-            int tmp = randomOrder[i];
-            randomOrder[i] = randomOrder[rand_pos];
-            randomOrder[rand_pos] = tmp;
-        }
+        // for (int i=0 ; i<partition->GetSize()-1 ; i++)
+        // {
+        //     int rand_pos = rand()%(partition->GetSize()-i)+i;
+        //     int tmp = randomOrder[i];
+        //     randomOrder[i] = randomOrder[rand_pos];
+        //     randomOrder[rand_pos] = tmp;
+        // }
         return randomOrder;
     }
 
@@ -60,14 +41,14 @@ namespace GraphClustering
         double new_mod = partition->Modularity();
         double cur_mod = new_mod;
 
-        vector<int> random_order = mixNodeOrder(partition);
+        vector<int> random_order = ::mixNodeOrder(partition);
         do
         {
             cur_mod = new_mod;
             nb_pass_done++;
-            wasImprovement = findImprovement(partition, random_order);
+            wasImprovement = ::findImprovement(partition, random_order);
             new_mod = partition->Modularity();
-        } while (wasImprovement);
+        } while (wasImprovement && (new_mod - cur_mod) > 0.000001);
         
         return new_mod;
     }
@@ -78,17 +59,14 @@ namespace GraphClustering
 
         for(auto node_tmp = nodes.begin(); node_tmp!=nodes.end(); ++node_tmp) 
         {
-            int node = nodes[*node_tmp];
+            int node = *node_tmp;
             int node_comm = partition->GetCommunityNumber(node);
 
-            partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
-
-            pair<int, int> newCommunity = findBestNeighCommFor(node, partition);
-
-            partition->Insert(node, newCommunity.first, newCommunity.second);
-                
+            pair<int, int> newCommunity = ::findBestNeighCommFor(node, partition);
             if (newCommunity.first!=node_comm)
             {
+                partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
+                partition->Insert(node, newCommunity.first, newCommunity.second);
                 wasImprovement = true;
             }
         }
@@ -114,6 +92,28 @@ namespace GraphClustering
         }
 
         return res;
+    }
+
+namespace GraphClustering 
+{
+
+    double GetLouvainPartitionOf(Graph* graph)
+    {
+        Partition partition(graph);
+        double mod = partition.Modularity();
+        double new_mod = ::MoveNodes(&partition);      
+        int i = 0;
+        Graph new_g = partition.AggregatePartition();  
+        while(new_mod-mod> 0.000001)
+        {
+            Partition new_partition(&new_g);
+            mod=new_mod;  
+            new_mod = ::MoveNodes(&new_partition);
+            new_g = new_partition.AggregatePartition();
+        }
+        return new_mod;
+        // // Нужно как-то вывести
+
     }
 
 }

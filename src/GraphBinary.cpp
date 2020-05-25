@@ -27,7 +27,7 @@ Graph::Graph(std::string filename, int type)
     nbLinks=degrees[NodesCount-1]/2;
     links = (int *)malloc((long)nbLinks*8);
     finput.read((char *)links, (long)nbLinks*8);  
-
+    
     // IF WEIGHTED : read weights: 4 bytes for each link (each link is counted twice)
     if (type==WEIGHTED) 
     {

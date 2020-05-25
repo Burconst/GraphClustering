@@ -5,7 +5,7 @@
 using namespace std;
 
 Partition::Partition(Graph* g)
-  : g(g)
+    : g(g)
 {
     size = g->GetNodesCount();
 
@@ -20,6 +20,22 @@ Partition::Partition(Graph* g)
         tot[i] = g->WeightedDegree(i);
     }
 }
+Partition::Partition (Graph* g, std::vector<int> node2comm)
+    : g(g)
+{
+    size = g->GetNodesCount();
+
+    n2c = node2comm;
+    in.resize(size);
+    tot.resize(size);
+
+    for (int i=0 ; i<size ; i++)
+    {
+        in[i]  = g->GetCountSelfloopsOf(i);
+        tot[i] = g->WeightedDegree(i);
+    }
+}
+
 
 Partition::Partition(const Partition &partition)
 {
@@ -93,9 +109,17 @@ map<int,int> Partition::neighComm(int node)
 Graph Partition::AggregatePartition()
 {
     vector<int> renumber(size, -1);
+    // for (int i = 0; i < n2c.size(); i++) 
+    // {
+    //     cout << n2c[i] << " " << endl;
+    // }
     for (int node=0 ; node<size ; node++)
-    {
-        renumber[n2c[node]]++;
+    {        
+        // assert(n2c[node]>=0 && n2c[node]<size);
+        if (n2c[node] != -1) 
+        {
+            renumber[n2c[node]]++;
+        }
     }
 
     int final=0;
@@ -105,12 +129,17 @@ Graph Partition::AggregatePartition()
         {
         renumber[i]=final++;
         }
-    }
-
-    vector<vector<int> > comm_nodes(final);
-    for (int node=0 ; node<size ; node++)
+    } 
+    vector<vector<int>> comm_nodes(final);
+    for (int node=0 ; node<final ; node++)
     {
-        comm_nodes[renumber[n2c[node]]].push_back(node);
+
+        if (n2c[node] != -1) 
+        {
+            assert(renumber[n2c[node]] >= 0 && renumber[n2c[node]]<size);
+            comm_nodes[renumber[n2c[node]]].push_back(node);
+        }
+
     }
 
     return MakeGraph(comm_nodes,renumber);
@@ -242,10 +271,4 @@ vector<int> Partition::GetNodesInCommunity(int comm_num, vector<int> subset)
         }
     }
     return nodes;
-}
-
-
-Partition::~Partition()
-{
-    g = NULL;
 }

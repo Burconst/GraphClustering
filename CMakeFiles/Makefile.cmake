@@ -15,6 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "test/CMakeLists.txt"
   "test/Graph/CMakeLists.txt"
   "test/GraphClustering/Leiden/CMakeLists.txt"
+  "test/GraphClustering/Louvain/CMakeLists.txt"
   "test/Partition/CMakeLists.txt"
   "/usr/local/share/cmake-3.12/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.12/Modules/CMakeCXXInformation.cmake"
@@ -49,6 +50,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/Graph/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/Partition/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/GraphClustering/Leiden/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/GraphClustering/Louvain/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -67,12 +69,14 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/Partition/CMakeFiles/PartitionTest6.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest2.dir/DependInfo.cmake"
   "test/Partition/CMakeFiles/PartitionTest3.dir/DependInfo.cmake"
-  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/DependInfo.cmake"
-  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/DependInfo.cmake"
-  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/DependInfo.cmake"
-  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/DependInfo.cmake"
-  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/DependInfo.cmake"
-  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/DependInfo.cmake"
   "test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/DependInfo.cmake"
+  "test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/DependInfo.cmake"
   "test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/DependInfo.cmake"
+  "test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/DependInfo.cmake"
   )

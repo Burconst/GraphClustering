@@ -122,3 +122,7 @@ target_link_libraries(LeidenTest7 GraphClustering)
 add_executable(LeidenTest8 LeidenTest8.cpp)
 target_link_libraries(LeidenTest8 GraphClustering)
 
+# LeidenTest8 maintain partition
+
+add_executable(LeidenTest9 LeidenTest9.cpp)
+target_link_libraries(LeidenTest9 GraphClustering)

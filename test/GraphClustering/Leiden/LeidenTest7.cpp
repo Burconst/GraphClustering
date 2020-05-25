@@ -7,7 +7,7 @@
 
 #include "../../../src/include/GraphBinary.h"
 #include "../../../src/include/Partition.h"
-#include "Leiden.h"
+#include "../../../src/Leiden.cpp"
 
 using namespace std;
 
@@ -57,7 +57,7 @@ int main(const int argc, const char *argv[])
     // {
     //     subset.push_back(i);
     // }
-    Partition refpart = GraphClustering::refinePartition(&partition);//,&refpart);
+    Partition refpart = ::refinePartition(&partition);//,&refpart);
         //     cout << "sadasd";
         vector<int> comms =  refpart.GetCommunities();
         for (int j = 0; j < comms.size(); j++) 

@@ -7,8 +7,8 @@ struct Node
         int _norm;
         int _number;
     public:
-        Node() noexcept;
-        Node(int number, int norm) noexcept;
+        Node();
+        Node(int number, int norm);
         inline int GetNumber();
         inline int GetNorm();
 };

@@ -9,7 +9,7 @@
 
 #include "../../../src/include/GraphBinary.h"
 #include "../../../src/include/Partition.h"
-#include "Leiden.h"
+#include "../../../src/Leiden.cpp"
 
 using namespace std;
 
@@ -55,7 +55,7 @@ int main(const int argc, const char *argv[])
     }
     for (int i = 0; i < nodes.size(); i++) 
     {
-        cout << " " << GraphClustering::isInSingletonCommunity(&partition, nodes[i], allnodes) << " ";
+        cout << " " << ::isInSingletonCommunity(&partition, nodes[i], allnodes) << " ";
     }
     return 0;
 }

@@ -7,7 +7,7 @@
 
 #include "../../../src/include/GraphBinary.h"
 #include "../../../src/include/Partition.h"
-#include "Leiden.h"
+#include "../../../src/Leiden.cpp"
 
 using namespace std;
 
@@ -48,7 +48,7 @@ int main(const int argc, const char *argv[])
         cout << subset[i-3] << " ";
     }
     cout << "{";
-    vector<int> markedNodes = GraphClustering::getWellConnectedNodes(&partition, subset);
+    vector<int> markedNodes = ::getWellConnectedNodes(&partition, subset);
     int size =  markedNodes.size();
     for (int j = 0; j < size; j++) 
     {

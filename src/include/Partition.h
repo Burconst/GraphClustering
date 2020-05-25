@@ -13,7 +13,7 @@
 
 struct Partition
 {   
-    private: 
+    // private: 
         int size;               // number of nodes in the network and size of all vectors
         std::vector<int> n2c;   // community to which each node belongs
         std::vector<int> in,tot;// used to compute the modularity participation of each community
@@ -22,8 +22,8 @@ struct Partition
     public:
         Graph* g;
         Partition (Graph* g);
+        Partition (Graph* g, std::vector<int> n2c);
         Partition(const Partition &partition);
-        ~Partition();
         bool operator==(Partition partition);
         // remove the node from its current community with which it has dnodecomm links
         inline void Remove(int node, int comm, int dnodecomm);
@@ -73,7 +73,7 @@ inline void Partition::Remove(int node, int comm, int dnodecomm)
 
 inline void Partition::Insert(int node, int comm, int dnodecomm)
 {
-     isValidNode(node);
+    isValidNode(node);
 
     tot[comm] += g->WeightedDegree(node);
     in[comm] += 2*dnodecomm + g->GetCountSelfloopsOf(node);

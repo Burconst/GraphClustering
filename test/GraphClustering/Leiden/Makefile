@@ -111,79 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
 
 # Convenience name for target.
-LeidenTest6: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
+LeidenTest8: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
 
-.PHONY : LeidenTest6
+.PHONY : LeidenTest8
 
 # fast build rule for target.
-LeidenTest6/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build
-.PHONY : LeidenTest6/fast
-
-# Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
-
-# Convenience name for target.
-LeidenTest5: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
-
-.PHONY : LeidenTest5
-
-# fast build rule for target.
-LeidenTest5/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build
-.PHONY : LeidenTest5/fast
-
-# Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
-
-# Convenience name for target.
-LeidenTest1: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
-
-.PHONY : LeidenTest1
-
-# fast build rule for target.
-LeidenTest1/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build
-.PHONY : LeidenTest1/fast
-
-# Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
-
-# Convenience name for target.
-LeidenTest3: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
-
-.PHONY : LeidenTest3
-
-# fast build rule for target.
-LeidenTest3/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build
-.PHONY : LeidenTest3/fast
-
-# Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
-
-# Convenience name for target.
-LeidenTest7: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
-
-.PHONY : LeidenTest7
-
-# fast build rule for target.
-LeidenTest7/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build
-.PHONY : LeidenTest7/fast
+LeidenTest8/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build
+.PHONY : LeidenTest8/fast
 
 # Convenience name for target.
 test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule:
@@ -201,19 +141,94 @@ LeidenTest2/fast:
 .PHONY : LeidenTest2/fast
 
 # Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
 
 # Convenience name for target.
-LeidenTest8: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
+LeidenTest7: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
 
-.PHONY : LeidenTest8
+.PHONY : LeidenTest7
 
 # fast build rule for target.
-LeidenTest8/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build
-.PHONY : LeidenTest8/fast
+LeidenTest7/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build
+.PHONY : LeidenTest7/fast
+
+# Convenience name for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
+
+# Convenience name for target.
+LeidenTest3: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
+
+.PHONY : LeidenTest3
+
+# fast build rule for target.
+LeidenTest3/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build
+.PHONY : LeidenTest3/fast
+
+# Convenience name for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule
+
+# Convenience name for target.
+LeidenTest9: test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule
+
+.PHONY : LeidenTest9
+
+# fast build rule for target.
+LeidenTest9/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build
+.PHONY : LeidenTest9/fast
+
+# Convenience name for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
+
+# Convenience name for target.
+LeidenTest1: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
+
+.PHONY : LeidenTest1
+
+# fast build rule for target.
+LeidenTest1/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build
+.PHONY : LeidenTest1/fast
+
+# Convenience name for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
+
+# Convenience name for target.
+LeidenTest5: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
+
+.PHONY : LeidenTest5
+
+# fast build rule for target.
+LeidenTest5/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build
+.PHONY : LeidenTest5/fast
+
+# Convenience name for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
+
+# Convenience name for target.
+LeidenTest6: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
+
+.PHONY : LeidenTest6
+
+# fast build rule for target.
+LeidenTest6/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build
+.PHONY : LeidenTest6/fast
 
 # Convenience name for target.
 test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule:
@@ -446,6 +461,33 @@ LeidenTest8.cpp.s:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/LeidenTest8.cpp.s
 .PHONY : LeidenTest8.cpp.s
 
+LeidenTest9.o: LeidenTest9.cpp.o
+
+.PHONY : LeidenTest9.o
+
+# target to build an object file
+LeidenTest9.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/LeidenTest9.cpp.o
+.PHONY : LeidenTest9.cpp.o
+
+LeidenTest9.i: LeidenTest9.cpp.i
+
+.PHONY : LeidenTest9.i
+
+# target to preprocess a source file
+LeidenTest9.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/LeidenTest9.cpp.i
+.PHONY : LeidenTest9.cpp.i
+
+LeidenTest9.s: LeidenTest9.cpp.s
+
+.PHONY : LeidenTest9.s
+
+# target to generate assembly for a file
+LeidenTest9.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/LeidenTest9.cpp.s
+.PHONY : LeidenTest9.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -453,15 +495,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... LeidenTest6"
-	@echo "... LeidenTest5"
-	@echo "... LeidenTest1"
-	@echo "... LeidenTest3"
-	@echo "... LeidenTest7"
-	@echo "... LeidenTest2"
 	@echo "... LeidenTest8"
+	@echo "... LeidenTest2"
+	@echo "... LeidenTest7"
+	@echo "... LeidenTest3"
+	@echo "... LeidenTest9"
+	@echo "... LeidenTest1"
+	@echo "... LeidenTest5"
+	@echo "... LeidenTest6"
 	@echo "... LeidenTest4"
+	@echo "... edit_cache"
 	@echo "... LeidenTest1.o"
 	@echo "... LeidenTest1.i"
 	@echo "... LeidenTest1.s"
@@ -486,6 +529,9 @@ help:
 	@echo "... LeidenTest8.o"
 	@echo "... LeidenTest8.i"
 	@echo "... LeidenTest8.s"
+	@echo "... LeidenTest9.o"
+	@echo "... LeidenTest9.i"
+	@echo "... LeidenTest9.s"
 .PHONY : help
 
 

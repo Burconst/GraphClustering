@@ -6,8 +6,8 @@
 
 namespace GraphClustering
 {
-    double GetLouvainPartitionOf(Partition* partition, double precision);
-    double GetLeidenPartitionOf(Partition* partition, double precision);
+    double GetLouvainPartitionOf(Graph* graph);
+    double GetLeidenPartitionOf(Graph* graph);
 }
 
 #endif // GRAPHCLUSTERING_H

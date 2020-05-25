@@ -7,7 +7,7 @@
 
 #include "../../../src/include/GraphBinary.h"
 #include "../../../src/include/Partition.h"
-#include "Leiden.h"
+#include "../../../src/Leiden.cpp"
 
 using namespace std;
 
@@ -42,7 +42,7 @@ int main(const int argc, const char *argv[])
     }
     // Testing 
     cout << "{";
-    vector<int> markedNodes = GraphClustering::getMarkedNodes(&partition);
+    vector<int> markedNodes = ::getMarkedNodes(&partition);
     int size =  markedNodes.size();
     for (int j = 0; j < size; j++) 
     {

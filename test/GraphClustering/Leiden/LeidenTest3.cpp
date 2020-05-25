@@ -9,7 +9,7 @@
 
 #include "../../../src/include/GraphBinary.h"
 #include "../../../src/include/Partition.h"
-#include "Leiden.h"
+#include "../../../src/Leiden.cpp"
 
 using namespace std;
 
@@ -49,6 +49,6 @@ int main(const int argc, const char *argv[])
     {
         commNums.push_back(atoi(argv[i]));
     }
-    auto comm = GraphClustering::ChooseRandomComm(&partition,commNums,atoi(argv[argc-1]));
+    auto comm = ::ChooseRandomComm(&partition,commNums,atoi(argv[argc-1]));
     return 0;
 }

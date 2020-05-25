@@ -293,69 +293,17 @@ PartitionTest3/fast:
 .PHONY : PartitionTest3/fast
 
 #=============================================================================
-# Target rules for targets named LeidenTest6
+# Target rules for targets named LeidenTest8
 
 # Build rule for target.
-LeidenTest6: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest6
-.PHONY : LeidenTest6
+LeidenTest8: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest8
+.PHONY : LeidenTest8
 
 # fast build rule for target.
-LeidenTest6/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build
-.PHONY : LeidenTest6/fast
-
-#=============================================================================
-# Target rules for targets named LeidenTest5
-
-# Build rule for target.
-LeidenTest5: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest5
-.PHONY : LeidenTest5
-
-# fast build rule for target.
-LeidenTest5/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build
-.PHONY : LeidenTest5/fast
-
-#=============================================================================
-# Target rules for targets named LeidenTest1
-
-# Build rule for target.
-LeidenTest1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest1
-.PHONY : LeidenTest1
-
-# fast build rule for target.
-LeidenTest1/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build
-.PHONY : LeidenTest1/fast
-
-#=============================================================================
-# Target rules for targets named LeidenTest3
-
-# Build rule for target.
-LeidenTest3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest3
-.PHONY : LeidenTest3
-
-# fast build rule for target.
-LeidenTest3/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build
-.PHONY : LeidenTest3/fast
-
-#=============================================================================
-# Target rules for targets named LeidenTest7
-
-# Build rule for target.
-LeidenTest7: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest7
-.PHONY : LeidenTest7
-
-# fast build rule for target.
-LeidenTest7/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build
-.PHONY : LeidenTest7/fast
+LeidenTest8/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build
+.PHONY : LeidenTest8/fast
 
 #=============================================================================
 # Target rules for targets named LeidenTest2
@@ -371,17 +319,82 @@ LeidenTest2/fast:
 .PHONY : LeidenTest2/fast
 
 #=============================================================================
-# Target rules for targets named LeidenTest8
+# Target rules for targets named LeidenTest7
 
 # Build rule for target.
-LeidenTest8: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest8
-.PHONY : LeidenTest8
+LeidenTest7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest7
+.PHONY : LeidenTest7
 
 # fast build rule for target.
-LeidenTest8/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build
-.PHONY : LeidenTest8/fast
+LeidenTest7/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build
+.PHONY : LeidenTest7/fast
+
+#=============================================================================
+# Target rules for targets named LeidenTest3
+
+# Build rule for target.
+LeidenTest3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest3
+.PHONY : LeidenTest3
+
+# fast build rule for target.
+LeidenTest3/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build
+.PHONY : LeidenTest3/fast
+
+#=============================================================================
+# Target rules for targets named LeidenTest9
+
+# Build rule for target.
+LeidenTest9: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest9
+.PHONY : LeidenTest9
+
+# fast build rule for target.
+LeidenTest9/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build
+.PHONY : LeidenTest9/fast
+
+#=============================================================================
+# Target rules for targets named LeidenTest1
+
+# Build rule for target.
+LeidenTest1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest1
+.PHONY : LeidenTest1
+
+# fast build rule for target.
+LeidenTest1/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build
+.PHONY : LeidenTest1/fast
+
+#=============================================================================
+# Target rules for targets named LeidenTest5
+
+# Build rule for target.
+LeidenTest5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest5
+.PHONY : LeidenTest5
+
+# fast build rule for target.
+LeidenTest5/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build
+.PHONY : LeidenTest5/fast
+
+#=============================================================================
+# Target rules for targets named LeidenTest6
+
+# Build rule for target.
+LeidenTest6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest6
+.PHONY : LeidenTest6
+
+# fast build rule for target.
+LeidenTest6/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build
+.PHONY : LeidenTest6/fast
 
 #=============================================================================
 # Target rules for targets named LeidenTest4
@@ -395,6 +408,19 @@ LeidenTest4: cmake_check_build_system
 LeidenTest4/fast:
 	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build
 .PHONY : LeidenTest4/fast
+
+#=============================================================================
+# Target rules for targets named LouvainTest1
+
+# Build rule for target.
+LouvainTest1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LouvainTest1
+.PHONY : LouvainTest1
+
+# fast build rule for target.
+LouvainTest1/fast:
+	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build
+.PHONY : LouvainTest1/fast
 
 # Help Target
 help:
@@ -418,14 +444,16 @@ help:
 	@echo "... PartitionTest6"
 	@echo "... PartitionTest2"
 	@echo "... PartitionTest3"
-	@echo "... LeidenTest6"
-	@echo "... LeidenTest5"
-	@echo "... LeidenTest1"
-	@echo "... LeidenTest3"
-	@echo "... LeidenTest7"
-	@echo "... LeidenTest2"
 	@echo "... LeidenTest8"
+	@echo "... LeidenTest2"
+	@echo "... LeidenTest7"
+	@echo "... LeidenTest3"
+	@echo "... LeidenTest9"
+	@echo "... LeidenTest1"
+	@echo "... LeidenTest5"
+	@echo "... LeidenTest6"
 	@echo "... LeidenTest4"
+	@echo "... LouvainTest1"
 .PHONY : help
 
 

@@ -4,13 +4,15 @@
 #include <string>
 #include <assert.h>
 #include <vector>
+#include <map>
+
+#include "Node.h"
 
 #define WEIGHTED   0
 #define UNWEIGHTED 1
 
 struct Graph 
 {
-    // private:
         int NodesCount;
         int nbLinks;
         int totalWeight;
@@ -19,8 +21,7 @@ struct Graph
         int *links;
         int *weights;
 
-    public:
-        Graph(); //noexcept;
+         Graph(); //noexcept;
         // binary file format is
         // 4 bytes for the number of nodes in the graph
         // 4*(nb_nodes) bytes for the cumulative degree for each node:
@@ -73,11 +74,11 @@ inline int Graph::GetCountSelfloopsOf(int node)
     std::pair<int *,int *> p = Neighbors(node);
     for (int i=0 ; i<GetDergeeOf(node) ; i++)
     {
-        if (*(p.first+i)==node)
+        if (p.first[i]==node)
         {
             if (weights!=NULL)
             {
-                return *(p.second+i);
+                return p.second[i];
             }
             else
             {

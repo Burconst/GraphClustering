@@ -7,3 +7,4 @@
 subdirs("Graph")
 subdirs("Partition")
 subdirs("GraphClustering/Leiden")
+subdirs("GraphClustering/Louvain")
