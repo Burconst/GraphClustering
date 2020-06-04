@@ -1,28 +1,28 @@
-Start testing: May 25 17:38 MSK
+Start testing: Jun 01 19:12 MSK
 ----------------------------------------------------------
-1/86 Testing: G1Test1
-1/86 Test: G1Test1
+1/96 Testing: G1Test1
+1/96 Test: G1Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest1" "./TestData/test1.bin" "2" "0" "9"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G1Test1" start time: May 25 17:38 MSK
+"G1Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 3 4 1
 <end of output>
-Test time =   0.08 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[3 4 1
 ]
-"G1Test1" end time: May 25 17:38 MSK
+"G1Test1" end time: Jun 01 19:12 MSK
 "G1Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/86 Testing: G1Test2
-2/86 Test: G1Test2
+2/96 Testing: G1Test2
+2/96 Test: G1Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest1" "./TestData/test2.bin" "8" "1" "0"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G1Test2" start time: May 25 17:38 MSK
+"G1Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 3 2 3
@@ -32,15 +32,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[3 2 3
 ]
-"G1Test2" end time: May 25 17:38 MSK
+"G1Test2" end time: Jun 01 19:12 MSK
 "G1Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/86 Testing: G1Test3
-3/86 Test: G1Test3
+3/96 Testing: G1Test3
+3/96 Test: G1Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest1" "./TestData/test3.bin" "17" "0" "24"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G1Test3" start time: May 25 17:38 MSK
+"G1Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 2 14 1
@@ -50,15 +50,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[2 14 1
 ]
-"G1Test3" end time: May 25 17:38 MSK
+"G1Test3" end time: Jun 01 19:12 MSK
 "G1Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/86 Testing: G1Test4
-4/86 Test: G1Test4
+4/96 Testing: G1Test4
+4/96 Test: G1Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest1" "./TestData/test4.bin" "16" "0" "20"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G1Test4" start time: May 25 17:38 MSK
+"G1Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 2 4 1
@@ -68,15 +68,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[2 4 1
 ]
-"G1Test4" end time: May 25 17:38 MSK
+"G1Test4" end time: Jun 01 19:12 MSK
 "G1Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/86 Testing: G1Test5
-5/86 Test: G1Test5
+5/96 Testing: G1Test5
+5/96 Test: G1Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest1" "./TestData/test5.bin" "10" "4" "6"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G1Test5" start time: May 25 17:38 MSK
+"G1Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 2 6 4
@@ -86,33 +86,33 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[2 6 4
 ]
-"G1Test5" end time: May 25 17:38 MSK
+"G1Test5" end time: Jun 01 19:12 MSK
 "G1Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/86 Testing: G2Test1
-6/86 Test: G2Test1
+6/96 Testing: G2Test1
+6/96 Test: G2Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest2" "./TestData/test1.bin" "8" "3" "2"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G2Test1" start time: May 25 17:38 MSK
+"G2Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 1 0
 <end of output>
-Test time =   0.02 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[0 1 0
 ]
-"G2Test1" end time: May 25 17:38 MSK
+"G2Test1" end time: Jun 01 19:12 MSK
 "G2Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/86 Testing: G2Test2
-7/86 Test: G2Test2
+7/96 Testing: G2Test2
+7/96 Test: G2Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest2" "./TestData/test2.bin" "8" "6" "7"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G2Test2" start time: May 25 17:38 MSK
+"G2Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 0 1
@@ -122,15 +122,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[1 0 1
 ]
-"G2Test2" end time: May 25 17:38 MSK
+"G2Test2" end time: Jun 01 19:12 MSK
 "G2Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/86 Testing: G2Test3
-8/86 Test: G2Test3
+8/96 Testing: G2Test3
+8/96 Test: G2Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest2" "./TestData/test3.bin" "0" "16" "29"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G2Test3" start time: May 25 17:38 MSK
+"G2Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 0 0
@@ -140,15 +140,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[1 0 0
 ]
-"G2Test3" end time: May 25 17:38 MSK
+"G2Test3" end time: Jun 01 19:12 MSK
 "G2Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/86 Testing: G2Test4
-9/86 Test: G2Test4
+9/96 Testing: G2Test4
+9/96 Test: G2Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest2" "./TestData/test4.bin" "5" "18" "7"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G2Test4" start time: May 25 17:38 MSK
+"G2Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 0 0
@@ -158,15 +158,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[0 0 0
 ]
-"G2Test4" end time: May 25 17:38 MSK
+"G2Test4" end time: Jun 01 19:12 MSK
 "G2Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-10/86 Testing: G2Test5
-10/86 Test: G2Test5
+10/96 Testing: G2Test5
+10/96 Test: G2Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest2" "./TestData/test5.bin" "4" "5" "0"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G2Test5" start time: May 25 17:38 MSK
+"G2Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 1 0
@@ -176,15 +176,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[1 1 0
 ]
-"G2Test5" end time: May 25 17:38 MSK
+"G2Test5" end time: Jun 01 19:12 MSK
 "G2Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-11/86 Testing: G3Test1
-11/86 Test: G3Test1
+11/96 Testing: G3Test1
+11/96 Test: G3Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest3" "./TestData/test1.bin" "0" "1" "9"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G3Test1" start time: May 25 17:38 MSK
+"G3Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 1 4 8 ;0 2 3 5 ;5 ;
@@ -196,35 +196,35 @@ Required regular expression found.Regex=[1 4 8
 0 2 3 5 
 5 
 ]
-"G3Test1" end time: May 25 17:38 MSK
+"G3Test1" end time: Jun 01 19:12 MSK
 "G3Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-12/86 Testing: G3Test2
-12/86 Test: G3Test2
+12/96 Testing: G3Test2
+12/96 Test: G3Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest3" "./TestData/test2.bin" "5" "7" "3"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G3Test2" start time: May 25 17:38 MSK
+"G3Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 2 ;0 6 7 ;1 2 8 9 ;
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[1 2 
 0 6 
 8 2 1 9 
 ]
-"G3Test2" end time: May 25 17:38 MSK
+"G3Test2" end time: Jun 01 19:12 MSK
 "G3Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-13/86 Testing: G3Test3
-13/86 Test: G3Test3
+13/96 Testing: G3Test3
+13/96 Test: G3Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest3" "./TestData/test3.bin" "27" "10" "0"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G3Test3" start time: May 25 17:38 MSK
+"G3Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 28 ;9 12 ;0 2 3 6 11 12 13 18 19 24 26 27 29 30 ;
@@ -236,15 +236,15 @@ Required regular expression found.Regex=[0 28
 9 12 
 0 2 3 6 11 12 13 18 19 24 26 27 29 30 
 ]
-"G3Test3" end time: May 25 17:38 MSK
+"G3Test3" end time: Jun 01 19:12 MSK
 "G3Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-14/86 Testing: G3Test4
-14/86 Test: G3Test4
+14/96 Testing: G3Test4
+14/96 Test: G3Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest3" "./TestData/test4.bin" "21" "9" "14"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G3Test4" start time: May 25 17:38 MSK
+"G3Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 15 22 23 ;6 ;10 19 20 ;
@@ -256,15 +256,15 @@ Required regular expression found.Regex=[0 15 22 23
 6 
 10 19 20 
 ]
-"G3Test4" end time: May 25 17:38 MSK
+"G3Test4" end time: Jun 01 19:12 MSK
 "G3Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-15/86 Testing: G3Test5
-15/86 Test: G3Test5
+15/96 Testing: G3Test5
+15/96 Test: G3Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest3" "./TestData/test5.bin" "8" "7" "11"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G3Test5" start time: May 25 17:38 MSK
+"G3Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 4 5 9 ;3 6 ;5 6 13 ;
@@ -276,15 +276,15 @@ Required regular expression found.Regex=[1 4 5 9
 3 6 
 5 6 13 
 ]
-"G3Test5" end time: May 25 17:38 MSK
+"G3Test5" end time: Jun 01 19:12 MSK
 "G3Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-16/86 Testing: G4Test1
-16/86 Test: G4Test1
+16/96 Testing: G4Test1
+16/96 Test: G4Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest4" "./TestData/test1.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G4Test1" start time: May 25 17:38 MSK
+"G4Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Success
@@ -294,15 +294,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Success
 ]
-"G4Test1" end time: May 25 17:38 MSK
+"G4Test1" end time: Jun 01 19:12 MSK
 "G4Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-17/86 Testing: G4Test2
-17/86 Test: G4Test2
+17/96 Testing: G4Test2
+17/96 Test: G4Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest4" "./TestData/test2.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G4Test2" start time: May 25 17:38 MSK
+"G4Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Success
@@ -312,15 +312,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Success
 ]
-"G4Test2" end time: May 25 17:38 MSK
+"G4Test2" end time: Jun 01 19:12 MSK
 "G4Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-18/86 Testing: G4Test3
-18/86 Test: G4Test3
+18/96 Testing: G4Test3
+18/96 Test: G4Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest4" "./TestData/test3.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G4Test3" start time: May 25 17:38 MSK
+"G4Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Success
@@ -330,15 +330,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Success
 ]
-"G4Test3" end time: May 25 17:38 MSK
+"G4Test3" end time: Jun 01 19:12 MSK
 "G4Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-19/86 Testing: G4Test4
-19/86 Test: G4Test4
+19/96 Testing: G4Test4
+19/96 Test: G4Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest4" "./TestData/test4.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G4Test4" start time: May 25 17:38 MSK
+"G4Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Success
@@ -348,15 +348,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Success
 ]
-"G4Test4" end time: May 25 17:38 MSK
+"G4Test4" end time: Jun 01 19:12 MSK
 "G4Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-20/86 Testing: G4Test5
-20/86 Test: G4Test5
+20/96 Testing: G4Test5
+20/96 Test: G4Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest4" "./TestData/test5.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G4Test5" start time: May 25 17:38 MSK
+"G4Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Success
@@ -366,15 +366,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Success
 ]
-"G4Test5" end time: May 25 17:38 MSK
+"G4Test5" end time: Jun 01 19:12 MSK
 "G4Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-21/86 Testing: G5Test1
-21/86 Test: G5Test1
+21/96 Testing: G5Test1
+21/96 Test: G5Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest5" "./TestData/test1.bin" "./TestData/test1.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G5Test1" start time: May 25 17:38 MSK
+"G5Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Equal
@@ -384,15 +384,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Equal
 ]
-"G5Test1" end time: May 25 17:38 MSK
+"G5Test1" end time: Jun 01 19:12 MSK
 "G5Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-22/86 Testing: G5Test2
-22/86 Test: G5Test2
+22/96 Testing: G5Test2
+22/96 Test: G5Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest5" "./TestData/test1.bin" "./TestData/test2.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G5Test2" start time: May 25 17:38 MSK
+"G5Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Not Equal
@@ -402,51 +402,51 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Not Equal
 ]
-"G5Test2" end time: May 25 17:38 MSK
+"G5Test2" end time: Jun 01 19:12 MSK
 "G5Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-23/86 Testing: G5Test3
-23/86 Test: G5Test3
+23/96 Testing: G5Test3
+23/96 Test: G5Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest5" "./TestData/test1.bin" "./TestData/nottest1.bin"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G5Test3" start time: May 25 17:38 MSK
+"G5Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 Not Equal
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[Not Equal
 ]
-"G5Test3" end time: May 25 17:38 MSK
+"G5Test3" end time: Jun 01 19:12 MSK
 "G5Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-24/86 Testing: G6Test1
-24/86 Test: G6Test1
+24/96 Testing: G6Test1
+24/96 Test: G6Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest6" "./TestData/test1.bin" "2" "0" "9"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G6Test1" start time: May 25 17:38 MSK
+"G6Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 1 1
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[1 1 1
 ]
-"G6Test1" end time: May 25 17:38 MSK
+"G6Test1" end time: Jun 01 19:12 MSK
 "G6Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-25/86 Testing: G6Test2
-25/86 Test: G6Test2
+25/96 Testing: G6Test2
+25/96 Test: G6Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest6" "./TestData/test2.bin" "8" "1" "0"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G6Test2" start time: May 25 17:38 MSK
+"G6Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 1 1
@@ -456,33 +456,33 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[1 1 1
 ]
-"G6Test2" end time: May 25 17:38 MSK
+"G6Test2" end time: Jun 01 19:12 MSK
 "G6Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-26/86 Testing: G6Test3
-26/86 Test: G6Test3
+26/96 Testing: G6Test3
+26/96 Test: G6Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest6" "./TestData/test3.bin" "17" "0" "24"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G6Test3" start time: May 25 17:38 MSK
+"G6Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 1 1
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[1 1 1
 ]
-"G6Test3" end time: May 25 17:38 MSK
+"G6Test3" end time: Jun 01 19:12 MSK
 "G6Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-27/86 Testing: G6Test4
-27/86 Test: G6Test4
+27/96 Testing: G6Test4
+27/96 Test: G6Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest6" "./TestData/test4.bin" "16" "0" "20"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G6Test4" start time: May 25 17:38 MSK
+"G6Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 1 1
@@ -492,15 +492,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[1 1 1
 ]
-"G6Test4" end time: May 25 17:38 MSK
+"G6Test4" end time: Jun 01 19:12 MSK
 "G6Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-28/86 Testing: G6Test5
-28/86 Test: G6Test5
+28/96 Testing: G6Test5
+28/96 Test: G6Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest6" "./TestData/test5.bin" "10" "4" "6"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G6Test5" start time: May 25 17:38 MSK
+"G6Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 1 1 1
@@ -510,537 +510,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[1 1 1
 ]
-"G6Test5" end time: May 25 17:38 MSK
+"G6Test5" end time: Jun 01 19:12 MSK
 "G6Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-29/86 Testing: G7Test1
-29/86 Test: G7Test1
+29/96 Testing: G7Test1
+29/96 Test: G7Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test1.bin" "./TestData/comm1.txt" "1" "0" "2"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G7Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-3 0 0
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Fail Reason:
-Required regular expression not found.Regex=[5 2 3
-]
-"G7Test1" end time: May 25 17:38 MSK
-"G7Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-30/86 Testing: G7Test2
-30/86 Test: G7Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test2.bin" "./TestData/comm2.txt" "0" "1" "2"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G7Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-0 1 2
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Fail Reason:
-Required regular expression not found.Regex=[3 4 3
-]
-"G7Test2" end time: May 25 17:38 MSK
-"G7Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-31/86 Testing: G7Test3
-31/86 Test: G7Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test3.bin" "./TestData/comm3.txt" "4" "3" "0"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G7Test3" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-3 1 0
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Fail Reason:
-Required regular expression not found.Regex=[4 7 8
-]
-"G7Test3" end time: May 25 17:38 MSK
-"G7Test3" time elapsed: 00:00:00
-----------------------------------------------------------
-
-32/86 Testing: G7Test4
-32/86 Test: G7Test4
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test4.bin" "./TestData/comm4.txt" "0" "3" "1"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G7Test4" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-2 2 0
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Fail Reason:
-Required regular expression not found.Regex=[9 6 5
-]
-"G7Test4" end time: May 25 17:38 MSK
-"G7Test4" time elapsed: 00:00:00
-----------------------------------------------------------
-
-33/86 Testing: G7Test5
-33/86 Test: G7Test5
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test5.bin" "./TestData/comm5.txt" "0" "2" "3"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
-"G7Test5" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-0 2 0
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Fail Reason:
-Required regular expression not found.Regex=[5 5 2
-]
-"G7Test5" end time: May 25 17:38 MSK
-"G7Test5" time elapsed: 00:00:00
-----------------------------------------------------------
-
-34/86 Testing: P1Test1
-34/86 Test: P1Test1
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test1.bin" "./TestData/comm1.txt" "6" "3" "9"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P1Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 1  2 }{ 0  1  2 }{ 0 }
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 1  2 }{ 0  1  2 }{ 0 }
-]
-"P1Test1" end time: May 25 17:38 MSK
-"P1Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-35/86 Testing: P1Test2
-35/86 Test: P1Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test2.bin" "./TestData/comm2.txt" "7" "5" "3"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P1Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1 }{ 2 }{ 1  2 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1 }{ 2 }{ 1  2 }
-]
-"P1Test2" end time: May 25 17:38 MSK
-"P1Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-36/86 Testing: P1Test3
-36/86 Test: P1Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test3.bin" "./TestData/comm3.txt" "0" "29" "15"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P1Test3" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1  2  3  4 }{ 0  4 }{ 3 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1  2  3  4 }{ 0  4 }{ 3 }
-]
-"P1Test3" end time: May 25 17:38 MSK
-"P1Test3" time elapsed: 00:00:00
-----------------------------------------------------------
-
-37/86 Testing: P1Test4
-37/86 Test: P1Test4
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test4.bin" "./TestData/comm4.txt" "0" "8" "10"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P1Test4" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  2  3 }{ 0  1 }{ 1  2  3 }
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  2  3 }{ 0  1 }{ 1  2  3 }
-]
-"P1Test4" end time: May 25 17:38 MSK
-"P1Test4" time elapsed: 00:00:00
-----------------------------------------------------------
-
-38/86 Testing: P1Test5
-38/86 Test: P1Test5
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test5.bin" "./TestData/comm5.txt" "5" "4" "11"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P1Test5" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  2  3 }{ 0  1  2 }{ 0  2  3 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  2  3 }{ 0  1  2 }{ 0  2  3 }
-]
-"P1Test5" end time: May 25 17:38 MSK
-"P1Test5" time elapsed: 00:00:00
-----------------------------------------------------------
-
-39/86 Testing: P2Test1
-39/86 Test: P2Test1
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test1.bin" "./TestData/comm1.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P2Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1  2 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1  2 }
-]
-"P2Test1" end time: May 25 17:38 MSK
-"P2Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-40/86 Testing: P2Test2
-40/86 Test: P2Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test2.bin" "./TestData/comm2.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P2Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1  2 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1  2 }
-]
-"P2Test2" end time: May 25 17:38 MSK
-"P2Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-41/86 Testing: P2Test3
-41/86 Test: P2Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test3.bin" "./TestData/comm3.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P2Test3" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1  2  3  4 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1  2  3  4 }
-]
-"P2Test3" end time: May 25 17:38 MSK
-"P2Test3" time elapsed: 00:00:00
-----------------------------------------------------------
-
-42/86 Testing: P2Test4
-42/86 Test: P2Test4
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test4.bin" "./TestData/comm4.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P2Test4" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1  2  3 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1  2  3 }
-]
-"P2Test4" end time: May 25 17:38 MSK
-"P2Test4" time elapsed: 00:00:00
-----------------------------------------------------------
-
-43/86 Testing: P2Test5
-43/86 Test: P2Test5
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test5.bin" "./TestData/comm5.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P2Test5" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-{ 0  1  2  3 }
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[{ 0  1  2  3 }
-]
-"P2Test5" end time: May 25 17:38 MSK
-"P2Test5" time elapsed: 00:00:00
-----------------------------------------------------------
-
-44/86 Testing: P3Test1
-44/86 Test: P3Test1
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest3" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/test1.bin" "./TestData/comm1.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P3Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P3Test1" end time: May 25 17:38 MSK
-"P3Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-45/86 Testing: P3Test2
-45/86 Test: P3Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest3" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/test1.bin" "./TestData/notcomm1.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P3Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Not Equal
-]
-"P3Test2" end time: May 25 17:38 MSK
-"P3Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-46/86 Testing: P3Test3
-46/86 Test: P3Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest3" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/test2.bin" "./TestData/comm2.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P3Test3" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Not Equal
-]
-"P3Test3" end time: May 25 17:38 MSK
-"P3Test3" time elapsed: 00:00:00
-----------------------------------------------------------
-
-47/86 Testing: P4Test1
-47/86 Test: P4Test1
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test1.bin" "./TestData/comm1.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P4Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P4Test1" end time: May 25 17:38 MSK
-"P4Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-48/86 Testing: P4Test2
-48/86 Test: P4Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test2.bin" "./TestData/comm2.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P4Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P4Test2" end time: May 25 17:38 MSK
-"P4Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-49/86 Testing: P4Test3
-49/86 Test: P4Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test3.bin" "./TestData/comm3.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P4Test3" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P4Test3" end time: May 25 17:38 MSK
-"P4Test3" time elapsed: 00:00:00
-----------------------------------------------------------
-
-50/86 Testing: P4Test4
-50/86 Test: P4Test4
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test4.bin" "./TestData/comm4.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P4Test4" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P4Test4" end time: May 25 17:38 MSK
-"P4Test4" time elapsed: 00:00:00
-----------------------------------------------------------
-
-51/86 Testing: P4Test5
-51/86 Test: P4Test5
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test5.bin" "./TestData/comm5.txt"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P4Test5" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P4Test5" end time: May 25 17:38 MSK
-"P4Test5" time elapsed: 00:00:00
-----------------------------------------------------------
-
-52/86 Testing: P5Test1
-52/86 Test: P5Test1
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/agrtest1.bin"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P5Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P5Test1" end time: May 25 17:38 MSK
-"P5Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-53/86 Testing: P5Test2
-53/86 Test: P5Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test2.bin" "./TestData/comm2.txt" "./TestData/agrtest2.bin"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P5Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P5Test2" end time: May 25 17:38 MSK
-"P5Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-54/86 Testing: P5Test3
-54/86 Test: P5Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test3.bin" "./TestData/comm3.txt" "./TestData/agrtest3.bin"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P5Test3" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P5Test3" end time: May 25 17:38 MSK
-"P5Test3" time elapsed: 00:00:00
-----------------------------------------------------------
-
-55/86 Testing: P5Test4
-55/86 Test: P5Test4
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test4.bin" "./TestData/comm4.txt" "./TestData/agrtest4.bin"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P5Test4" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P5Test4" end time: May 25 17:38 MSK
-"P5Test4" time elapsed: 00:00:00
-----------------------------------------------------------
-
-56/86 Testing: P5Test5
-56/86 Test: P5Test5
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test5.bin" "./TestData/comm5.txt" "./TestData/agrtest5.bin"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P5Test5" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Equal
-]
-"P5Test5" end time: May 25 17:38 MSK
-"P5Test5" time elapsed: 00:00:00
-----------------------------------------------------------
-
-57/86 Testing: P5Test6
-57/86 Test: P5Test6
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/notagrtest1.bin"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P5Test6" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-Not Equal
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Pass Reason:
-Required regular expression found.Regex=[Not Equal
-]
-"P5Test6" end time: May 25 17:38 MSK
-"P5Test6" time elapsed: 00:00:00
-----------------------------------------------------------
-
-58/86 Testing: P6Test1
-58/86 Test: P6Test1
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test1.bin" "./TestData/comm1.txt" "1" "0" "2"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P6Test1" start time: May 25 17:38 MSK
+"G7Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 5 2 3
@@ -1050,15 +528,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[5 2 3
 ]
-"P6Test1" end time: May 25 17:38 MSK
-"P6Test1" time elapsed: 00:00:00
+"G7Test1" end time: Jun 01 19:12 MSK
+"G7Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-59/86 Testing: P6Test2
-59/86 Test: P6Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test2.bin" "./TestData/comm2.txt" "0" "1" "2"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P6Test2" start time: May 25 17:38 MSK
+30/96 Testing: G7Test2
+30/96 Test: G7Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test2.bin" "./TestData/comm2.txt" "0" "1" "2"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
+"G7Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 3 4 3
@@ -1068,15 +546,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[3 4 3
 ]
-"P6Test2" end time: May 25 17:38 MSK
-"P6Test2" time elapsed: 00:00:00
+"G7Test2" end time: Jun 01 19:12 MSK
+"G7Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-60/86 Testing: P6Test3
-60/86 Test: P6Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test3.bin" "./TestData/comm3.txt" "4" "3" "0"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P6Test3" start time: May 25 17:38 MSK
+31/96 Testing: G7Test3
+31/96 Test: G7Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test3.bin" "./TestData/comm3.txt" "4" "3" "0"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
+"G7Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 4 7 8
@@ -1086,33 +564,33 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[4 7 8
 ]
-"P6Test3" end time: May 25 17:38 MSK
-"P6Test3" time elapsed: 00:00:00
+"G7Test3" end time: Jun 01 19:12 MSK
+"G7Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-61/86 Testing: P6Test4
-61/86 Test: P6Test4
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test4.bin" "./TestData/comm4.txt" "0" "3" "1"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P6Test4" start time: May 25 17:38 MSK
+32/96 Testing: G7Test4
+32/96 Test: G7Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test4.bin" "./TestData/comm4.txt" "0" "3" "1"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
+"G7Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 9 6 5
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[9 6 5
 ]
-"P6Test4" end time: May 25 17:38 MSK
-"P6Test4" time elapsed: 00:00:00
+"G7Test4" end time: Jun 01 19:12 MSK
+"G7Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-62/86 Testing: P6Test5
-62/86 Test: P6Test5
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test5.bin" "./TestData/comm5.txt" "0" "2" "3"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
-"P6Test5" start time: May 25 17:38 MSK
+33/96 Testing: G7Test5
+33/96 Test: G7Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph/GraphTest7" "./TestData/test5.bin" "./TestData/comm5.txt" "0" "2" "3"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Graph
+"G7Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 5 5 2
@@ -1122,15 +600,537 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[5 5 2
 ]
-"P6Test5" end time: May 25 17:38 MSK
+"G7Test5" end time: Jun 01 19:12 MSK
+"G7Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/96 Testing: P1Test1
+34/96 Test: P1Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test1.bin" "./TestData/comm1.txt" "6" "3" "9"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P1Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 1  2 }{ 0  1  2 }{ 0 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 1  2 }{ 0  1  2 }{ 0 }
+]
+"P1Test1" end time: Jun 01 19:12 MSK
+"P1Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/96 Testing: P1Test2
+35/96 Test: P1Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test2.bin" "./TestData/comm2.txt" "7" "5" "3"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P1Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1 }{ 2 }{ 1  2 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1 }{ 2 }{ 1  2 }
+]
+"P1Test2" end time: Jun 01 19:12 MSK
+"P1Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/96 Testing: P1Test3
+36/96 Test: P1Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test3.bin" "./TestData/comm3.txt" "0" "29" "15"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P1Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1  2  3  4 }{ 0  4 }{ 3 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1  2  3  4 }{ 0  4 }{ 3 }
+]
+"P1Test3" end time: Jun 01 19:12 MSK
+"P1Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/96 Testing: P1Test4
+37/96 Test: P1Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test4.bin" "./TestData/comm4.txt" "0" "8" "10"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P1Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  2  3 }{ 0  1 }{ 1  2  3 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  2  3 }{ 0  1 }{ 1  2  3 }
+]
+"P1Test4" end time: Jun 01 19:12 MSK
+"P1Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/96 Testing: P1Test5
+38/96 Test: P1Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest1" "./TestData/test5.bin" "./TestData/comm5.txt" "5" "4" "11"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P1Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  2  3 }{ 0  1  2 }{ 0  2  3 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  2  3 }{ 0  1  2 }{ 0  2  3 }
+]
+"P1Test5" end time: Jun 01 19:12 MSK
+"P1Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/96 Testing: P2Test1
+39/96 Test: P2Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test1.bin" "./TestData/comm1.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P2Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1  2 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1  2 }
+]
+"P2Test1" end time: Jun 01 19:12 MSK
+"P2Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/96 Testing: P2Test2
+40/96 Test: P2Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test2.bin" "./TestData/comm2.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P2Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1  2 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1  2 }
+]
+"P2Test2" end time: Jun 01 19:12 MSK
+"P2Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/96 Testing: P2Test3
+41/96 Test: P2Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test3.bin" "./TestData/comm3.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P2Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1  2  3  4 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1  2  3  4 }
+]
+"P2Test3" end time: Jun 01 19:12 MSK
+"P2Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/96 Testing: P2Test4
+42/96 Test: P2Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test4.bin" "./TestData/comm4.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P2Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1  2  3 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1  2  3 }
+]
+"P2Test4" end time: Jun 01 19:12 MSK
+"P2Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/96 Testing: P2Test5
+43/96 Test: P2Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest2" "./TestData/test5.bin" "./TestData/comm5.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P2Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+{ 0  1  2  3 }
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[{ 0  1  2  3 }
+]
+"P2Test5" end time: Jun 01 19:12 MSK
+"P2Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/96 Testing: P3Test1
+44/96 Test: P3Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest3" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/test1.bin" "./TestData/comm1.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P3Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P3Test1" end time: Jun 01 19:12 MSK
+"P3Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/96 Testing: P3Test2
+45/96 Test: P3Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest3" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/test1.bin" "./TestData/notcomm1.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P3Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Not Equal
+]
+"P3Test2" end time: Jun 01 19:12 MSK
+"P3Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/96 Testing: P3Test3
+46/96 Test: P3Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest3" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/test2.bin" "./TestData/comm2.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P3Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Not Equal
+]
+"P3Test3" end time: Jun 01 19:12 MSK
+"P3Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/96 Testing: P4Test1
+47/96 Test: P4Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test1.bin" "./TestData/comm1.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P4Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P4Test1" end time: Jun 01 19:12 MSK
+"P4Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/96 Testing: P4Test2
+48/96 Test: P4Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test2.bin" "./TestData/comm2.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P4Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P4Test2" end time: Jun 01 19:12 MSK
+"P4Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/96 Testing: P4Test3
+49/96 Test: P4Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test3.bin" "./TestData/comm3.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P4Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Equal
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P4Test3" end time: Jun 01 19:12 MSK
+"P4Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/96 Testing: P4Test4
+50/96 Test: P4Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test4.bin" "./TestData/comm4.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P4Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P4Test4" end time: Jun 01 19:12 MSK
+"P4Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/96 Testing: P4Test5
+51/96 Test: P4Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest4" "./TestData/test5.bin" "./TestData/comm5.txt"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P4Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P4Test5" end time: Jun 01 19:12 MSK
+"P4Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/96 Testing: P5Test1
+52/96 Test: P5Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/agrtest1.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P5Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P5Test1" end time: Jun 01 19:12 MSK
+"P5Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+53/96 Testing: P5Test2
+53/96 Test: P5Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test2.bin" "./TestData/comm2.txt" "./TestData/agrtest2.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P5Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P5Test2" end time: Jun 01 19:12 MSK
+"P5Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/96 Testing: P5Test3
+54/96 Test: P5Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test3.bin" "./TestData/comm3.txt" "./TestData/agrtest3.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P5Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P5Test3" end time: Jun 01 19:12 MSK
+"P5Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+55/96 Testing: P5Test4
+55/96 Test: P5Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test4.bin" "./TestData/comm4.txt" "./TestData/agrtest4.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P5Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P5Test4" end time: Jun 01 19:12 MSK
+"P5Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/96 Testing: P5Test5
+56/96 Test: P5Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test5.bin" "./TestData/comm5.txt" "./TestData/agrtest5.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P5Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Equal
+]
+"P5Test5" end time: Jun 01 19:12 MSK
+"P5Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/96 Testing: P5Test6
+57/96 Test: P5Test6
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest5" "./TestData/test1.bin" "./TestData/comm1.txt" "./TestData/notagrtest1.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P5Test6" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+Not Equal
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Not Equal
+]
+"P5Test6" end time: Jun 01 19:12 MSK
+"P5Test6" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/96 Testing: P6Test1
+58/96 Test: P6Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test1.bin" "./TestData/comm1.txt" "1" "0" "2"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P6Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+5 2 3
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[5 2 3
+]
+"P6Test1" end time: Jun 01 19:12 MSK
+"P6Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/96 Testing: P6Test2
+59/96 Test: P6Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test2.bin" "./TestData/comm2.txt" "0" "1" "2"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P6Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+3 4 3
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[3 4 3
+]
+"P6Test2" end time: Jun 01 19:12 MSK
+"P6Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/96 Testing: P6Test3
+60/96 Test: P6Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test3.bin" "./TestData/comm3.txt" "4" "3" "0"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P6Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+4 7 8
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[4 7 8
+]
+"P6Test3" end time: Jun 01 19:12 MSK
+"P6Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/96 Testing: P6Test4
+61/96 Test: P6Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test4.bin" "./TestData/comm4.txt" "0" "3" "1"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P6Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+9 6 5
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[9 6 5
+]
+"P6Test4" end time: Jun 01 19:12 MSK
+"P6Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/96 Testing: P6Test5
+62/96 Test: P6Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/PartitionTest6" "./TestData/test5.bin" "./TestData/comm5.txt" "0" "2" "3"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition
+"P6Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+5 5 2
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[5 5 2
+]
+"P6Test5" end time: Jun 01 19:12 MSK
 "P6Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-63/86 Testing: Leid1Test1
-63/86 Test: Leid1Test1
+63/96 Testing: Leid1Test1
+63/96 Test: Leid1Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest1" "./TestData/test1.bin" "./TestData/comm1.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid1Test1" start time: May 25 17:38 MSK
+"Leid1Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 1  2  3  5  6 }
@@ -1140,15 +1140,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 1  2  3  5  6 }
 ]
-"Leid1Test1" end time: May 25 17:38 MSK
+"Leid1Test1" end time: Jun 01 19:12 MSK
 "Leid1Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-64/86 Testing: Leid1Test2
-64/86 Test: Leid1Test2
+64/96 Testing: Leid1Test2
+64/96 Test: Leid1Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest1" "./TestData/test2.bin" "./TestData/comm2.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid1Test2" start time: May 25 17:38 MSK
+"Leid1Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 0  1  2  3  7 }
@@ -1158,15 +1158,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 0  1  2  3  7 }
 ]
-"Leid1Test2" end time: May 25 17:38 MSK
+"Leid1Test2" end time: Jun 01 19:12 MSK
 "Leid1Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-65/86 Testing: Leid1Test4
-65/86 Test: Leid1Test4
+65/96 Testing: Leid1Test4
+65/96 Test: Leid1Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest1" "./TestData/test4.bin" "./TestData/comm4.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid1Test4" start time: May 25 17:38 MSK
+"Leid1Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 0  1  8  10  13  14  15  16  21 }
@@ -1176,15 +1176,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 0  1  8  10  13  14  15  16  21 }
 ]
-"Leid1Test4" end time: May 25 17:38 MSK
+"Leid1Test4" end time: Jun 01 19:12 MSK
 "Leid1Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-66/86 Testing: Leid1Test5
-66/86 Test: Leid1Test5
+66/96 Testing: Leid1Test5
+66/96 Test: Leid1Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest1" "./TestData/test5.bin" "./TestData/comm5.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid1Test5" start time: May 25 17:38 MSK
+"Leid1Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 1  4  5  6  8  11 }
@@ -1194,15 +1194,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 1  4  5  6  8  11 }
 ]
-"Leid1Test5" end time: May 25 17:38 MSK
+"Leid1Test5" end time: Jun 01 19:12 MSK
 "Leid1Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-67/86 Testing: Leid2Test1
-67/86 Test: Leid2Test1
+67/96 Testing: Leid2Test1
+67/96 Test: Leid2Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest2" "./TestData/test1.bin" "./TestData/comm1.txt" "0" "1" "2" "4" "8"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid2Test1" start time: May 25 17:38 MSK
+"Leid2Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 1 2 4 8 { 0 }
@@ -1212,15 +1212,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 0 }
 ]
-"Leid2Test1" end time: May 25 17:38 MSK
+"Leid2Test1" end time: Jun 01 19:12 MSK
 "Leid2Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-68/86 Testing: Leid2Test2
-68/86 Test: Leid2Test2
+68/96 Testing: Leid2Test2
+68/96 Test: Leid2Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest2" "./TestData/test2.bin" "./TestData/comm2.txt" "0" "3" "8" "9"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid2Test2" start time: May 25 17:38 MSK
+"Leid2Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 3 8 9 { 8 }
@@ -1230,33 +1230,33 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 8 }
 ]
-"Leid2Test2" end time: May 25 17:38 MSK
+"Leid2Test2" end time: Jun 01 19:12 MSK
 "Leid2Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-69/86 Testing: Leid2Test3
-69/86 Test: Leid2Test3
+69/96 Testing: Leid2Test3
+69/96 Test: Leid2Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest2" "./TestData/test3.bin" "./TestData/comm3.txt" "0" "3" "4" "5"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid2Test3" start time: May 25 17:38 MSK
+"Leid2Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 0 3 4 5 {}
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[{}
 ]
-"Leid2Test3" end time: May 25 17:38 MSK
+"Leid2Test3" end time: Jun 01 19:12 MSK
 "Leid2Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-70/86 Testing: Leid2Test4
-70/86 Test: Leid2Test4
+70/96 Testing: Leid2Test4
+70/96 Test: Leid2Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest2" "./TestData/test4.bin" "./TestData/comm4.txt" "15" "21" "22" "23"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid2Test4" start time: May 25 17:38 MSK
+"Leid2Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 15 21 22 23 { 21 }
@@ -1266,15 +1266,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{ 21 }
 ]
-"Leid2Test4" end time: May 25 17:38 MSK
+"Leid2Test4" end time: Jun 01 19:12 MSK
 "Leid2Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-71/86 Testing: Leid2Test5
-71/86 Test: Leid2Test5
+71/96 Testing: Leid2Test5
+71/96 Test: Leid2Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest2" "./TestData/test5.bin" "./TestData/comm5.txt" "2" "3" "4" "6" "7"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid2Test5" start time: May 25 17:38 MSK
+"Leid2Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 2 3 4 6 7 {}
@@ -1284,90 +1284,90 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[{}
 ]
-"Leid2Test5" end time: May 25 17:38 MSK
+"Leid2Test5" end time: Jun 01 19:12 MSK
 "Leid2Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-72/86 Testing: Leid3Test1
-72/86 Test: Leid3Test1
+72/96 Testing: Leid3Test1
+72/96 Test: Leid3Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test1.bin" "./TestData/ChRandCommTest1.txt" "0" "1" "3" "4" "4"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid3Test1" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"Leid3Test1" end time: May 25 17:38 MSK
-"Leid3Test1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-73/86 Testing: Leid3Test2
-73/86 Test: Leid3Test2
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test2.bin" "./TestData/SinglComm2.txt" "1" "4" "8"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid3Test2" start time: May 25 17:38 MSK
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"Leid3Test2" end time: May 25 17:38 MSK
-"Leid3Test2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-74/86 Testing: Leid3Test3
-74/86 Test: Leid3Test3
-Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test3.bin" "./TestData/SinglComm3.txt" "2" "4" "6" "9" "8" "13" "0"
-Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid3Test3" start time: May 25 17:38 MSK
+"Leid3Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid3Test3" end time: May 25 17:38 MSK
+"Leid3Test1" end time: Jun 01 19:12 MSK
+"Leid3Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+73/96 Testing: Leid3Test2
+73/96 Test: Leid3Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test2.bin" "./TestData/SinglComm2.txt" "1" "4" "8"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid3Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Leid3Test2" end time: Jun 01 19:12 MSK
+"Leid3Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+74/96 Testing: Leid3Test3
+74/96 Test: Leid3Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test3.bin" "./TestData/SinglComm3.txt" "2" "4" "6" "9" "8" "13" "0"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid3Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Leid3Test3" end time: Jun 01 19:12 MSK
 "Leid3Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-75/86 Testing: Leid3Test4
-75/86 Test: Leid3Test4
+75/96 Testing: Leid3Test4
+75/96 Test: Leid3Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test4.bin" "./TestData/SinglComm4.txt" "2" "6" "0"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid3Test4" start time: May 25 17:38 MSK
+"Leid3Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid3Test4" end time: May 25 17:38 MSK
+"Leid3Test4" end time: Jun 01 19:12 MSK
 "Leid3Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-76/86 Testing: Leid3Test5
-76/86 Test: Leid3Test5
+76/96 Testing: Leid3Test5
+76/96 Test: Leid3Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest3" "./TestData/test5.bin" "./TestData/SinglComm5.txt" "3" "6" "3"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid3Test5" start time: May 25 17:38 MSK
+"Leid3Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid3Test5" end time: May 25 17:38 MSK
+"Leid3Test5" end time: Jun 01 19:12 MSK
 "Leid3Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-77/86 Testing: Leid4Test1
-77/86 Test: Leid4Test1
+77/96 Testing: Leid4Test1
+77/96 Test: Leid4Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest4" "./TestData/test1.bin" "./TestData/SinglComm1.txt" "7" "1" "3"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid4Test1" start time: May 25 17:38 MSK
+"Leid4Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
  0  1  0 
@@ -1377,15 +1377,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[ 0  1  0 
 ]
-"Leid4Test1" end time: May 25 17:38 MSK
+"Leid4Test1" end time: Jun 01 19:12 MSK
 "Leid4Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-78/86 Testing: Leid4Test2
-78/86 Test: Leid4Test2
+78/96 Testing: Leid4Test2
+78/96 Test: Leid4Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest4" "./TestData/test2.bin" "./TestData/SinglComm2.txt" "8" "2" "4"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid4Test2" start time: May 25 17:38 MSK
+"Leid4Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
  1  0  0 
@@ -1395,33 +1395,33 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[ 1  0  0 
 ]
-"Leid4Test2" end time: May 25 17:38 MSK
+"Leid4Test2" end time: Jun 01 19:12 MSK
 "Leid4Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-79/86 Testing: Leid4Test3
-79/86 Test: Leid4Test3
+79/96 Testing: Leid4Test3
+79/96 Test: Leid4Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest4" "./TestData/test3.bin" "./TestData/SinglComm3.txt" "29" "24" "9"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid4Test3" start time: May 25 17:38 MSK
+"Leid4Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
  1  0  0 
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Pass Reason:
 Required regular expression found.Regex=[ 1  0  0 
 ]
-"Leid4Test3" end time: May 25 17:38 MSK
+"Leid4Test3" end time: Jun 01 19:12 MSK
 "Leid4Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-80/86 Testing: Leid4Test4
-80/86 Test: Leid4Test4
+80/96 Testing: Leid4Test4
+80/96 Test: Leid4Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest4" "./TestData/test4.bin" "./TestData/SinglComm4.txt" "20" "1" "11"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid4Test4" start time: May 25 17:38 MSK
+"Leid4Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
  0  0  0 
@@ -1431,15 +1431,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[ 0  0  0 
 ]
-"Leid4Test4" end time: May 25 17:38 MSK
+"Leid4Test4" end time: Jun 01 19:12 MSK
 "Leid4Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-81/86 Testing: Leid4Test5
-81/86 Test: Leid4Test5
+81/96 Testing: Leid4Test5
+81/96 Test: Leid4Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest4" "./TestData/test5.bin" "./TestData/SinglComm5.txt" "9" "5" "2"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid4Test5" start time: May 25 17:38 MSK
+"Leid4Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
  1  0  0 
@@ -1449,15 +1449,15 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[ 1  0  0 
 ]
-"Leid4Test5" end time: May 25 17:38 MSK
+"Leid4Test5" end time: Jun 01 19:12 MSK
 "Leid4Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-82/86 Testing: Leid5Test1
-82/86 Test: Leid5Test1
+82/96 Testing: Leid5Test1
+82/96 Test: Leid5Test1
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest5" "./TestData/test1.bin" "./TestData/SinglComm1.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid5Test1" start time: May 25 17:38 MSK
+"Leid5Test1" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 0  1  3 }
@@ -1465,15 +1465,15 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid5Test1" end time: May 25 17:38 MSK
+"Leid5Test1" end time: Jun 01 19:12 MSK
 "Leid5Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-83/86 Testing: Leid5Test2
-83/86 Test: Leid5Test2
+83/96 Testing: Leid5Test2
+83/96 Test: Leid5Test2
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest5" "./TestData/test2.bin" "./TestData/SinglComm2.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid5Test2" start time: May 25 17:38 MSK
+"Leid5Test2" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 {}
@@ -1481,15 +1481,15 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid5Test2" end time: May 25 17:38 MSK
+"Leid5Test2" end time: Jun 01 19:12 MSK
 "Leid5Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-84/86 Testing: Leid5Test3
-84/86 Test: Leid5Test3
+84/96 Testing: Leid5Test3
+84/96 Test: Leid5Test3
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest5" "./TestData/test3.bin" "./TestData/SinglComm3.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid5Test3" start time: May 25 17:38 MSK
+"Leid5Test3" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 0 }
@@ -1497,31 +1497,31 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid5Test3" end time: May 25 17:38 MSK
+"Leid5Test3" end time: Jun 01 19:12 MSK
 "Leid5Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-85/86 Testing: Leid5Test4
-85/86 Test: Leid5Test4
+85/96 Testing: Leid5Test4
+85/96 Test: Leid5Test4
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest5" "./TestData/test4.bin" "./TestData/SinglComm4.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid5Test4" start time: May 25 17:38 MSK
+"Leid5Test4" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 0  2 }
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid5Test4" end time: May 25 17:38 MSK
+"Leid5Test4" end time: Jun 01 19:12 MSK
 "Leid5Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-86/86 Testing: Leid5Test5
-86/86 Test: Leid5Test5
+86/96 Testing: Leid5Test5
+86/96 Test: Leid5Test5
 Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest5" "./TestData/test5.bin" "./TestData/SinglComm5.txt"
 Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
-"Leid5Test5" start time: May 25 17:38 MSK
+"Leid5Test5" start time: Jun 01 19:12 MSK
 Output:
 ----------------------------------------------------------
 { 2 }
@@ -1529,8 +1529,168 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Leid5Test5" end time: May 25 17:38 MSK
+"Leid5Test5" end time: Jun 01 19:12 MSK
 "Leid5Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 25 17:38 MSK
+87/96 Testing: Leid10Test1
+87/96 Test: Leid10Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest10" "./TestData/test1.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid10Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.364796
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Leid10Test1" end time: Jun 01 19:12 MSK
+"Leid10Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+88/96 Testing: Leid10Test2
+88/96 Test: Leid10Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest10" "./TestData/test2.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid10Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.350694
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Leid10Test2" end time: Jun 01 19:12 MSK
+"Leid10Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+89/96 Testing: Leid10Test3
+89/96 Test: Leid10Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest10" "./TestData/test3.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid10Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.554562
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Leid10Test3" end time: Jun 01 19:12 MSK
+"Leid10Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+90/96 Testing: Leid10Test4
+90/96 Test: Leid10Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest10" "./TestData/test4.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid10Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.454882
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Leid10Test4" end time: Jun 01 19:12 MSK
+"Leid10Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+91/96 Testing: Leid10Test5
+91/96 Test: Leid10Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/LeidenTest10" "./TestData/test5.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden
+"Leid10Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.36
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Leid10Test5" end time: Jun 01 19:12 MSK
+"Leid10Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+92/96 Testing: Louv1Test1
+92/96 Test: Louv1Test1
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/LouvainTest1" "./TestData/test1.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain
+"Louv1Test1" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.364796
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Louv1Test1" end time: Jun 01 19:12 MSK
+"Louv1Test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+93/96 Testing: Louv1Test2
+93/96 Test: Louv1Test2
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/LouvainTest1" "./TestData/test2.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain
+"Louv1Test2" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.375
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Louv1Test2" end time: Jun 01 19:12 MSK
+"Louv1Test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+94/96 Testing: Louv1Test3
+94/96 Test: Louv1Test3
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/LouvainTest1" "./TestData/test3.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain
+"Louv1Test3" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.564513
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Louv1Test3" end time: Jun 01 19:12 MSK
+"Louv1Test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+95/96 Testing: Louv1Test4
+95/96 Test: Louv1Test4
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/LouvainTest1" "./TestData/test4.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain
+"Louv1Test4" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.51997
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Louv1Test4" end time: Jun 01 19:12 MSK
+"Louv1Test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+96/96 Testing: Louv1Test5
+96/96 Test: Louv1Test5
+Command: "/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/LouvainTest1" "./TestData/test5.bin"
+Directory: /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain
+"Louv1Test5" start time: Jun 01 19:12 MSK
+Output:
+----------------------------------------------------------
+0.315
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Louv1Test5" end time: Jun 01 19:12 MSK
+"Louv1Test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 01 19:12 MSK

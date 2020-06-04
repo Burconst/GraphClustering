@@ -20,6 +20,7 @@ Partition::Partition(Graph* g)
         tot[i] = g->WeightedDegree(i);
     }
 }
+
 Partition::Partition (Graph* g, std::vector<int> node2comm)
     : g(g)
 {
@@ -35,7 +36,6 @@ Partition::Partition (Graph* g, std::vector<int> node2comm)
         tot[i] = g->WeightedDegree(i);
     }
 }
-
 
 Partition::Partition(const Partition &partition)
 {
@@ -67,9 +67,10 @@ double Partition::Modularity()
     {
         if (tot[i]>0)
         {
-        q += (double)in[i]/m2 - ((double)tot[i]/m2)*((double)tot[i]/m2);
+            q += (double)in[i]/m2 - ((double)tot[i]/m2)*((double)tot[i]/m2);
         }
     }
+
     return q;
 }
 
@@ -109,50 +110,40 @@ map<int,int> Partition::neighComm(int node)
 Graph Partition::AggregatePartition()
 {
     vector<int> renumber(size, -1);
-    // for (int i = 0; i < n2c.size(); i++) 
-    // {
-    //     cout << n2c[i] << " " << endl;
-    // }
     for (int node=0 ; node<size ; node++)
-    {        
-        // assert(n2c[node]>=0 && n2c[node]<size);
-        if (n2c[node] != -1) 
-        {
-            renumber[n2c[node]]++;
-        }
+    {   
+        renumber[n2c[node]]++;
     }
 
     int final=0;
     for (int i=0 ; i<size ; i++)
     {
-        if (renumber[i]!=-1)
-        {
         renumber[i]=final++;
-        }
     } 
     vector<vector<int>> comm_nodes(final);
     for (int node=0 ; node<final ; node++)
     {
 
-        if (n2c[node] != -1) 
-        {
+        // if (n2c[node] != -1) 
+        // {
             assert(renumber[n2c[node]] >= 0 && renumber[n2c[node]]<size);
             comm_nodes[renumber[n2c[node]]].push_back(node);
-        }
+        // }
 
     }
 
     return MakeGraph(comm_nodes,renumber);
 }
 
+// FIX
 Graph Partition::MakeGraph(vector<vector<int> > comm_nodes, vector<int> renumber)
 {
-    
     int comm_deg = comm_nodes.size();
     Graph graph;
     graph.NodesCount = comm_deg;
     graph.degrees  = (int *)malloc(comm_deg*4);
     graph.norms = (int *)malloc(comm_deg*4);
+    // XXX
     graph.links = (int *)malloc((long)10000000*8);
     graph.weights  = (int *)malloc((long)10000000*8);
     long where = 0;
@@ -195,9 +186,6 @@ Graph Partition::MakeGraph(vector<vector<int> > comm_nodes, vector<int> renumber
         }
     }
 
-    // realloc(g->links, (long)graph.nbLinks*4);
-    // realloc(g->weights, (long)graph.nbLinks*4);
-
     return graph;
 }
 
@@ -233,7 +221,6 @@ int Partition::GetCommunityNorm(int comm_num)
     return res;
 }
 
-// Catch errors!!!
 int Partition::GetSubsetNorm(vector<int> subset)
 {
     int res = 0;

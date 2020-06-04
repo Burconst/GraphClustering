@@ -15,6 +15,7 @@ int main(const int argc, const char *argv[])
     // praph1 
     string filegraph1(argv[1]);
     Graph graph1(filegraph1, UNWEIGHTED);
+
     // Read Communities
     string filecomm1(argv[2]);
     ifstream finput;
@@ -42,6 +43,7 @@ int main(const int argc, const char *argv[])
         partition1.SetCommunityOf(i, commVector1[i]);
     }
     Partition partition2 = partition1;
+    
     // Testing 
     if (partition1 == partition2) 
     {

@@ -86,26 +86,26 @@ Graph::Graph(const Graph &graph)
 
 Graph::~Graph() 
 {
-    // if (degrees != NULL) 
-    // {
-    //      free(degrees);
-    //      degrees = NULL;
-    // }
-    // if (norms != NULL) 
-    // {
-    //      free(norms);
-    //      norms = NULL;
-    // }
-    // if (links != NULL) 
-    // {
-    //     free(links);
-    //     links = NULL;
-    // }
-    // if (weights != NULL) 
-    // {
-    //    free(weights);
-    //    weights = NULL;
-    // }
+    if (degrees != NULL) 
+    {
+         free(degrees);
+         degrees = NULL;
+    }
+    if (norms != NULL) 
+    {
+         free(norms);
+         norms = NULL;
+    }
+    if (links != NULL) 
+    {
+        free(links);
+        links = NULL;
+    }
+    if (weights != NULL) 
+    {
+       free(weights);
+       weights = NULL;
+    }
 }
 
 bool Graph::operator==(Graph g) 
@@ -164,5 +164,3 @@ bool Graph::operator==(Graph g)
 
     return true;
 }
-
-

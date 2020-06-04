@@ -83,7 +83,8 @@ inline void Partition::Insert(int node, int comm, int dnodecomm)
 inline double Partition::ModularityGain(int node, int comm, int dnodecomm)
 {
     isValidNode(node);
-
+    
+    assert(tot.size() > comm && comm >= 0);
     double totc = (double)tot[comm];
     double degc = (double)g->WeightedDegree(node);
     double m2 = (double)g->totalWeight;

@@ -1,5 +1,5 @@
 
-set(MULTIPLY_TIMEOUT 1)
+set(LDN_TIMEOUT 1)
 
 # LeidenTest1 getMarkedNodes
 
@@ -13,7 +13,7 @@ add_test(Leid1Test4 LeidenTest1 ./TestData/test4.bin ./TestData/comm4.txt)
 add_test(Leid1Test5 LeidenTest1 ./TestData/test5.bin ./TestData/comm5.txt)
 
 set_tests_properties(Leid1Test1 Leid1Test2 Leid1Test4 Leid1Test5 # Leid1Test3
-PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+PROPERTIES TIMEOUT ${LDN_TIMEOUT})
 set_tests_properties(Leid1Test1 PROPERTIES
 PASS_REGULAR_EXPRESSION "{ 1  2  3  5  6 }")
 set_tests_properties(Leid1Test2 PROPERTIES
@@ -37,7 +37,7 @@ add_test(Leid2Test4 LeidenTest2 ./TestData/test4.bin ./TestData/comm4.txt 15 21 
 add_test(Leid2Test5 LeidenTest2 ./TestData/test5.bin ./TestData/comm5.txt 2 3 4 6 7)
 
 set_tests_properties(Leid2Test1 Leid2Test2 Leid2Test4 Leid2Test5 Leid2Test3
-PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+PROPERTIES TIMEOUT ${LDN_TIMEOUT})
 set_tests_properties(Leid2Test1 PROPERTIES
 PASS_REGULAR_EXPRESSION "{ 0 }")
 set_tests_properties(Leid2Test2 PROPERTIES
@@ -62,7 +62,7 @@ add_test(Leid3Test4 LeidenTest3 ./TestData/test4.bin ./TestData/SinglComm4.txt 2
 add_test(Leid3Test5 LeidenTest3 ./TestData/test5.bin ./TestData/SinglComm5.txt 3 6 3)
 
 set_tests_properties(Leid3Test1 Leid3Test2 Leid3Test4 Leid3Test5 Leid3Test3
-PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+PROPERTIES TIMEOUT ${LDN_TIMEOUT})
 set_tests_properties(Leid3Test1 PROPERTIES
 PASS_REGULAR_EXPRESSION "")
 
@@ -80,7 +80,7 @@ add_test(Leid4Test4 LeidenTest4 ./TestData/test4.bin ./TestData/SinglComm4.txt 2
 add_test(Leid4Test5 LeidenTest4 ./TestData/test5.bin ./TestData/SinglComm5.txt 9 5 2)
 
 set_tests_properties(Leid4Test1 Leid4Test2 Leid4Test4 Leid4Test5 Leid4Test3
-PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+PROPERTIES TIMEOUT ${LDN_TIMEOUT})
 set_tests_properties(Leid4Test1 PROPERTIES
 PASS_REGULAR_EXPRESSION " 0  1  0 ")
 set_tests_properties(Leid4Test2 PROPERTIES
@@ -104,7 +104,7 @@ add_test(Leid5Test4 LeidenTest5 ./TestData/test4.bin ./TestData/SinglComm4.txt)
 add_test(Leid5Test5 LeidenTest5 ./TestData/test5.bin ./TestData/SinglComm5.txt)
 
 set_tests_properties(Leid5Test1 Leid5Test2 Leid5Test4 Leid5Test5 Leid5Test3
-PROPERTIES TIMEOUT ${MULTIPLY_TIMEOUT})
+PROPERTIES TIMEOUT ${LDN_TIMEOUT})
 
 # LeidenTest6 wellConnComms
 
@@ -116,13 +116,27 @@ target_link_libraries(LeidenTest6 GraphClustering)
 add_executable(LeidenTest7 LeidenTest7.cpp)
 target_link_libraries(LeidenTest7 GraphClustering)
 
-
 # LeidenTest8 moveNodes
 
 add_executable(LeidenTest8 LeidenTest8.cpp)
 target_link_libraries(LeidenTest8 GraphClustering)
 
-# LeidenTest8 maintain partition
+# LeidenTest9 maintain partition
 
 add_executable(LeidenTest9 LeidenTest9.cpp)
 target_link_libraries(LeidenTest9 GraphClustering)
+
+# LeidenTest10
+set(LEIDEN_TIMEOUT 2)
+
+add_executable(LeidenTest10 LeidenTest10.cpp)
+target_link_libraries(LeidenTest10 GraphClustering)
+
+add_test(Leid10Test1 LeidenTest10 ./TestData/test1.bin)
+add_test(Leid10Test2 LeidenTest10 ./TestData/test2.bin)
+add_test(Leid10Test3 LeidenTest10 ./TestData/test3.bin)
+add_test(Leid10Test4 LeidenTest10 ./TestData/test4.bin)
+add_test(Leid10Test5 LeidenTest10 ./TestData/test5.bin)
+
+set_tests_properties(Leid10Test1 Leid10Test2 Leid10Test3 Leid10Test4 Leid10Test5
+PROPERTIES TIMEOUT ${LEIDEN_TIMEOUT})

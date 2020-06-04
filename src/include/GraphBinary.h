@@ -6,7 +6,7 @@
 #include <vector>
 #include <map>
 
-#include "Node.h"
+#include <iostream>
 
 #define WEIGHTED   0
 #define UNWEIGHTED 1
@@ -70,7 +70,7 @@ inline int Graph::GetDergeeOf(int node)
 inline int Graph::GetCountSelfloopsOf(int node)
 {
     isValidNode(node);
-
+    // std::cout << GetDergeeOf(node) << std::endl;
     std::pair<int *,int *> p = Neighbors(node);
     for (int i=0 ; i<GetDergeeOf(node) ; i++)
     {

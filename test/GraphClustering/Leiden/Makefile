@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /run/media/konstantin/NameD/Home/git/GraphClusteringLib
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,21 @@ preinstall/fast:
 depend:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+
+# Convenience name for target.
+LeidenTest4: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+
+.PHONY : LeidenTest4
+
+# fast build rule for target.
+LeidenTest4/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build
+.PHONY : LeidenTest4/fast
 
 # Convenience name for target.
 test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule:
@@ -231,19 +246,19 @@ LeidenTest6/fast:
 .PHONY : LeidenTest6/fast
 
 # Convenience name for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule
 
 # Convenience name for target.
-LeidenTest4: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+LeidenTest10: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule
 
-.PHONY : LeidenTest4
+.PHONY : LeidenTest10
 
 # fast build rule for target.
-LeidenTest4/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build
-.PHONY : LeidenTest4/fast
+LeidenTest10/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build
+.PHONY : LeidenTest10/fast
 
 LeidenTest1.o: LeidenTest1.cpp.o
 
@@ -271,6 +286,33 @@ LeidenTest1.s: LeidenTest1.cpp.s
 LeidenTest1.cpp.s:
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/LeidenTest1.cpp.s
 .PHONY : LeidenTest1.cpp.s
+
+LeidenTest10.o: LeidenTest10.cpp.o
+
+.PHONY : LeidenTest10.o
+
+# target to build an object file
+LeidenTest10.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/LeidenTest10.cpp.o
+.PHONY : LeidenTest10.cpp.o
+
+LeidenTest10.i: LeidenTest10.cpp.i
+
+.PHONY : LeidenTest10.i
+
+# target to preprocess a source file
+LeidenTest10.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/LeidenTest10.cpp.i
+.PHONY : LeidenTest10.cpp.i
+
+LeidenTest10.s: LeidenTest10.cpp.s
+
+.PHONY : LeidenTest10.s
+
+# target to generate assembly for a file
+LeidenTest10.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/LeidenTest10.cpp.s
+.PHONY : LeidenTest10.cpp.s
 
 LeidenTest2.o: LeidenTest2.cpp.o
 
@@ -494,6 +536,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
+	@echo "... LeidenTest4"
 	@echo "... rebuild_cache"
 	@echo "... LeidenTest8"
 	@echo "... LeidenTest2"
@@ -503,11 +547,13 @@ help:
 	@echo "... LeidenTest1"
 	@echo "... LeidenTest5"
 	@echo "... LeidenTest6"
-	@echo "... LeidenTest4"
-	@echo "... edit_cache"
+	@echo "... LeidenTest10"
 	@echo "... LeidenTest1.o"
 	@echo "... LeidenTest1.i"
 	@echo "... LeidenTest1.s"
+	@echo "... LeidenTest10.o"
+	@echo "... LeidenTest10.i"
+	@echo "... LeidenTest10.s"
 	@echo "... LeidenTest2.o"
 	@echo "... LeidenTest2.i"
 	@echo "... LeidenTest2.s"

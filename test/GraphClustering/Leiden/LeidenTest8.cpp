@@ -17,7 +17,7 @@ int main(const int argc, const char *argv[])
     string filegr(argv[1]);
     Graph graph(filegr, UNWEIGHTED);
     
-    double res = GraphClustering::GetLeidenPartitionOf(&graph);//,&refpart);
+    double res = GraphClustering::GetLeidenPartitionOf(&graph);
     cout << res << endl;
     return 0;
 }

@@ -16,6 +16,7 @@ int main(const int argc, const char *argv[])
     // Read Graph 
     string filegr(argv[1]);
     Graph graph(filegr, UNWEIGHTED);
+
     // Read Communities
     string filecomm(argv[2]);
     ifstream finput;
@@ -34,19 +35,16 @@ int main(const int argc, const char *argv[])
         commVector.push_back(atoi(num.c_str()));
         num = "";
     }
+
     // Setup Partition
     Partition partition(&graph);
     for (int i = 0; i < commVector.size(); i++) 
     {
         partition.SetCommunityOf(i, commVector[i]);
     }
+
     // Testing 
     vector<int> subset;
-    // for (int i = 3; i < argc; i++) 
-    // {
-    //     subset.push_back(atoi(argv[i]));
-    //     cout << subset[i-3] << " ";
-    // }
     for (int i = 0; i < partition.GetCommunities().size(); i++) 
     {
         subset.push_back(i);

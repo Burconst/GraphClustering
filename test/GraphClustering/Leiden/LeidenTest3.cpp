@@ -18,6 +18,7 @@ int main(const int argc, const char *argv[])
     // Read Graph 
     string filegr(argv[1]);
     Graph graph(filegr, UNWEIGHTED);
+
     // Read Communities
     string filecomm(argv[2]);
     ifstream finput;
@@ -36,6 +37,7 @@ int main(const int argc, const char *argv[])
         commVector.push_back(atoi(num.c_str()));
         num = "";
     }
+    
     // Setup Partition
     Partition partition(&graph);
     for (int i = 0; i < commVector.size(); i++) 
@@ -49,6 +51,6 @@ int main(const int argc, const char *argv[])
     {
         commNums.push_back(atoi(argv[i]));
     }
-    auto comm = ::ChooseRandomComm(&partition,commNums,atoi(argv[argc-1]));
+    auto comm = ::chooseRandomComm(&partition,commNums,atoi(argv[argc-1]));
     return 0;
 }

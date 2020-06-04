@@ -15,6 +15,7 @@ int main(const int argc, const char *argv[])
     // praph1 
     string filegraph1(argv[1]);
     Graph graph1(filegraph1, UNWEIGHTED);
+
     // Read Communities
     string filecomm1(argv[2]);
     ifstream finput;
@@ -38,6 +39,7 @@ int main(const int argc, const char *argv[])
     // graph2
     string filegraph2(argv[3]);
     Graph graph2(filegraph2, UNWEIGHTED);
+
     // Read Communities
     string filecomm2(argv[4]);
     finput.open(filecomm2, fstream::in | fstream::binary);
@@ -68,6 +70,7 @@ int main(const int argc, const char *argv[])
     {
         partition2.SetCommunityOf(i, commVector2[i]);
     }
+    
     // Testing 
     if (partition1 == partition2) 
     {

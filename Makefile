@@ -293,6 +293,19 @@ PartitionTest3/fast:
 .PHONY : PartitionTest3/fast
 
 #=============================================================================
+# Target rules for targets named LeidenTest4
+
+# Build rule for target.
+LeidenTest4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest4
+.PHONY : LeidenTest4
+
+# fast build rule for target.
+LeidenTest4/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build
+.PHONY : LeidenTest4/fast
+
+#=============================================================================
 # Target rules for targets named LeidenTest8
 
 # Build rule for target.
@@ -397,17 +410,17 @@ LeidenTest6/fast:
 .PHONY : LeidenTest6/fast
 
 #=============================================================================
-# Target rules for targets named LeidenTest4
+# Target rules for targets named LeidenTest10
 
 # Build rule for target.
-LeidenTest4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest4
-.PHONY : LeidenTest4
+LeidenTest10: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LeidenTest10
+.PHONY : LeidenTest10
 
 # fast build rule for target.
-LeidenTest4/fast:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build
-.PHONY : LeidenTest4/fast
+LeidenTest10/fast:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build
+.PHONY : LeidenTest10/fast
 
 #=============================================================================
 # Target rules for targets named LouvainTest1
@@ -444,6 +457,7 @@ help:
 	@echo "... PartitionTest6"
 	@echo "... PartitionTest2"
 	@echo "... PartitionTest3"
+	@echo "... LeidenTest4"
 	@echo "... LeidenTest8"
 	@echo "... LeidenTest2"
 	@echo "... LeidenTest7"
@@ -452,7 +466,7 @@ help:
 	@echo "... LeidenTest1"
 	@echo "... LeidenTest5"
 	@echo "... LeidenTest6"
-	@echo "... LeidenTest4"
+	@echo "... LeidenTest10"
 	@echo "... LouvainTest1"
 .PHONY : help
 

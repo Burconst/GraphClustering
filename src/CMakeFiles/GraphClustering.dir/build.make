@@ -57,22 +57,9 @@ include src/CMakeFiles/GraphClustering.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/GraphClustering.dir/flags.make
 
-src/CMakeFiles/GraphClustering.dir/Node.cpp.o: src/CMakeFiles/GraphClustering.dir/flags.make
-src/CMakeFiles/GraphClustering.dir/Node.cpp.o: src/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/GraphClustering.dir/Node.cpp.o"
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphClustering.dir/Node.cpp.o -c /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Node.cpp
-
-src/CMakeFiles/GraphClustering.dir/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphClustering.dir/Node.cpp.i"
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Node.cpp > CMakeFiles/GraphClustering.dir/Node.cpp.i
-
-src/CMakeFiles/GraphClustering.dir/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphClustering.dir/Node.cpp.s"
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Node.cpp -o CMakeFiles/GraphClustering.dir/Node.cpp.s
-
 src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o: src/CMakeFiles/GraphClustering.dir/flags.make
 src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o: src/GraphBinary.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o"
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o -c /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/GraphBinary.cpp
 
 src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.i: cmake_force
@@ -85,7 +72,7 @@ src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.s: cmake_force
 
 src/CMakeFiles/GraphClustering.dir/Partition.cpp.o: src/CMakeFiles/GraphClustering.dir/flags.make
 src/CMakeFiles/GraphClustering.dir/Partition.cpp.o: src/Partition.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/GraphClustering.dir/Partition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/GraphClustering.dir/Partition.cpp.o"
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphClustering.dir/Partition.cpp.o -c /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Partition.cpp
 
 src/CMakeFiles/GraphClustering.dir/Partition.cpp.i: cmake_force
@@ -98,7 +85,7 @@ src/CMakeFiles/GraphClustering.dir/Partition.cpp.s: cmake_force
 
 src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o: src/CMakeFiles/GraphClustering.dir/flags.make
 src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o: src/Leiden.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o"
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphClustering.dir/Leiden.cpp.o -c /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Leiden.cpp
 
 src/CMakeFiles/GraphClustering.dir/Leiden.cpp.i: cmake_force
@@ -111,7 +98,7 @@ src/CMakeFiles/GraphClustering.dir/Leiden.cpp.s: cmake_force
 
 src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o: src/CMakeFiles/GraphClustering.dir/flags.make
 src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o: src/Louvain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o"
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphClustering.dir/Louvain.cpp.o -c /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Louvain.cpp
 
 src/CMakeFiles/GraphClustering.dir/Louvain.cpp.i: cmake_force
@@ -124,7 +111,6 @@ src/CMakeFiles/GraphClustering.dir/Louvain.cpp.s: cmake_force
 
 # Object files for target GraphClustering
 GraphClustering_OBJECTS = \
-"CMakeFiles/GraphClustering.dir/Node.cpp.o" \
 "CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o" \
 "CMakeFiles/GraphClustering.dir/Partition.cpp.o" \
 "CMakeFiles/GraphClustering.dir/Leiden.cpp.o" \
@@ -133,14 +119,13 @@ GraphClustering_OBJECTS = \
 # External object files for target GraphClustering
 GraphClustering_EXTERNAL_OBJECTS =
 
-src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/Node.cpp.o
 src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/GraphBinary.cpp.o
 src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/Partition.cpp.o
 src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/Leiden.cpp.o
 src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/Louvain.cpp.o
 src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/build.make
 src/libGraphClustering.a: src/CMakeFiles/GraphClustering.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libGraphClustering.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libGraphClustering.a"
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && $(CMAKE_COMMAND) -P CMakeFiles/GraphClustering.dir/cmake_clean_target.cmake
 	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphClustering.dir/link.txt --verbose=$(VERBOSE)
 

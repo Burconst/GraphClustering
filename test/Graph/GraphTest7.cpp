@@ -10,9 +10,10 @@ using namespace std;
 int main(const int argc, const char *argv[]) 
 {
 
-   // graph1 
+    // graph1 
     string filegraph1(argv[1]);
     Graph graph1(filegraph1, UNWEIGHTED);
+    
     // Read Communities
     string filecomm1(argv[2]);
     ifstream finput;
@@ -39,10 +40,9 @@ int main(const int argc, const char *argv[])
     {
         partition1.SetCommunityOf(i, commVector1[i]);
     }
+    
     // Testing 
     Graph agrGraph = partition1.AggregatePartition();
-    
-
     int n = 3;
     int nodes[] = { atoi(argv[3]), atoi(argv[4]), atoi(argv[5]) };
     for (int i = 0; i < n; i++) 

@@ -16,6 +16,7 @@ int main(const int argc, const char *argv[])
     // Read Graph 
     string filegr(argv[1]);
     Graph graph(filegr, UNWEIGHTED);
+    
     // Read Partition    
     string filecomm1(argv[2]);
     ifstream finput;
@@ -35,6 +36,7 @@ int main(const int argc, const char *argv[])
         num = "";
     }
     finput.close();
+
     // Read RefPartition    
     string filecomm2(argv[3]);
     finput;
@@ -54,8 +56,8 @@ int main(const int argc, const char *argv[])
         num = "";
     }
     finput.close();
-    // Setup Partition
 
+    // Setup Partition
     Partition partition(&graph);
     cout << graph.nbLinks << endl;
     for (int i = 0; i < commVectorPart.size(); i++) 
@@ -64,13 +66,7 @@ int main(const int argc, const char *argv[])
     }
     // Setup RefPartition
     Partition refPartition = ::refinePartition(&partition);
-    // for (int i = 0; i < commVectorRefPArt.size(); i++) 
-    // {
-    //     refPartition.SetCommunityOf(i, commVectorRefPArt[i]);
-    // }
-
     vector<int> newComms = ::maintain_partition(&partition,&refPartition);
-
     cout << "Partition" << endl;
     for (int i = 0; i < partition.n2c.size(); i++) 
     {

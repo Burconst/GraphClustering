@@ -15,6 +15,7 @@ int main(const int argc, const char *argv[])
     // Read Graph 
     string filegr(argv[1]);
     Graph graph(filegr, UNWEIGHTED);
+
     // Read Communities
     string filecomm(argv[2]);
     ifstream finput;
@@ -33,12 +34,14 @@ int main(const int argc, const char *argv[])
         commVector.push_back(atoi(num.c_str()));
         num = "";
     }
+
     // Setup Partition
     Partition partition(&graph);
     for (int i = 0; i < commVector.size(); i++) 
     {
         partition.SetCommunityOf(i, commVector[i]);
     }
+    
     // Testing 
     int nodes[] = { atoi(argv[3]), atoi(argv[4]), atoi(argv[5]) };
     for (int i = 0; i < 3; i++) 

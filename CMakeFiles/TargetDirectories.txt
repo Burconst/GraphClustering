@@ -22,6 +22,8 @@
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest6.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest2.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/Partition/CMakeFiles/PartitionTest3.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/rebuild_cache.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir
@@ -31,8 +33,7 @@
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/edit_cache.dir
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/CMakeFiles/rebuild_cache.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/CMakeFiles/edit_cache.dir
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir
