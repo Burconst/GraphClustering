@@ -9,11 +9,11 @@ Graph::Graph()
     : NodesCount(0)
     , nbLinks(0)
     , totalWeight(0)
+    , degrees(NULL)
+    , norms(NULL)
+    , links(NULL)
+    , weights(NULL)
 {
-    degrees = NULL;
-    norms = NULL;
-    links = NULL;
-    weights = NULL;
 }
 
 Graph::Graph(std::string filename, int type) 
