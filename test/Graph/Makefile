@@ -111,298 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/Graph/CMakeFiles/GraphTest6.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest6.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest6.dir/rule
+test/Graph/CMakeFiles/GraphTests.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTests.dir/rule
+.PHONY : test/Graph/CMakeFiles/GraphTests.dir/rule
 
 # Convenience name for target.
-GraphTest6: test/Graph/CMakeFiles/GraphTest6.dir/rule
+GraphTests: test/Graph/CMakeFiles/GraphTests.dir/rule
 
-.PHONY : GraphTest6
+.PHONY : GraphTests
 
 # fast build rule for target.
-GraphTest6/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/build
-.PHONY : GraphTest6/fast
+GraphTests/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/build
+.PHONY : GraphTests/fast
 
-# Convenience name for target.
-test/Graph/CMakeFiles/GraphTest5.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest5.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest5.dir/rule
+GraphTests.o: GraphTests.cpp.o
 
-# Convenience name for target.
-GraphTest5: test/Graph/CMakeFiles/GraphTest5.dir/rule
-
-.PHONY : GraphTest5
-
-# fast build rule for target.
-GraphTest5/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/build
-.PHONY : GraphTest5/fast
-
-# Convenience name for target.
-test/Graph/CMakeFiles/GraphTest7.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest7.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest7.dir/rule
-
-# Convenience name for target.
-GraphTest7: test/Graph/CMakeFiles/GraphTest7.dir/rule
-
-.PHONY : GraphTest7
-
-# fast build rule for target.
-GraphTest7/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/build
-.PHONY : GraphTest7/fast
-
-# Convenience name for target.
-test/Graph/CMakeFiles/GraphTest1.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest1.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest1.dir/rule
-
-# Convenience name for target.
-GraphTest1: test/Graph/CMakeFiles/GraphTest1.dir/rule
-
-.PHONY : GraphTest1
-
-# fast build rule for target.
-GraphTest1/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/build
-.PHONY : GraphTest1/fast
-
-# Convenience name for target.
-test/Graph/CMakeFiles/GraphTest2.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest2.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest2.dir/rule
-
-# Convenience name for target.
-GraphTest2: test/Graph/CMakeFiles/GraphTest2.dir/rule
-
-.PHONY : GraphTest2
-
-# fast build rule for target.
-GraphTest2/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/build
-.PHONY : GraphTest2/fast
-
-# Convenience name for target.
-test/Graph/CMakeFiles/GraphTest3.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest3.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest3.dir/rule
-
-# Convenience name for target.
-GraphTest3: test/Graph/CMakeFiles/GraphTest3.dir/rule
-
-.PHONY : GraphTest3
-
-# fast build rule for target.
-GraphTest3/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/build
-.PHONY : GraphTest3/fast
-
-# Convenience name for target.
-test/Graph/CMakeFiles/GraphTest4.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest4.dir/rule
-.PHONY : test/Graph/CMakeFiles/GraphTest4.dir/rule
-
-# Convenience name for target.
-GraphTest4: test/Graph/CMakeFiles/GraphTest4.dir/rule
-
-.PHONY : GraphTest4
-
-# fast build rule for target.
-GraphTest4/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/build
-.PHONY : GraphTest4/fast
-
-GraphTest1.o: GraphTest1.cpp.o
-
-.PHONY : GraphTest1.o
+.PHONY : GraphTests.o
 
 # target to build an object file
-GraphTest1.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/GraphTest1.cpp.o
-.PHONY : GraphTest1.cpp.o
+GraphTests.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/GraphTests.cpp.o
+.PHONY : GraphTests.cpp.o
 
-GraphTest1.i: GraphTest1.cpp.i
+GraphTests.i: GraphTests.cpp.i
 
-.PHONY : GraphTest1.i
-
-# target to preprocess a source file
-GraphTest1.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/GraphTest1.cpp.i
-.PHONY : GraphTest1.cpp.i
-
-GraphTest1.s: GraphTest1.cpp.s
-
-.PHONY : GraphTest1.s
-
-# target to generate assembly for a file
-GraphTest1.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/GraphTest1.cpp.s
-.PHONY : GraphTest1.cpp.s
-
-GraphTest2.o: GraphTest2.cpp.o
-
-.PHONY : GraphTest2.o
-
-# target to build an object file
-GraphTest2.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/GraphTest2.cpp.o
-.PHONY : GraphTest2.cpp.o
-
-GraphTest2.i: GraphTest2.cpp.i
-
-.PHONY : GraphTest2.i
+.PHONY : GraphTests.i
 
 # target to preprocess a source file
-GraphTest2.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/GraphTest2.cpp.i
-.PHONY : GraphTest2.cpp.i
+GraphTests.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/GraphTests.cpp.i
+.PHONY : GraphTests.cpp.i
 
-GraphTest2.s: GraphTest2.cpp.s
+GraphTests.s: GraphTests.cpp.s
 
-.PHONY : GraphTest2.s
-
-# target to generate assembly for a file
-GraphTest2.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/GraphTest2.cpp.s
-.PHONY : GraphTest2.cpp.s
-
-GraphTest3.o: GraphTest3.cpp.o
-
-.PHONY : GraphTest3.o
-
-# target to build an object file
-GraphTest3.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/GraphTest3.cpp.o
-.PHONY : GraphTest3.cpp.o
-
-GraphTest3.i: GraphTest3.cpp.i
-
-.PHONY : GraphTest3.i
-
-# target to preprocess a source file
-GraphTest3.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/GraphTest3.cpp.i
-.PHONY : GraphTest3.cpp.i
-
-GraphTest3.s: GraphTest3.cpp.s
-
-.PHONY : GraphTest3.s
+.PHONY : GraphTests.s
 
 # target to generate assembly for a file
-GraphTest3.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/GraphTest3.cpp.s
-.PHONY : GraphTest3.cpp.s
-
-GraphTest4.o: GraphTest4.cpp.o
-
-.PHONY : GraphTest4.o
-
-# target to build an object file
-GraphTest4.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/GraphTest4.cpp.o
-.PHONY : GraphTest4.cpp.o
-
-GraphTest4.i: GraphTest4.cpp.i
-
-.PHONY : GraphTest4.i
-
-# target to preprocess a source file
-GraphTest4.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/GraphTest4.cpp.i
-.PHONY : GraphTest4.cpp.i
-
-GraphTest4.s: GraphTest4.cpp.s
-
-.PHONY : GraphTest4.s
-
-# target to generate assembly for a file
-GraphTest4.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/GraphTest4.cpp.s
-.PHONY : GraphTest4.cpp.s
-
-GraphTest5.o: GraphTest5.cpp.o
-
-.PHONY : GraphTest5.o
-
-# target to build an object file
-GraphTest5.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/GraphTest5.cpp.o
-.PHONY : GraphTest5.cpp.o
-
-GraphTest5.i: GraphTest5.cpp.i
-
-.PHONY : GraphTest5.i
-
-# target to preprocess a source file
-GraphTest5.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/GraphTest5.cpp.i
-.PHONY : GraphTest5.cpp.i
-
-GraphTest5.s: GraphTest5.cpp.s
-
-.PHONY : GraphTest5.s
-
-# target to generate assembly for a file
-GraphTest5.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/GraphTest5.cpp.s
-.PHONY : GraphTest5.cpp.s
-
-GraphTest6.o: GraphTest6.cpp.o
-
-.PHONY : GraphTest6.o
-
-# target to build an object file
-GraphTest6.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/GraphTest6.cpp.o
-.PHONY : GraphTest6.cpp.o
-
-GraphTest6.i: GraphTest6.cpp.i
-
-.PHONY : GraphTest6.i
-
-# target to preprocess a source file
-GraphTest6.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/GraphTest6.cpp.i
-.PHONY : GraphTest6.cpp.i
-
-GraphTest6.s: GraphTest6.cpp.s
-
-.PHONY : GraphTest6.s
-
-# target to generate assembly for a file
-GraphTest6.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/GraphTest6.cpp.s
-.PHONY : GraphTest6.cpp.s
-
-GraphTest7.o: GraphTest7.cpp.o
-
-.PHONY : GraphTest7.o
-
-# target to build an object file
-GraphTest7.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/GraphTest7.cpp.o
-.PHONY : GraphTest7.cpp.o
-
-GraphTest7.i: GraphTest7.cpp.i
-
-.PHONY : GraphTest7.i
-
-# target to preprocess a source file
-GraphTest7.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/GraphTest7.cpp.i
-.PHONY : GraphTest7.cpp.i
-
-GraphTest7.s: GraphTest7.cpp.s
-
-.PHONY : GraphTest7.s
-
-# target to generate assembly for a file
-GraphTest7.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/GraphTest7.cpp.s
-.PHONY : GraphTest7.cpp.s
+GraphTests.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/GraphTests.cpp.s
+.PHONY : GraphTests.cpp.s
 
 # Help Target
 help:
@@ -411,35 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... GraphTest6"
-	@echo "... GraphTest5"
-	@echo "... GraphTest7"
-	@echo "... GraphTest1"
-	@echo "... GraphTest2"
-	@echo "... GraphTest3"
 	@echo "... edit_cache"
-	@echo "... GraphTest4"
-	@echo "... GraphTest1.o"
-	@echo "... GraphTest1.i"
-	@echo "... GraphTest1.s"
-	@echo "... GraphTest2.o"
-	@echo "... GraphTest2.i"
-	@echo "... GraphTest2.s"
-	@echo "... GraphTest3.o"
-	@echo "... GraphTest3.i"
-	@echo "... GraphTest3.s"
-	@echo "... GraphTest4.o"
-	@echo "... GraphTest4.i"
-	@echo "... GraphTest4.s"
-	@echo "... GraphTest5.o"
-	@echo "... GraphTest5.i"
-	@echo "... GraphTest5.s"
-	@echo "... GraphTest6.o"
-	@echo "... GraphTest6.i"
-	@echo "... GraphTest6.s"
-	@echo "... GraphTest7.o"
-	@echo "... GraphTest7.i"
-	@echo "... GraphTest7.s"
+	@echo "... GraphTests"
+	@echo "... GraphTests.o"
+	@echo "... GraphTests.i"
+	@echo "... GraphTests.s"
 .PHONY : help
 
 

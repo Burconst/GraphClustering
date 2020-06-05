@@ -111,46 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule
-.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule
+test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule
+.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule
 
 # Convenience name for target.
-LouvainTest1: test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule
+LouvainTests: test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule
 
-.PHONY : LouvainTest1
+.PHONY : LouvainTests
 
 # fast build rule for target.
-LouvainTest1/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build
-.PHONY : LouvainTest1/fast
+LouvainTests/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build
+.PHONY : LouvainTests/fast
 
-LouvainTest1.o: LouvainTest1.cpp.o
+LouvainTests.o: LouvainTests.cpp.o
 
-.PHONY : LouvainTest1.o
+.PHONY : LouvainTests.o
 
 # target to build an object file
-LouvainTest1.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/LouvainTest1.cpp.o
-.PHONY : LouvainTest1.cpp.o
+LouvainTests.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/LouvainTests.cpp.o
+.PHONY : LouvainTests.cpp.o
 
-LouvainTest1.i: LouvainTest1.cpp.i
+LouvainTests.i: LouvainTests.cpp.i
 
-.PHONY : LouvainTest1.i
+.PHONY : LouvainTests.i
 
 # target to preprocess a source file
-LouvainTest1.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/LouvainTest1.cpp.i
-.PHONY : LouvainTest1.cpp.i
+LouvainTests.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/LouvainTests.cpp.i
+.PHONY : LouvainTests.cpp.i
 
-LouvainTest1.s: LouvainTest1.cpp.s
+LouvainTests.s: LouvainTests.cpp.s
 
-.PHONY : LouvainTest1.s
+.PHONY : LouvainTests.s
 
 # target to generate assembly for a file
-LouvainTest1.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/LouvainTest1.cpp.s
-.PHONY : LouvainTest1.cpp.s
+LouvainTests.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/LouvainTests.cpp.s
+.PHONY : LouvainTests.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... LouvainTest1"
-	@echo "... LouvainTest1.o"
-	@echo "... LouvainTest1.i"
-	@echo "... LouvainTest1.s"
+	@echo "... LouvainTests"
+	@echo "... LouvainTests.o"
+	@echo "... LouvainTests.i"
+	@echo "... LouvainTests.s"
 .PHONY : help
 
 

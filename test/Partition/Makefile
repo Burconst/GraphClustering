@@ -111,256 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/Partition/CMakeFiles/PartitionTest5.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest5.dir/rule
-.PHONY : test/Partition/CMakeFiles/PartitionTest5.dir/rule
+test/Partition/CMakeFiles/PartitionTests.dir/rule:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTests.dir/rule
+.PHONY : test/Partition/CMakeFiles/PartitionTests.dir/rule
 
 # Convenience name for target.
-PartitionTest5: test/Partition/CMakeFiles/PartitionTest5.dir/rule
+PartitionTests: test/Partition/CMakeFiles/PartitionTests.dir/rule
 
-.PHONY : PartitionTest5
+.PHONY : PartitionTests
 
 # fast build rule for target.
-PartitionTest5/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/build
-.PHONY : PartitionTest5/fast
+PartitionTests/fast:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/build
+.PHONY : PartitionTests/fast
 
-# Convenience name for target.
-test/Partition/CMakeFiles/PartitionTest1.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest1.dir/rule
-.PHONY : test/Partition/CMakeFiles/PartitionTest1.dir/rule
+PartitionTests.o: PartitionTests.cpp.o
 
-# Convenience name for target.
-PartitionTest1: test/Partition/CMakeFiles/PartitionTest1.dir/rule
-
-.PHONY : PartitionTest1
-
-# fast build rule for target.
-PartitionTest1/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/build
-.PHONY : PartitionTest1/fast
-
-# Convenience name for target.
-test/Partition/CMakeFiles/PartitionTest4.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest4.dir/rule
-.PHONY : test/Partition/CMakeFiles/PartitionTest4.dir/rule
-
-# Convenience name for target.
-PartitionTest4: test/Partition/CMakeFiles/PartitionTest4.dir/rule
-
-.PHONY : PartitionTest4
-
-# fast build rule for target.
-PartitionTest4/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/build
-.PHONY : PartitionTest4/fast
-
-# Convenience name for target.
-test/Partition/CMakeFiles/PartitionTest6.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest6.dir/rule
-.PHONY : test/Partition/CMakeFiles/PartitionTest6.dir/rule
-
-# Convenience name for target.
-PartitionTest6: test/Partition/CMakeFiles/PartitionTest6.dir/rule
-
-.PHONY : PartitionTest6
-
-# fast build rule for target.
-PartitionTest6/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/build
-.PHONY : PartitionTest6/fast
-
-# Convenience name for target.
-test/Partition/CMakeFiles/PartitionTest2.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest2.dir/rule
-.PHONY : test/Partition/CMakeFiles/PartitionTest2.dir/rule
-
-# Convenience name for target.
-PartitionTest2: test/Partition/CMakeFiles/PartitionTest2.dir/rule
-
-.PHONY : PartitionTest2
-
-# fast build rule for target.
-PartitionTest2/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/build
-.PHONY : PartitionTest2/fast
-
-# Convenience name for target.
-test/Partition/CMakeFiles/PartitionTest3.dir/rule:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest3.dir/rule
-.PHONY : test/Partition/CMakeFiles/PartitionTest3.dir/rule
-
-# Convenience name for target.
-PartitionTest3: test/Partition/CMakeFiles/PartitionTest3.dir/rule
-
-.PHONY : PartitionTest3
-
-# fast build rule for target.
-PartitionTest3/fast:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/build
-.PHONY : PartitionTest3/fast
-
-PartitionTest1.o: PartitionTest1.cpp.o
-
-.PHONY : PartitionTest1.o
+.PHONY : PartitionTests.o
 
 # target to build an object file
-PartitionTest1.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/PartitionTest1.cpp.o
-.PHONY : PartitionTest1.cpp.o
+PartitionTests.cpp.o:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/PartitionTests.cpp.o
+.PHONY : PartitionTests.cpp.o
 
-PartitionTest1.i: PartitionTest1.cpp.i
+PartitionTests.i: PartitionTests.cpp.i
 
-.PHONY : PartitionTest1.i
-
-# target to preprocess a source file
-PartitionTest1.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/PartitionTest1.cpp.i
-.PHONY : PartitionTest1.cpp.i
-
-PartitionTest1.s: PartitionTest1.cpp.s
-
-.PHONY : PartitionTest1.s
-
-# target to generate assembly for a file
-PartitionTest1.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/PartitionTest1.cpp.s
-.PHONY : PartitionTest1.cpp.s
-
-PartitionTest2.o: PartitionTest2.cpp.o
-
-.PHONY : PartitionTest2.o
-
-# target to build an object file
-PartitionTest2.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/PartitionTest2.cpp.o
-.PHONY : PartitionTest2.cpp.o
-
-PartitionTest2.i: PartitionTest2.cpp.i
-
-.PHONY : PartitionTest2.i
+.PHONY : PartitionTests.i
 
 # target to preprocess a source file
-PartitionTest2.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/PartitionTest2.cpp.i
-.PHONY : PartitionTest2.cpp.i
+PartitionTests.cpp.i:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/PartitionTests.cpp.i
+.PHONY : PartitionTests.cpp.i
 
-PartitionTest2.s: PartitionTest2.cpp.s
+PartitionTests.s: PartitionTests.cpp.s
 
-.PHONY : PartitionTest2.s
-
-# target to generate assembly for a file
-PartitionTest2.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/PartitionTest2.cpp.s
-.PHONY : PartitionTest2.cpp.s
-
-PartitionTest3.o: PartitionTest3.cpp.o
-
-.PHONY : PartitionTest3.o
-
-# target to build an object file
-PartitionTest3.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/PartitionTest3.cpp.o
-.PHONY : PartitionTest3.cpp.o
-
-PartitionTest3.i: PartitionTest3.cpp.i
-
-.PHONY : PartitionTest3.i
-
-# target to preprocess a source file
-PartitionTest3.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/PartitionTest3.cpp.i
-.PHONY : PartitionTest3.cpp.i
-
-PartitionTest3.s: PartitionTest3.cpp.s
-
-.PHONY : PartitionTest3.s
+.PHONY : PartitionTests.s
 
 # target to generate assembly for a file
-PartitionTest3.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/PartitionTest3.cpp.s
-.PHONY : PartitionTest3.cpp.s
-
-PartitionTest4.o: PartitionTest4.cpp.o
-
-.PHONY : PartitionTest4.o
-
-# target to build an object file
-PartitionTest4.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/PartitionTest4.cpp.o
-.PHONY : PartitionTest4.cpp.o
-
-PartitionTest4.i: PartitionTest4.cpp.i
-
-.PHONY : PartitionTest4.i
-
-# target to preprocess a source file
-PartitionTest4.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/PartitionTest4.cpp.i
-.PHONY : PartitionTest4.cpp.i
-
-PartitionTest4.s: PartitionTest4.cpp.s
-
-.PHONY : PartitionTest4.s
-
-# target to generate assembly for a file
-PartitionTest4.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/PartitionTest4.cpp.s
-.PHONY : PartitionTest4.cpp.s
-
-PartitionTest5.o: PartitionTest5.cpp.o
-
-.PHONY : PartitionTest5.o
-
-# target to build an object file
-PartitionTest5.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/PartitionTest5.cpp.o
-.PHONY : PartitionTest5.cpp.o
-
-PartitionTest5.i: PartitionTest5.cpp.i
-
-.PHONY : PartitionTest5.i
-
-# target to preprocess a source file
-PartitionTest5.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/PartitionTest5.cpp.i
-.PHONY : PartitionTest5.cpp.i
-
-PartitionTest5.s: PartitionTest5.cpp.s
-
-.PHONY : PartitionTest5.s
-
-# target to generate assembly for a file
-PartitionTest5.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/PartitionTest5.cpp.s
-.PHONY : PartitionTest5.cpp.s
-
-PartitionTest6.o: PartitionTest6.cpp.o
-
-.PHONY : PartitionTest6.o
-
-# target to build an object file
-PartitionTest6.cpp.o:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/PartitionTest6.cpp.o
-.PHONY : PartitionTest6.cpp.o
-
-PartitionTest6.i: PartitionTest6.cpp.i
-
-.PHONY : PartitionTest6.i
-
-# target to preprocess a source file
-PartitionTest6.cpp.i:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/PartitionTest6.cpp.i
-.PHONY : PartitionTest6.cpp.i
-
-PartitionTest6.s: PartitionTest6.cpp.s
-
-.PHONY : PartitionTest6.s
-
-# target to generate assembly for a file
-PartitionTest6.cpp.s:
-	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/PartitionTest6.cpp.s
-.PHONY : PartitionTest6.cpp.s
+PartitionTests.cpp.s:
+	cd /run/media/konstantin/NameD/Home/git/GraphClusteringLib && $(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/PartitionTests.cpp.s
+.PHONY : PartitionTests.cpp.s
 
 # Help Target
 help:
@@ -369,31 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... PartitionTest5"
 	@echo "... edit_cache"
-	@echo "... PartitionTest1"
-	@echo "... PartitionTest4"
-	@echo "... PartitionTest6"
-	@echo "... PartitionTest2"
-	@echo "... PartitionTest3"
-	@echo "... PartitionTest1.o"
-	@echo "... PartitionTest1.i"
-	@echo "... PartitionTest1.s"
-	@echo "... PartitionTest2.o"
-	@echo "... PartitionTest2.i"
-	@echo "... PartitionTest2.s"
-	@echo "... PartitionTest3.o"
-	@echo "... PartitionTest3.i"
-	@echo "... PartitionTest3.s"
-	@echo "... PartitionTest4.o"
-	@echo "... PartitionTest4.i"
-	@echo "... PartitionTest4.s"
-	@echo "... PartitionTest5.o"
-	@echo "... PartitionTest5.i"
-	@echo "... PartitionTest5.s"
-	@echo "... PartitionTest6.o"
-	@echo "... PartitionTest6.i"
-	@echo "... PartitionTest6.s"
+	@echo "... PartitionTests"
+	@echo "... PartitionTests.o"
+	@echo "... PartitionTests.i"
+	@echo "... PartitionTests.s"
 .PHONY : help
 
 

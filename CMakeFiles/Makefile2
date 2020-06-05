@@ -150,24 +150,12 @@ test/preinstall: test/GraphClustering/Louvain/preinstall
 # Directory level rules for directory test/Graph
 
 # Convenience name for "all" pass in the directory.
-test/Graph/all: test/Graph/CMakeFiles/GraphTest6.dir/all
-test/Graph/all: test/Graph/CMakeFiles/GraphTest5.dir/all
-test/Graph/all: test/Graph/CMakeFiles/GraphTest7.dir/all
-test/Graph/all: test/Graph/CMakeFiles/GraphTest1.dir/all
-test/Graph/all: test/Graph/CMakeFiles/GraphTest2.dir/all
-test/Graph/all: test/Graph/CMakeFiles/GraphTest3.dir/all
-test/Graph/all: test/Graph/CMakeFiles/GraphTest4.dir/all
+test/Graph/all: test/Graph/CMakeFiles/GraphTests.dir/all
 
 .PHONY : test/Graph/all
 
 # Convenience name for "clean" pass in the directory.
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest6.dir/clean
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest5.dir/clean
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest7.dir/clean
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest1.dir/clean
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest2.dir/clean
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest3.dir/clean
-test/Graph/clean: test/Graph/CMakeFiles/GraphTest4.dir/clean
+test/Graph/clean: test/Graph/CMakeFiles/GraphTests.dir/clean
 
 .PHONY : test/Graph/clean
 
@@ -177,261 +165,39 @@ test/Graph/preinstall:
 .PHONY : test/Graph/preinstall
 
 #=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest6.dir
+# Target rules for target test/Graph/CMakeFiles/GraphTests.dir
 
 # All Build rule for target.
-test/Graph/CMakeFiles/GraphTest6.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=16,17 "Built target GraphTest6"
-.PHONY : test/Graph/CMakeFiles/GraphTest6.dir/all
+test/Graph/CMakeFiles/GraphTests.dir/all: src/CMakeFiles/GraphClustering.dir/all
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/depend
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=6,7 "Built target GraphTests"
+.PHONY : test/Graph/CMakeFiles/GraphTests.dir/all
 
 # Include target in all.
-all: test/Graph/CMakeFiles/GraphTest6.dir/all
+all: test/Graph/CMakeFiles/GraphTests.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest6.dir/rule: cmake_check_build_system
+test/Graph/CMakeFiles/GraphTests.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest6.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest6.dir/rule
+.PHONY : test/Graph/CMakeFiles/GraphTests.dir/rule
 
 # Convenience name for target.
-GraphTest6: test/Graph/CMakeFiles/GraphTest6.dir/rule
+GraphTests: test/Graph/CMakeFiles/GraphTests.dir/rule
 
-.PHONY : GraphTest6
-
-# clean rule for target.
-test/Graph/CMakeFiles/GraphTest6.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest6.dir/build.make test/Graph/CMakeFiles/GraphTest6.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest6.dir/clean
+.PHONY : GraphTests
 
 # clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest6.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest5.dir
-
-# All Build rule for target.
-test/Graph/CMakeFiles/GraphTest5.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=14,15 "Built target GraphTest5"
-.PHONY : test/Graph/CMakeFiles/GraphTest5.dir/all
-
-# Include target in all.
-all: test/Graph/CMakeFiles/GraphTest5.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest5.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest5.dir/rule
-
-# Convenience name for target.
-GraphTest5: test/Graph/CMakeFiles/GraphTest5.dir/rule
-
-.PHONY : GraphTest5
+test/Graph/CMakeFiles/GraphTests.dir/clean:
+	$(MAKE) -f test/Graph/CMakeFiles/GraphTests.dir/build.make test/Graph/CMakeFiles/GraphTests.dir/clean
+.PHONY : test/Graph/CMakeFiles/GraphTests.dir/clean
 
 # clean rule for target.
-test/Graph/CMakeFiles/GraphTest5.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest5.dir/build.make test/Graph/CMakeFiles/GraphTest5.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest5.dir/clean
-
-# clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest5.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest7.dir
-
-# All Build rule for target.
-test/Graph/CMakeFiles/GraphTest7.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=18,19 "Built target GraphTest7"
-.PHONY : test/Graph/CMakeFiles/GraphTest7.dir/all
-
-# Include target in all.
-all: test/Graph/CMakeFiles/GraphTest7.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest7.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest7.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest7.dir/rule
-
-# Convenience name for target.
-GraphTest7: test/Graph/CMakeFiles/GraphTest7.dir/rule
-
-.PHONY : GraphTest7
-
-# clean rule for target.
-test/Graph/CMakeFiles/GraphTest7.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest7.dir/build.make test/Graph/CMakeFiles/GraphTest7.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest7.dir/clean
-
-# clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest7.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest1.dir
-
-# All Build rule for target.
-test/Graph/CMakeFiles/GraphTest1.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=6,7 "Built target GraphTest1"
-.PHONY : test/Graph/CMakeFiles/GraphTest1.dir/all
-
-# Include target in all.
-all: test/Graph/CMakeFiles/GraphTest1.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest1.dir/rule
-
-# Convenience name for target.
-GraphTest1: test/Graph/CMakeFiles/GraphTest1.dir/rule
-
-.PHONY : GraphTest1
-
-# clean rule for target.
-test/Graph/CMakeFiles/GraphTest1.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest1.dir/build.make test/Graph/CMakeFiles/GraphTest1.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest1.dir/clean
-
-# clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest1.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest2.dir
-
-# All Build rule for target.
-test/Graph/CMakeFiles/GraphTest2.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=8,9 "Built target GraphTest2"
-.PHONY : test/Graph/CMakeFiles/GraphTest2.dir/all
-
-# Include target in all.
-all: test/Graph/CMakeFiles/GraphTest2.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest2.dir/rule
-
-# Convenience name for target.
-GraphTest2: test/Graph/CMakeFiles/GraphTest2.dir/rule
-
-.PHONY : GraphTest2
-
-# clean rule for target.
-test/Graph/CMakeFiles/GraphTest2.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest2.dir/build.make test/Graph/CMakeFiles/GraphTest2.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest2.dir/clean
-
-# clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest2.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest3.dir
-
-# All Build rule for target.
-test/Graph/CMakeFiles/GraphTest3.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=10,11 "Built target GraphTest3"
-.PHONY : test/Graph/CMakeFiles/GraphTest3.dir/all
-
-# Include target in all.
-all: test/Graph/CMakeFiles/GraphTest3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest3.dir/rule
-
-# Convenience name for target.
-GraphTest3: test/Graph/CMakeFiles/GraphTest3.dir/rule
-
-.PHONY : GraphTest3
-
-# clean rule for target.
-test/Graph/CMakeFiles/GraphTest3.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest3.dir/build.make test/Graph/CMakeFiles/GraphTest3.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest3.dir/clean
-
-# clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest3.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Graph/CMakeFiles/GraphTest4.dir
-
-# All Build rule for target.
-test/Graph/CMakeFiles/GraphTest4.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/depend
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=12,13 "Built target GraphTest4"
-.PHONY : test/Graph/CMakeFiles/GraphTest4.dir/all
-
-# Include target in all.
-all: test/Graph/CMakeFiles/GraphTest4.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Graph/CMakeFiles/GraphTest4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Graph/CMakeFiles/GraphTest4.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Graph/CMakeFiles/GraphTest4.dir/rule
-
-# Convenience name for target.
-GraphTest4: test/Graph/CMakeFiles/GraphTest4.dir/rule
-
-.PHONY : GraphTest4
-
-# clean rule for target.
-test/Graph/CMakeFiles/GraphTest4.dir/clean:
-	$(MAKE) -f test/Graph/CMakeFiles/GraphTest4.dir/build.make test/Graph/CMakeFiles/GraphTest4.dir/clean
-.PHONY : test/Graph/CMakeFiles/GraphTest4.dir/clean
-
-# clean rule for target.
-clean: test/Graph/CMakeFiles/GraphTest4.dir/clean
+clean: test/Graph/CMakeFiles/GraphTests.dir/clean
 
 .PHONY : clean
 
@@ -439,22 +205,12 @@ clean: test/Graph/CMakeFiles/GraphTest4.dir/clean
 # Directory level rules for directory test/Partition
 
 # Convenience name for "all" pass in the directory.
-test/Partition/all: test/Partition/CMakeFiles/PartitionTest5.dir/all
-test/Partition/all: test/Partition/CMakeFiles/PartitionTest1.dir/all
-test/Partition/all: test/Partition/CMakeFiles/PartitionTest4.dir/all
-test/Partition/all: test/Partition/CMakeFiles/PartitionTest6.dir/all
-test/Partition/all: test/Partition/CMakeFiles/PartitionTest2.dir/all
-test/Partition/all: test/Partition/CMakeFiles/PartitionTest3.dir/all
+test/Partition/all: test/Partition/CMakeFiles/PartitionTests.dir/all
 
 .PHONY : test/Partition/all
 
 # Convenience name for "clean" pass in the directory.
-test/Partition/clean: test/Partition/CMakeFiles/PartitionTest5.dir/clean
-test/Partition/clean: test/Partition/CMakeFiles/PartitionTest1.dir/clean
-test/Partition/clean: test/Partition/CMakeFiles/PartitionTest4.dir/clean
-test/Partition/clean: test/Partition/CMakeFiles/PartitionTest6.dir/clean
-test/Partition/clean: test/Partition/CMakeFiles/PartitionTest2.dir/clean
-test/Partition/clean: test/Partition/CMakeFiles/PartitionTest3.dir/clean
+test/Partition/clean: test/Partition/CMakeFiles/PartitionTests.dir/clean
 
 .PHONY : test/Partition/clean
 
@@ -464,224 +220,39 @@ test/Partition/preinstall:
 .PHONY : test/Partition/preinstall
 
 #=============================================================================
-# Target rules for target test/Partition/CMakeFiles/PartitionTest5.dir
+# Target rules for target test/Partition/CMakeFiles/PartitionTests.dir
 
 # All Build rule for target.
-test/Partition/CMakeFiles/PartitionTest5.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/depend
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=50,51 "Built target PartitionTest5"
-.PHONY : test/Partition/CMakeFiles/PartitionTest5.dir/all
+test/Partition/CMakeFiles/PartitionTests.dir/all: src/CMakeFiles/GraphClustering.dir/all
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/depend
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=13,14 "Built target PartitionTests"
+.PHONY : test/Partition/CMakeFiles/PartitionTests.dir/all
 
 # Include target in all.
-all: test/Partition/CMakeFiles/PartitionTest5.dir/all
+all: test/Partition/CMakeFiles/PartitionTests.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-test/Partition/CMakeFiles/PartitionTest5.dir/rule: cmake_check_build_system
+test/Partition/CMakeFiles/PartitionTests.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest5.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Partition/CMakeFiles/PartitionTest5.dir/rule
+.PHONY : test/Partition/CMakeFiles/PartitionTests.dir/rule
 
 # Convenience name for target.
-PartitionTest5: test/Partition/CMakeFiles/PartitionTest5.dir/rule
+PartitionTests: test/Partition/CMakeFiles/PartitionTests.dir/rule
 
-.PHONY : PartitionTest5
-
-# clean rule for target.
-test/Partition/CMakeFiles/PartitionTest5.dir/clean:
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest5.dir/build.make test/Partition/CMakeFiles/PartitionTest5.dir/clean
-.PHONY : test/Partition/CMakeFiles/PartitionTest5.dir/clean
+.PHONY : PartitionTests
 
 # clean rule for target.
-clean: test/Partition/CMakeFiles/PartitionTest5.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Partition/CMakeFiles/PartitionTest1.dir
-
-# All Build rule for target.
-test/Partition/CMakeFiles/PartitionTest1.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/depend
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=42,43 "Built target PartitionTest1"
-.PHONY : test/Partition/CMakeFiles/PartitionTest1.dir/all
-
-# Include target in all.
-all: test/Partition/CMakeFiles/PartitionTest1.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Partition/CMakeFiles/PartitionTest1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Partition/CMakeFiles/PartitionTest1.dir/rule
-
-# Convenience name for target.
-PartitionTest1: test/Partition/CMakeFiles/PartitionTest1.dir/rule
-
-.PHONY : PartitionTest1
+test/Partition/CMakeFiles/PartitionTests.dir/clean:
+	$(MAKE) -f test/Partition/CMakeFiles/PartitionTests.dir/build.make test/Partition/CMakeFiles/PartitionTests.dir/clean
+.PHONY : test/Partition/CMakeFiles/PartitionTests.dir/clean
 
 # clean rule for target.
-test/Partition/CMakeFiles/PartitionTest1.dir/clean:
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest1.dir/build.make test/Partition/CMakeFiles/PartitionTest1.dir/clean
-.PHONY : test/Partition/CMakeFiles/PartitionTest1.dir/clean
-
-# clean rule for target.
-clean: test/Partition/CMakeFiles/PartitionTest1.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Partition/CMakeFiles/PartitionTest4.dir
-
-# All Build rule for target.
-test/Partition/CMakeFiles/PartitionTest4.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/depend
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=48,49 "Built target PartitionTest4"
-.PHONY : test/Partition/CMakeFiles/PartitionTest4.dir/all
-
-# Include target in all.
-all: test/Partition/CMakeFiles/PartitionTest4.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Partition/CMakeFiles/PartitionTest4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest4.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Partition/CMakeFiles/PartitionTest4.dir/rule
-
-# Convenience name for target.
-PartitionTest4: test/Partition/CMakeFiles/PartitionTest4.dir/rule
-
-.PHONY : PartitionTest4
-
-# clean rule for target.
-test/Partition/CMakeFiles/PartitionTest4.dir/clean:
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest4.dir/build.make test/Partition/CMakeFiles/PartitionTest4.dir/clean
-.PHONY : test/Partition/CMakeFiles/PartitionTest4.dir/clean
-
-# clean rule for target.
-clean: test/Partition/CMakeFiles/PartitionTest4.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Partition/CMakeFiles/PartitionTest6.dir
-
-# All Build rule for target.
-test/Partition/CMakeFiles/PartitionTest6.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/depend
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=52,53 "Built target PartitionTest6"
-.PHONY : test/Partition/CMakeFiles/PartitionTest6.dir/all
-
-# Include target in all.
-all: test/Partition/CMakeFiles/PartitionTest6.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Partition/CMakeFiles/PartitionTest6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest6.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Partition/CMakeFiles/PartitionTest6.dir/rule
-
-# Convenience name for target.
-PartitionTest6: test/Partition/CMakeFiles/PartitionTest6.dir/rule
-
-.PHONY : PartitionTest6
-
-# clean rule for target.
-test/Partition/CMakeFiles/PartitionTest6.dir/clean:
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest6.dir/build.make test/Partition/CMakeFiles/PartitionTest6.dir/clean
-.PHONY : test/Partition/CMakeFiles/PartitionTest6.dir/clean
-
-# clean rule for target.
-clean: test/Partition/CMakeFiles/PartitionTest6.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Partition/CMakeFiles/PartitionTest2.dir
-
-# All Build rule for target.
-test/Partition/CMakeFiles/PartitionTest2.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/depend
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=44,45 "Built target PartitionTest2"
-.PHONY : test/Partition/CMakeFiles/PartitionTest2.dir/all
-
-# Include target in all.
-all: test/Partition/CMakeFiles/PartitionTest2.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Partition/CMakeFiles/PartitionTest2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Partition/CMakeFiles/PartitionTest2.dir/rule
-
-# Convenience name for target.
-PartitionTest2: test/Partition/CMakeFiles/PartitionTest2.dir/rule
-
-.PHONY : PartitionTest2
-
-# clean rule for target.
-test/Partition/CMakeFiles/PartitionTest2.dir/clean:
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest2.dir/build.make test/Partition/CMakeFiles/PartitionTest2.dir/clean
-.PHONY : test/Partition/CMakeFiles/PartitionTest2.dir/clean
-
-# clean rule for target.
-clean: test/Partition/CMakeFiles/PartitionTest2.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/Partition/CMakeFiles/PartitionTest3.dir
-
-# All Build rule for target.
-test/Partition/CMakeFiles/PartitionTest3.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/depend
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=46,47 "Built target PartitionTest3"
-.PHONY : test/Partition/CMakeFiles/PartitionTest3.dir/all
-
-# Include target in all.
-all: test/Partition/CMakeFiles/PartitionTest3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/Partition/CMakeFiles/PartitionTest3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/Partition/CMakeFiles/PartitionTest3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/Partition/CMakeFiles/PartitionTest3.dir/rule
-
-# Convenience name for target.
-PartitionTest3: test/Partition/CMakeFiles/PartitionTest3.dir/rule
-
-.PHONY : PartitionTest3
-
-# clean rule for target.
-test/Partition/CMakeFiles/PartitionTest3.dir/clean:
-	$(MAKE) -f test/Partition/CMakeFiles/PartitionTest3.dir/build.make test/Partition/CMakeFiles/PartitionTest3.dir/clean
-.PHONY : test/Partition/CMakeFiles/PartitionTest3.dir/clean
-
-# clean rule for target.
-clean: test/Partition/CMakeFiles/PartitionTest3.dir/clean
+clean: test/Partition/CMakeFiles/PartitionTests.dir/clean
 
 .PHONY : clean
 
@@ -689,30 +260,12 @@ clean: test/Partition/CMakeFiles/PartitionTest3.dir/clean
 # Directory level rules for directory test/GraphClustering/Leiden
 
 # Convenience name for "all" pass in the directory.
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/all
-test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/all
+test/GraphClustering/Leiden/all: test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/all
 
 .PHONY : test/GraphClustering/Leiden/all
 
 # Convenience name for "clean" pass in the directory.
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/clean
-test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/clean
+test/GraphClustering/Leiden/clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/clean
 
 .PHONY : test/GraphClustering/Leiden/clean
 
@@ -722,372 +275,39 @@ test/GraphClustering/Leiden/preinstall:
 .PHONY : test/GraphClustering/Leiden/preinstall
 
 #=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir
+# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir
 
 # All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=28,29 "Built target LeidenTest4"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/all
+test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/all: src/CMakeFiles/GraphClustering.dir/all
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/depend
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=8,9,10 "Built target LeidenTests"
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/all
 
 # Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/all
+all: test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/all
+test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/rule
 
 # Convenience name for target.
-LeidenTest4: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/rule
+LeidenTests: test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/rule
 
-.PHONY : LeidenTest4
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/clean
+.PHONY : LeidenTests
 
 # clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest4.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=36,37 "Built target LeidenTest8"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
-
-# Convenience name for target.
-LeidenTest8: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/rule
-
-.PHONY : LeidenTest8
+test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/clean:
+	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/clean
+.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/clean
 
 # clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest8.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=24,25 "Built target LeidenTest2"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule
-
-# Convenience name for target.
-LeidenTest2: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/rule
-
-.PHONY : LeidenTest2
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest2.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=34,35 "Built target LeidenTest7"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
-
-# Convenience name for target.
-LeidenTest7: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/rule
-
-.PHONY : LeidenTest7
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest7.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=26,27 "Built target LeidenTest3"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
-
-# Convenience name for target.
-LeidenTest3: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/rule
-
-.PHONY : LeidenTest3
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest3.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=38,39 "Built target LeidenTest9"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule
-
-# Convenience name for target.
-LeidenTest9: test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/rule
-
-.PHONY : LeidenTest9
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest9.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=20,21 "Built target LeidenTest1"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
-
-# Convenience name for target.
-LeidenTest1: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/rule
-
-.PHONY : LeidenTest1
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest1.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=30,31 "Built target LeidenTest5"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
-
-# Convenience name for target.
-LeidenTest5: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/rule
-
-.PHONY : LeidenTest5
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest5.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=32,33 "Built target LeidenTest6"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
-
-# Convenience name for target.
-LeidenTest6: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/rule
-
-.PHONY : LeidenTest6
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest6.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir
-
-# All Build rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/depend
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=22,23 "Built target LeidenTest10"
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/all
-
-# Include target in all.
-all: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule
-
-# Convenience name for target.
-LeidenTest10: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/rule
-
-.PHONY : LeidenTest10
-
-# clean rule for target.
-test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/clean:
-	$(MAKE) -f test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/build.make test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/clean
-.PHONY : test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/clean
-
-# clean rule for target.
-clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/clean
+clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTests.dir/clean
 
 .PHONY : clean
 
@@ -1095,12 +315,12 @@ clean: test/GraphClustering/Leiden/CMakeFiles/LeidenTest10.dir/clean
 # Directory level rules for directory test/GraphClustering/Louvain
 
 # Convenience name for "all" pass in the directory.
-test/GraphClustering/Louvain/all: test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/all
+test/GraphClustering/Louvain/all: test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/all
 
 .PHONY : test/GraphClustering/Louvain/all
 
 # Convenience name for "clean" pass in the directory.
-test/GraphClustering/Louvain/clean: test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/clean
+test/GraphClustering/Louvain/clean: test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/clean
 
 .PHONY : test/GraphClustering/Louvain/clean
 
@@ -1110,39 +330,39 @@ test/GraphClustering/Louvain/preinstall:
 .PHONY : test/GraphClustering/Louvain/preinstall
 
 #=============================================================================
-# Target rules for target test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir
+# Target rules for target test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir
 
 # All Build rule for target.
-test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/all: src/CMakeFiles/GraphClustering.dir/all
-	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/depend
-	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=40,41 "Built target LouvainTest1"
-.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/all
+test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/all: src/CMakeFiles/GraphClustering.dir/all
+	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/depend
+	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles --progress-num=11,12 "Built target LouvainTests"
+.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/all
 
 # Include target in all.
-all: test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/all
+all: test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule: cmake_check_build_system
+test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/konstantin/NameD/Home/git/GraphClusteringLib/CMakeFiles 0
-.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule
+.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule
 
 # Convenience name for target.
-LouvainTest1: test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/rule
+LouvainTests: test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/rule
 
-.PHONY : LouvainTest1
-
-# clean rule for target.
-test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/clean:
-	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/clean
-.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/clean
+.PHONY : LouvainTests
 
 # clean rule for target.
-clean: test/GraphClustering/Louvain/CMakeFiles/LouvainTest1.dir/clean
+test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/clean:
+	$(MAKE) -f test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/build.make test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/clean
+.PHONY : test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/clean
+
+# clean rule for target.
+clean: test/GraphClustering/Louvain/CMakeFiles/LouvainTests.dir/clean
 
 .PHONY : clean
 

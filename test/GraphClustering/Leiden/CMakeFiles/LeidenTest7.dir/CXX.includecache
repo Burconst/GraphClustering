@@ -7,14 +7,6 @@
 #IncludeRegexTransform: 
 
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Leiden.cpp
-stdlib.h
--
-stdio.h
--
-iostream
--
-iomanip
--
 fstream
 -
 vector

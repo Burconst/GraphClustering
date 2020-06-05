@@ -38,12 +38,12 @@ Partition::Partition (Graph* g, std::vector<int> node2comm)
 }
 
 Partition::Partition(const Partition &partition)
+    : g(partition.g)
+    , n2c(partition.n2c)
+    , size(partition.size)
+    , tot(partition.tot)
+    , in(partition.in)
 {
-    g = partition.g;
-    n2c = partition.n2c;
-    size = partition.size;
-    tot = partition.tot;
-    in = partition.in;
 }
 
 bool Partition::operator==(Partition partition) 

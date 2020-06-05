@@ -6,13 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/GraphBinary.cpp
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Leiden.cpp
 fstream
 -
-iostream
+vector
 -
-include/GraphBinary.h
-/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
+map
+-
+algorithm
+-
+random
+-
+include/GraphClustering.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphClustering.h
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Louvain.cpp
+vector
+-
+map
+-
+include/GraphClustering.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphClustering.h
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/Partition.cpp
+algorithm
+-
+include/Partition.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
 
 /run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
 string
@@ -25,4 +45,28 @@ map
 -
 iostream
 -
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphClustering.h
+GraphBinary.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
+Partition.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
+
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/Partition.h
+stdlib.h
+-
+stdio.h
+-
+iostream
+-
+iomanip
+-
+fstream
+-
+vector
+-
+map
+-
+GraphBinary.h
+/run/media/konstantin/NameD/Home/git/GraphClusteringLib/src/include/GraphBinary.h
 

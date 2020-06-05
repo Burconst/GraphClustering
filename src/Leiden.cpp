@@ -1,7 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-#include <iomanip>
+//Debug
+// #include <iostream>
+
 #include <fstream>
 #include <vector>
 #include <map>
@@ -35,12 +34,6 @@ vector<int> maintain_partition(Partition* partition, Partition* ref_partition)
     {
         res[ref_partition->n2c[i]] = partition->n2c[i];
     }
-    cout << "part  ref_part" << endl;
-    for (int i = 0; i < partition->GetSize(); i++) 
-    {
-        cout << partition->n2c[i] << " " << ref_partition->n2c[i]<< endl;
-    }
-    cout << endl;
     return res;
 }
 
@@ -76,20 +69,6 @@ double moveNodesFast(Partition* partition)
 bool findImprovement(Partition* partition, vector<int> nodes) 
 {
     bool wasImprovement = false;
-
-    // for(auto node_tmp = nodes.begin(); node_tmp!=nodes.end(); ++node_tmp) 
-    // {
-    //     int node = *node_tmp;
-    //     int node_comm = partition->GetCommunityNumber(node);
-    //     pair<int, int> newCommunity = ::findBestNeighCommFor(node, partition);
-    //     if (newCommunity.first != -1) 
-    //     {
-    //         partition->Remove(node, node_comm, partition->neighComm(node).find(node_comm)->second);
-    //         partition->Insert(node, newCommunity.first, newCommunity.second);
-    //         wasImprovement = true;
-    //     }
-    // }
-
     for(int i = 0; i < nodes.size(); i++) 
     {
         int node = nodes[i];
@@ -214,7 +193,7 @@ pair<int, int> chooseRandomComm(Partition* partition, vector<int> commNums, int 
         uniform_real_distribution<> distr(0., commMod[commMod.size() - 1].second);
         double genval = distr(gen);
         int ind = 0;
-        while(genval >= commMod[ind].second && ind < commMod.size()) 
+        while(ind < commMod.size() && genval >= commMod[ind].second) 
         {
             ind++;
         }
@@ -229,11 +208,10 @@ vector<int> getWellConnectedNodes(Partition* partition, vector<int> subset)
     vector<int> res;
     int size = subset.size();
     int subsetNorm = partition->GetSubsetNorm(subset);
-    int nodeNorm = 0;
     int E = 0;
     for (int i = 0; i < size; i++) 
     {
-        nodeNorm = partition->g->GetNodeNorm(subset[i]);
+        int nodeNorm = partition->g->GetNodeNorm(subset[i]);
         auto neigh = partition->g->Neighbors(subset[i]);
         int deg = partition->g->GetDergeeOf(subset[i]);
         for (int j = 0; j < deg; j++) 
@@ -274,11 +252,10 @@ vector<int> getWellConnectedCommunities(Partition* partition, vector<int> subset
     }
     int size = comms.size();
     int subsetNorm = partition->GetSubsetNorm(subset);
-    int commNorm = 0;
     int E = 0;
     for (int i = 0; i < size; i++) 
     {
-        commNorm = partition->GetCommunityNorm(comms[i]);
+        int commNorm = partition->GetCommunityNorm(comms[i]);
         
         // needs change
         vector<int> allnodes = partition->GetNodesInCommunity(comms[i], subset);
@@ -323,7 +300,7 @@ vector<int> mixNodeOrder(Partition* partition)
     vector<int> randomOrder(partition->GetSize());
     for (int i=0 ; i<partition->GetSize() ; i++)
     {
-        // randomOrder[i]=i;
+        randomOrder[i]=i;
         randomOrder.push_back(i);
     }
     for (int i=0 ; i<partition->GetSize()-1 ; i++)

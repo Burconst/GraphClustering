@@ -61,7 +61,6 @@ inline void Partition::isValidNode(int node)
     assert(node>=0 && node<size);
 }
 
-
 inline void Partition::Remove(int node, int comm, int dnodecomm)
 {
     isValidNode(node);

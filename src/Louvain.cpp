@@ -1,8 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-#include <iomanip>
-#include <fstream>
 #include <vector>
 #include <map>
 
@@ -95,7 +90,6 @@ pair<int, int> findBestNeighCommFor(int node, Partition* partition)
 
 namespace GraphClustering 
 {
-
     double GetLouvainPartitionOf(Graph* graph)
     {
         Partition partition(graph);
