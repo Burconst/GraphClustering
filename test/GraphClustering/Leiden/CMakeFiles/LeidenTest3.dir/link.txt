@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/LeidenTest3.dir/LeidenTest3.cpp.o  -o LeidenTest3 ../../../src/libGraphClustering.a 

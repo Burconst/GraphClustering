@@ -23,10 +23,9 @@ Partition::Partition(Graph* g)
 
 Partition::Partition (Graph* g, std::vector<int> node2comm)
     : g(g)
+    , n2c(node2comm)
 {
     size = g->GetNodesCount();
-
-    n2c = node2comm;
     in.resize(size);
     tot.resize(size);
 

@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/PartitionTest2.dir/PartitionTest2.cpp.o  -o PartitionTest2 ../../src/libGraphClustering.a 

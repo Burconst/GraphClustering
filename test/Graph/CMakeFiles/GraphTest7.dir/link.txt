@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/GraphTest7.dir/GraphTest7.cpp.o  -o GraphTest7 ../../src/libGraphClustering.a 

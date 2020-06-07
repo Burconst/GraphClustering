@@ -1,9 +1,10 @@
-# Задать минимальную версию CMake:
 cmake_minimum_required(VERSION 3.0)
 
-# Указать характеристики проекта:
+# GraphClusteringLib
 project(MyProgram VERSION 1.0.0 LANGUAGES C CXX)
 
-add_subdirectory(src)
+# Build lib
+add_subdirectory(src/build)
 
-add_subdirectory(test)
+# Build test app
+add_subdirectory(test/build)

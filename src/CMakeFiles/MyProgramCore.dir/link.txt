@@ -1,2 +1,0 @@
-/usr/bin/ar qc libMyProgramCore.a  CMakeFiles/MyProgramCore.dir/GraphBinary.cpp.o
-/usr/bin/ranlib libMyProgramCore.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libGraphClustering.a  CMakeFiles/GraphClustering.dir/__/GraphBinary.cpp.o CMakeFiles/GraphClustering.dir/__/Partition.cpp.o CMakeFiles/GraphClustering.dir/__/Leiden.cpp.o CMakeFiles/GraphClustering.dir/__/Louvain.cpp.o
+/usr/bin/ranlib libGraphClustering.a
