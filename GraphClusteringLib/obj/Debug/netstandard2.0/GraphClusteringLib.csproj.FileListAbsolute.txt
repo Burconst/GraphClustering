@@ -1,0 +1,8 @@
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/obj/Debug/netstandard2.0/GraphClusteringLib.csprojAssemblyReference.cache
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/obj/Debug/netstandard2.0/GraphClusteringLib.AssemblyInfoInputs.cache
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/obj/Debug/netstandard2.0/GraphClusteringLib.AssemblyInfo.cs
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/bin/Debug/netstandard2.0/GraphClusteringLib.deps.json
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/bin/Debug/netstandard2.0/GraphClusteringLib.dll
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/bin/Debug/netstandard2.0/GraphClusteringLib.pdb
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/obj/Debug/netstandard2.0/GraphClusteringLib.dll
+/home/burov/git/GraphClusteringLib/GraphClusteringLib/obj/Debug/netstandard2.0/GraphClusteringLib.pdb
