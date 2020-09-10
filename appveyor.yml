@@ -1,0 +1,7 @@
+version: 1.0.{build}
+image:
+- Visual Studio 2019
+- Ubuntu
+build:
+  include_nuget_references: true
+  verbosity: minimal
