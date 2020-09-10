@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
+  <!-- <ItemGroup>
     <PackageReference Include="QuikGraph" Version="2.2.0" />
-  </ItemGroup>
+  </ItemGroup> -->
 
 </Project>
