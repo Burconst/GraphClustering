@@ -5,11 +5,11 @@
 #  - dotnet restore
 
 language: csharp
-solution: GraphClustering.sln
-install:
-  - nuget restore GraphClustering.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
-script:
-  - msbuild /p:Configuration=Debug GraphClustering.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./GraphClusteringTest/bin/Debug/netcoreapp3.1/GraphClusteringTest.dll
+# solution: GraphClustering.sln
+# install:
+#   - nuget restore GraphClustering.sln
+#   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+# script:
+#   - msbuild /p:Configuration=Debug GraphClustering.sln
+#   - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./GraphClusteringTest/bin/Debug/netcoreapp3.1/GraphClusteringTest.dll
 
