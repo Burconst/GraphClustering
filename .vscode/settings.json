@@ -64,5 +64,9 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp"
-    }
+    },
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "workbench.preferredLightColorTheme": "Abyss",
+    "workbench.preferredHighContrastColorTheme": "Abyss",
+    "workbench.preferredDarkColorTheme": "Abyss"
 }
