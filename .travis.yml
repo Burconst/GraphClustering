@@ -1,10 +1,10 @@
-# language: csharp
-# mono: none
-# dotnet: 3.1.106
-# script:
-#  - dotnet restore
-
 language: csharp
+mono: none
+dotnet: 3.1.106
+script:
+ - dotnet restore
+
+# language: csharp
 # solution: GraphClustering.sln
 # install:
 #   - nuget restore GraphClustering.sln
