@@ -92,3 +92,5 @@
 /home/burov/git/GraphClustering/GraphClusteringTest/obj/Debug/netcoreapp3.1/GraphClusteringTest.csproj.CopyComplete
 /home/burov/git/GraphClustering/GraphClusteringTest/obj/Debug/netcoreapp3.1/GraphClusteringTest.dll
 /home/burov/git/GraphClustering/GraphClusteringTest/obj/Debug/netcoreapp3.1/GraphClusteringTest.pdb
+/home/burov/git/GraphClustering/GraphClusteringTest/bin/Debug/netcoreapp3.1/GraphClustering.dll
+/home/burov/git/GraphClustering/GraphClusteringTest/bin/Debug/netcoreapp3.1/GraphClustering.pdb
