@@ -16,7 +16,7 @@ dotnet_csproj:
   informational_version: '{version}'
 build:
   project: GraphClustering.sln
-  # publish_nuget: true
+  publish_nuget: true
   include_nuget_references: true
   verbosity: minimal
 test_script:
