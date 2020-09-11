@@ -1,7 +1,8 @@
-./GraphClustering/obj
-./GraphClustering/bin
-./GraphClusteringTest/TestResults/
-./GraphClusteringTest/obj
-./GraphClusteringTest/bin/
-./GraphClustering.sln
+/GraphClustering/obj
+/GraphClustering/bin
+/GraphClusteringTest/TestResults/
+/GraphClusteringTest/obj
+/GraphClusteringTest/bin/
+
+GraphClustering.sln
 .vscode
