@@ -1,3 +1,3 @@
-./GraphClustering/obj/*
-./GraphClustering/bin/*
-.vscode/*
+./GraphClustering/obj
+./GraphClustering/bin
+.vscode
