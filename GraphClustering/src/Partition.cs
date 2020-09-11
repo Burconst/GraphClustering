@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using QuikGraph;
 using QuikGraph.Collections;
 
+
 namespace GraphClustering 
 {
     public class Partition<TVertex>
     {
         private List<Community<TVertex>> Communities;
-
         public  AdjacencyGraph<TVertex, SEdge<TVertex>> Graph
         {
             get;
