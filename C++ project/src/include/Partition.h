@@ -14,7 +14,7 @@
 struct Partition
 {   
     // private: 
-        int size;               // number of nodes in the network and size of all vectors
+        // int size;               // number of nodes in the network and size of all vectors
         std::vector<int> n2c;   // community to which each node belongs
         std::vector<int> in,tot;// used to compute the modularity participation of each community
                 
@@ -50,7 +50,7 @@ struct Partition
         // for each community, gives the number of links from node to comm
         std::map<int,int> neighComm(int node);
         // compute the modularity of the current partition
-        double Modularity();
+        // double Modularity();
         Graph AggregatePartition();
         std::vector<int> GetCommunities();
         void isValidNode(int node);
