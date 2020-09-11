@@ -1,7 +1,10 @@
+# Build files
 /GraphClustering/obj
 /GraphClustering/bin
 /GraphClusteringTest/TestResults/
 /GraphClusteringTest/obj
 /GraphClusteringTest/bin/
 GraphClustering.sln
+
+# VS Code files
 .vscode
