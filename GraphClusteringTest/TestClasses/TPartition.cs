@@ -14,7 +14,7 @@ namespace Prime.UnitTests.Services
     {
         private List<Partition<int>> _partition;
 
-        private const string _testsDir = "../../../TestClasses/TestData/";
+        private string _testsDir = "../../../../TestClasses/TestData/";
 
         private List<AdjacencyGraph<int, Edge<int>>> GetGraphsFrom(List<string> filenames) 
         {
@@ -50,7 +50,8 @@ namespace Prime.UnitTests.Services
         [SetUp]
         public void SetUp()
         {
-            _partition = new List<Partition<int>>(); 
+            _partition = new List<Partition<int>>();
+             
             var filenames = new List<string>() { _testsDir+"test3.txt" };
             var graphList = GetGraphsFrom(filenames);
             foreach(var graph in graphList) 
