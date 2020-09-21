@@ -6,10 +6,10 @@ using QuikGraph.Collections;
 
 namespace GraphClustering 
 {
-    public class Partition<TVertex>
+    public class Partition<TVertex> : Partition
     {
         private List<Community<TVertex>> Communities;
-        public  AdjacencyGraph<TVertex, SEdge<TVertex>> Graph
+        public  AdjacencyGraph<TVertex, Edge<TVertex>> Graph
         {
             get;
             private set;
@@ -20,9 +20,10 @@ namespace GraphClustering
             get { return Communities.Count; } 
         }
 
-        public Partition(AdjacencyGraph<TVertex, SEdge<TVertex>> graph) 
+        public Partition(AdjacencyGraph<TVertex, Edge<TVertex>> graph) 
         {
             Graph = graph;
+            Communities = new List<Community<TVertex>>();
             foreach(var vertex in Graph.Vertices) 
             {
                 Communities.Add(new Community<TVertex>(vertex));
@@ -33,6 +34,23 @@ namespace GraphClustering
         {
             throw new NotImplementedException();
         }
+
+        public int GetCommunityNumber(TVertex vertex) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+        
+        public void PushVertexToCommunity(TVertex vertex, int communityNumber) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public AdjacencyGraph<TVertex, Edge<TVertex>> AggregatePartition() 
+        {
+            throw new NotImplementedException("TODO");
+        }
+        
+
 
     }
 
