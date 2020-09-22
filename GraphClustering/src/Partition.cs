@@ -8,7 +8,7 @@ namespace GraphClustering
 {
     public class Partition<TVertex> : Partition
     {
-        private List<Community<TVertex>> Communities;
+        private List<Community<TVertex>> _communities;
         public  AdjacencyGraph<TVertex, Edge<TVertex>> Graph
         {
             get;
@@ -17,16 +17,16 @@ namespace GraphClustering
 
         public int Size
         {
-            get { return Communities.Count; } 
+            get { return _communities.Count; } 
         }
 
         public Partition(AdjacencyGraph<TVertex, Edge<TVertex>> graph) 
         {
             Graph = graph;
-            Communities = new List<Community<TVertex>>();
+            _communities = new List<Community<TVertex>>();
             foreach(var vertex in Graph.Vertices) 
             {
-                Communities.Add(new Community<TVertex>(vertex));
+                _communities.Add(new Community<TVertex>(vertex));
             }
         }
 
