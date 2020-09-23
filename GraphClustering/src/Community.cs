@@ -5,7 +5,7 @@ namespace GraphClustering
 {
     public class Community<TVertex> : ICommunity<TVertex>
     {
-        private VertexList<TVertex> _vertices;
+        private readonly VertexList<TVertex> _vertices;
 
         public Community()
         {

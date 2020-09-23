@@ -8,7 +8,7 @@ namespace GraphClustering
 {
     public class Partition<TVertex> : IPartition<TVertex>
     {
-        private List<Community<TVertex>> _communities;
+        private readonly List<Community<TVertex>> _communities;
         public  AdjacencyGraph<TVertex, Edge<TVertex>> Graph
         {
             get;
@@ -50,8 +50,6 @@ namespace GraphClustering
             throw new NotImplementedException("TODO");
         }
         
-
-
     }
 
 }
