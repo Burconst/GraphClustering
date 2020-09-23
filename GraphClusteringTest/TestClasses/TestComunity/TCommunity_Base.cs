@@ -7,8 +7,6 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TCommunity_Base
     {
-
-        private ICommunity<int> _community;
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, Edge<int>>> _graphDict;
 
         [SetUp]
@@ -27,13 +25,6 @@ namespace GraphClustering.UnitTests
             _graphDict.Add("UGraph5",GraphFactory.CreateUGraph5());
         }
 
-        [TearDown]
-        public void TearDown()
-        {
-
-            _community = null;
-        }
-
         [Test]
         public void Community_Constructor_ReturnTrue()
         {
@@ -41,7 +32,7 @@ namespace GraphClustering.UnitTests
             {
                 foreach(var vertex in graph.Value.Vertices) 
                 {
-                    _community = new Community<int>(vertex);
+                    var _community = new Community<int>(vertex);
                     Assert.IsTrue(_community.GetVertexCount() == 1,"TODO");
                     break;
                 }
@@ -53,7 +44,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict) 
             {
-                _community = new Community<int>(graph.Value.Vertices);
+                var _community = new Community<int>(graph.Value.Vertices);
                 Assert.IsTrue(_community.GetVertexCount() == graph.Value.VertexCount,"TODO");
             }
         }
@@ -65,7 +56,7 @@ namespace GraphClustering.UnitTests
             {
                 foreach(var vertex in graph.Value.Vertices) 
                 {
-                    _community = new Community<int>(vertex);
+                    var _community = new Community<int>(vertex);
                     Assert.IsTrue(_community.Contains(vertex),"TODO");
                 }
             }
@@ -76,7 +67,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict) 
             {
-                _community = new Community<int>(graph.Value.Vertices);
+                var _community = new Community<int>(graph.Value.Vertices);
                 Assert.IsTrue(_community.Contains(graph.Value.Vertices),"TODO");
             }
         }
@@ -86,7 +77,7 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict)
             {
-                _community = new Community<int>();
+                var _community = new Community<int>();
                 var vertList = new List<int>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
@@ -107,7 +98,7 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict)
             {
-                _community = new Community<int>();
+                var _community = new Community<int>();
                 var vertList = new List<int>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
@@ -128,7 +119,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict)
             {
-                _community = new Community<int>(graph.Value.Vertices);
+                var _community = new Community<int>(graph.Value.Vertices);
                 foreach(var vertex in graph.Value.Vertices) 
                 {
                     bool answer = _community.Remove(vertex);
@@ -142,7 +133,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict)
             {
-                _community = new Community<int>(graph.Value.Vertices);
+                var _community = new Community<int>(graph.Value.Vertices);
                 var vertList = new List<int>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
@@ -163,7 +154,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict)
             {
-                _community = new Community<int>();
+                var _community = new Community<int>();
                 var vertList = new List<int>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
