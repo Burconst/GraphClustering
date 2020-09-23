@@ -1,6 +1,6 @@
 namespace GraphClustering 
 {
-    interface Partition 
+    interface IPartition<TVertex>
     {
         // TODO
     }

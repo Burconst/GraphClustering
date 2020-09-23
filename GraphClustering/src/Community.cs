@@ -1,55 +1,86 @@
-using QuikGraph;
+using System.Collections.Generic;
 using QuikGraph.Collections;
 
 namespace GraphClustering
 {
-    public class Community<TVertex>
+    public class Community<TVertex> : ICommunity<TVertex>
     {
-        public VertexList<TVertex> Vertices 
-        {
-            get;
-            private set;
-        }
+        private VertexList<TVertex> _vertices;
 
-        public int Size
+        public Community()
         {
-            get { return Vertices.Count; }
+            _vertices = new VertexList<TVertex>();
         }
-
         public Community(TVertex vertex) 
         {
-            Vertices = new VertexList<TVertex>() { vertex };
+            _vertices = new VertexList<TVertex>() { vertex };
         }
 
         public Community(VertexList<TVertex> vertices) 
         {
-            Vertices = vertices;
+            _vertices = vertices;
+        }
+
+        public Community(IEnumerable<TVertex> vertices) 
+        {
+            if (_vertices == null) 
+            {
+                _vertices = new VertexList<TVertex>();
+            }
+            _vertices.AddRange(vertices);
+        }
+
+        public int GetVertexCount() 
+        {
+            return _vertices.Count;
         }
 
         public void Add(TVertex vertex) 
         {
-            Vertices.Add(vertex);
+            _vertices.Add(vertex);
         }
 
-        public void Add(VertexList<TVertex> vertices) 
+        public void Add(IEnumerable<TVertex> vertices) 
         {
-            Vertices.AddRange(vertices);
+            _vertices.AddRange(vertices);
         }
 
-        public void Remove(TVertex vertex) 
+        public bool Remove(TVertex vertex) 
         {
-            if (Vertices.Contains(vertex)) 
+            return _vertices.Remove(vertex);
+        }
+
+        public bool Remove(IEnumerable<TVertex> vertices) 
+        {
+            bool allRemoved = true;
+            foreach(var vertex in vertices) 
             {
-                Vertices.Remove(vertex);
+                allRemoved = Remove(vertex)? allRemoved : false;
             }
+            return allRemoved;
         }
 
-        public void Remove(VertexList<TVertex> vertices)
+        public bool Contains(TVertex vertex) 
         {
-            foreach (var v in vertices) 
+            return _vertices.Contains(vertex);
+        }
+
+        public bool Contains(IEnumerable<TVertex> vertices)
+        {
+            bool contains = true;
+            foreach (var vertex in vertices) 
             {
-                Remove(v);
+                if(!Contains(vertex)) 
+                {
+                    contains = false;
+                }
             }
+            return contains;
+        }
+
+        public void Clear() 
+        {
+            _vertices.Clear();
         }
 
     }

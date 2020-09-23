@@ -6,7 +6,7 @@ using QuikGraph.Collections;
 
 namespace GraphClustering 
 {
-    public class Partition<TVertex> : Partition
+    public class Partition<TVertex> : IPartition<TVertex>
     {
         private List<Community<TVertex>> _communities;
         public  AdjacencyGraph<TVertex, Edge<TVertex>> Graph

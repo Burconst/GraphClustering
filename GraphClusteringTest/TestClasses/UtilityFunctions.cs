@@ -1,22 +1,14 @@
 using System.IO;
 using System.Collections.Generic;
-using NUnit.Framework;
 using QuikGraph;
 using QuikGraph.Collections;
 using GraphClustering;
 
-
-
-namespace Prime.UnitTests.Services
+namespace GraphClustering.UnitTests
 {
-    [TestFixture]
-    public class TestPartition
+    public static class UtilityFunctions
     {
-        private List<Partition<int>> _partition;
-
-        private string _testsDir = "TestClasses/TestData/";
-
-        private List<AdjacencyGraph<int, Edge<int>>> GetGraphsFrom(List<string> filenames) 
+        public static List<AdjacencyGraph<int, Edge<int>>> GetGraphsList(List<string> filenames) 
         {
             var graphList = new List<AdjacencyGraph<int, Edge<int>>>();
             
@@ -40,6 +32,7 @@ namespace Prime.UnitTests.Services
                             throw new VertexNotFoundException("Invalid input. Please, use following format: v1 v2\nv3v4...");
                         }
                     }
+                    fstream.Close();
                 } 
                 graphList.Add(graph);
             }
@@ -47,34 +40,15 @@ namespace Prime.UnitTests.Services
             return graphList;
         }
 
-        [SetUp]
-        public void SetUp()
+        public static Dictionary<string,AdjacencyGraph<int, Edge<int>>> GetGraphsDict(List<string> filenames) 
         {
-            _partition = new List<Partition<int>>();
-            // FIX
-            while(!Directory.Exists(_testsDir)) 
+            var graphs = GetGraphsList(filenames);
+            var resultDict = new Dictionary<string,AdjacencyGraph<int, Edge<int>>>();
+            for (int i = 0; i < graphs.Count; i++) 
             {
-                _testsDir = "../"+_testsDir;
+                resultDict.Add(filenames[i].Substring(filenames[i].LastIndexOf("\\")+1),graphs[i]);
             }
-            
-            var filenames = new List<string>() { _testsDir+"test3.txt" };
-            var graphList = GetGraphsFrom(filenames);
-            foreach(var graph in graphList) 
-            {
-                _partition.Add(new Partition<int>(graph));
-            }
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            _partition = null;
-        }
-
-        [Test]
-        public void Partition_Size_ReturnTrue()
-        {
-            Assert.IsTrue(_partition[0].Size == 3, "Incorrect partition size.");
+            return resultDict;
         }
 
     }
