@@ -13,7 +13,7 @@ namespace GraphClustering
         }
         public Community(TVertex vertex) 
         {
-            _vertices = new VertexList<TVertex>() { vertex };
+            _vertices = new VertexList<TVertex> { vertex };
         }
 
         public Community(VertexList<TVertex> vertices) 
