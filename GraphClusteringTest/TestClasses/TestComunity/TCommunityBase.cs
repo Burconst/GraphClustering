@@ -5,7 +5,7 @@ using QuikGraph;
 namespace GraphClustering.UnitTests
 {
     [TestFixture]
-    public class TCommunity_Base
+    public class TCommunityBase
     {
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, Edge<int>>> _graphDict;
 
