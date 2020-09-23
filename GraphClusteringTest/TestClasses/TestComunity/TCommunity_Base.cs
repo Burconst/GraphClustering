@@ -1,8 +1,6 @@
-using System.IO;
 using System.Collections.Generic;
 using NUnit.Framework;
 using QuikGraph;
-using QuikGraph.Collections;
 
 namespace GraphClustering.UnitTests
 {

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using QuikGraph;
-using QuikGraph.Collections;
 
 namespace GraphClustering 
 {
