@@ -3,7 +3,7 @@ using QuikGraph.Collections;
 
 namespace GraphClustering
 {
-    public class Community<TVertex> : ICommunity<TVertex>
+    public sealed class Community<TVertex> : ICommunity<TVertex>
     {
         private readonly VertexList<TVertex> _vertices;
 

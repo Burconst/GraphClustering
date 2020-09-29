@@ -4,34 +4,32 @@ using QuikGraph;
 
 namespace GraphClustering 
 {
-    public class Partition<TVertex> : IPartition<TVertex>
+    public sealed class GraphPartition<TVertex> : IPartition<TVertex>
     {
-        private readonly List<Community<TVertex>> _communities;
-
-        public  AdjacencyGraph<TVertex, Edge<TVertex>> Graph
+        private readonly List<ICommunity<TVertex>> _communities;
+        
+        public IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> Graph
         {
             get;
-            private set;
         }
 
-        public int Size
+        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> graph) 
         {
-            get { return _communities.Count; } 
-        }
-
-        public Partition(AdjacencyGraph<TVertex, Edge<TVertex>> graph) 
-        {
+            if (graph == null) 
+            {
+                throw new ArgumentNullException("TODO");
+            }
             Graph = graph;
-            _communities = new List<Community<TVertex>>();
+            _communities = new List<ICommunity<TVertex>>();
             foreach(var vertex in Graph.Vertices) 
             {
                 _communities.Add(new Community<TVertex>(vertex));
             }
         }
 
-        public double? GetModularity()
+        public int GetCommunityCount() 
         {
-            throw new NotImplementedException();
+            return _communities.Count;
         }
 
         public int GetCommunityNumber(TVertex vertex) 
@@ -40,6 +38,11 @@ namespace GraphClustering
         }
         
         public void PushVertexToCommunity(TVertex vertex, int communityNumber) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public void PushVertexToCommunity(TVertex vertex, ICommunity<TVertex> community) 
         {
             throw new NotImplementedException("TODO");
         }
