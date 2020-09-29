@@ -16,11 +16,6 @@ namespace GraphClustering
             _vertices = new VertexList<TVertex> { vertex };
         }
 
-        public Community(VertexList<TVertex> vertices) 
-        {
-            _vertices = vertices;
-        }
-
         public Community(IEnumerable<TVertex> vertices) 
         {
             if (_vertices == null) 
@@ -37,6 +32,7 @@ namespace GraphClustering
 
         public void Add(TVertex vertex) 
         {
+         //   _vertices.Add(null);
             _vertices.Add(vertex);
         }
 
@@ -62,7 +58,19 @@ namespace GraphClustering
 
         public bool Contains(TVertex vertex) 
         {
-            return _vertices.Contains(vertex);
+            if(vertex.GetType().IsValueType) 
+            {
+                return _vertices.Contains(vertex);
+            }
+
+            foreach(var _vertex in _vertices) 
+            {
+                if (object.ReferenceEquals(_vertex,vertex))
+                {
+                    return true;
+                }
+            }
+           return false;
         }
 
         public bool Contains(IEnumerable<TVertex> vertices)

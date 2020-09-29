@@ -7,7 +7,7 @@ namespace GraphClustering
     public sealed class GraphPartition<TVertex> : IPartition<TVertex>
     {
         private readonly List<ICommunity<TVertex>> _communities;
-        
+        private readonly CommunityManager<TVertex> _communityManager;
         public IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> Graph
         {
             get;
@@ -20,6 +20,7 @@ namespace GraphClustering
                 throw new ArgumentNullException("TODO");
             }
             Graph = graph;
+            _communityManager = new CommunityManager<TVertex>(graph);
             _communities = new List<ICommunity<TVertex>>();
             foreach(var vertex in Graph.Vertices) 
             {
@@ -32,22 +33,36 @@ namespace GraphClustering
             return _communities.Count;
         }
 
-        public int GetCommunityNumber(TVertex vertex) 
+        public int? GetCommunityNumber(TVertex vertex) 
         {
             throw new NotImplementedException("TODO");
         }
         
-        public void PushVertexToCommunity(TVertex vertex, int communityNumber) 
+        public void AddVertexToCommunity(TVertex vertex, int communityNumber) 
         {
             throw new NotImplementedException("TODO");
         }
 
-        public void PushVertexToCommunity(TVertex vertex, ICommunity<TVertex> community) 
+        public void RemoveVertexFromCommunity(TVertex vertex, int communityNumber)
+        {
+            throw new NotImplementedException("TODO");
+        } 
+
+        public int GetEdgeCountBetween(TVertex vertex, int communityNumber) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+        public int GetEdgeCountBetween(int firstCommunityNumber, int secondCommunityNumber) 
         {
             throw new NotImplementedException("TODO");
         }
 
-        public AdjacencyGraph<TVertex, Edge<TVertex>> AggregatePartition() 
+        public IEnumerable<TVertex> GetVerticesFromCommunity(int communityNumber) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> AggregatePartition() 
         {
             throw new NotImplementedException("TODO");
         }

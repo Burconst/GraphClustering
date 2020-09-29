@@ -27,7 +27,7 @@ namespace GraphClustering.UnitTests
         }
 
         [Test]
-        public void Partition_PushVertexToCommunity_ReturnTrue() 
+        public void Partition_AddVertexToCommunity_ReturnTrue() 
         {
             foreach(var graph in _graphDict.Values) 
             {
@@ -36,7 +36,7 @@ namespace GraphClustering.UnitTests
                 {
                     foreach(var vertex in graph.Vertices) 
                     {
-                        partition.PushVertexToCommunity(vertex, 0);
+                        partition.AddVertexToCommunity(vertex, 0);
                     }
                     Assert.IsTrue(partition.GetCommunityCount() == 1, "TODU");
                 }
@@ -53,7 +53,7 @@ namespace GraphClustering.UnitTests
                 {
                     foreach(var vertex in graph.Vertices) 
                     {
-                        partition.PushVertexToCommunity(vertex, 0);
+                        partition.AddVertexToCommunity(vertex, 0);
                     }
                     foreach(var vertex in graph.Vertices) 
                     {
@@ -62,7 +62,6 @@ namespace GraphClustering.UnitTests
                 }
             }
         }
-
 
         
 
