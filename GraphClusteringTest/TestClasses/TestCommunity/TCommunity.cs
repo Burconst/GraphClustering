@@ -49,16 +49,19 @@ namespace GraphClustering.UnitTests
         [Test]
         public void Community_ConstructorWithRange_ReturnFalse() 
         {
+            // Value type testing
             var verticesInt = new List<int>{ 1, 2, 3 };
             var communityInt = new Community<int>(verticesInt);
             verticesInt.Add(4);
             Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"TODO");
             verticesInt.Clear();
             Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"TODO");
+            
+            // Reference type Testing
             var verticesString = new List<string> { "one", "two", "three"}; 
             var communityString = new Community<string>(verticesString);
             verticesString.Clear();
-            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"TODO");
+            Assert.IsFalse(verticesInt.Count == communityString.GetVertexCount(),"TODO");
         }
 
         [Test]

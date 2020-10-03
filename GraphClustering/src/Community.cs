@@ -32,7 +32,6 @@ namespace GraphClustering
 
         public void Add(TVertex vertex) 
         {
-         //   _vertices.Add(null);
             _vertices.Add(vertex);
         }
 

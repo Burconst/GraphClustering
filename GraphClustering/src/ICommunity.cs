@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace GraphClustering
 {
-    public interface ICommunity<TVertex> 
+    public interface ICommunity<in TVertex> 
     {
         void Add(TVertex vertex);
         void Add(IEnumerable<TVertex> vertices);

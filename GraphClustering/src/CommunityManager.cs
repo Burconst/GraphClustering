@@ -11,7 +11,7 @@ namespace GraphClustering
 {
     internal sealed class CommunityManager<TVertex> 
     {
-        IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> _graph;
+        private readonly IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> _graph;
         public CommunityManager(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) 
         {
             if (graph == null) 
