@@ -5,9 +5,9 @@ namespace GraphClustering.UnitTests
 {
     public static class GraphFactory 
     {
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateDGraph1() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateDGraph1() 
         {
-            var graph = new AdjacencyGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -20,12 +20,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(10,11)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateDGraph2() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateDGraph2() 
         {
-            var graph = new AdjacencyGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -35,12 +35,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(2,4),new Edge<int>(4,5)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateDGraph3() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateDGraph3() 
         {
-            var graph = new AdjacencyGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, IEdge<int>>();
             graph.AddVertex(0);
             graph.AddVertex(1);
             graph.AddVerticesAndEdgeRange(
@@ -58,12 +58,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(8,10), new Edge<int>(9,11)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateDGraph4() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateDGraph4() 
         {
-            var graph = new AdjacencyGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -78,12 +78,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(9,11)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateDGraph5() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateDGraph5() 
         {
-            var graph = new AdjacencyGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -94,12 +94,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(10,0)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateUGraph1() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateUGraph1() 
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new BidirectionalGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -113,12 +113,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(5,9)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateUGraph2() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateUGraph2() 
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new BidirectionalGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -131,12 +131,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(4,6)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateUGraph3() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateUGraph3() 
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new BidirectionalGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -162,12 +162,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(0,18)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateUGraph4() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateUGraph4() 
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new BidirectionalGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -186,12 +186,12 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(16,0), new Edge<int>(21,0)
                 }
             );
-            return graph;
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
-        public static IEdgeListAndIncidenceGraph<int, Edge<int>> CreateUGraph5() 
+        public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateUGraph5() 
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new BidirectionalGraph<int, IEdge<int>>();
             graph.AddVerticesAndEdgeRange(
                 new List<Edge<int>>
                 {
@@ -208,7 +208,8 @@ namespace GraphClustering.UnitTests
                     new Edge<int>(9,12)
                 }
             );
-            return graph;
+            
+            return (IEdgeListAndIncidenceGraph<int, IEdge<int>>)graph;
         }
 
     }

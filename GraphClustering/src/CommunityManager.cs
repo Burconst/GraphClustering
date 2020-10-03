@@ -4,31 +4,44 @@ using QuikGraph.Collections;
 using System.Runtime.CompilerServices;
 using QuikGraph;
 
+#if DEBUG
 [assembly: InternalsVisibleTo("GraphClusteringTest")]
+#endif
 namespace GraphClustering
 {
     internal sealed class CommunityManager<TVertex> 
     {
-        IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> _graph;
-        public CommunityManager(IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> graph) 
+        IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> _graph;
+        public CommunityManager(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) 
         {
             if (graph == null) 
             {
-                throw new ArgumentNullException("TODO");
+                throw new ArgumentNullException("Graph should be not null");
             }
             _graph = graph;
         }
 
-        public int GetEdgeCountBetween(TVertex vertex, ICommunity<TVertex> community) 
-        {
-            throw new NotImplementedException("TODO");
-        }
-        public int GetEdgeCountBetween(ICommunity<TVertex> firstCommunity, ICommunity<TVertex> secondCommunity)
+        public bool IsValidCommunity(ICommunity<TVertex> community)
         {
             throw new NotImplementedException("TODO");
         }
 
         public int GetEdgeCount(ICommunity<TVertex> community) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public int GetEdgeCount(TVertex fromVertex, ICommunity<TVertex> toCommunity) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+        
+        public int GetEdgeCount(ICommunity<TVertex> fromCommunity, TVertex toVertex) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public int GetEdgeCount(ICommunity<TVertex> fromCommunity, ICommunity<TVertex> toCommunity)
         {
             throw new NotImplementedException("TODO");
         }

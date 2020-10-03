@@ -5,9 +5,9 @@ namespace GraphClustering.UnitTests
 {
     public static class UtilityFunctions
     {
-        public static Dictionary<string, IEdgeListAndIncidenceGraph<int, Edge<int>>> GetGraphsDict()
+        public static Dictionary<string, IEdgeListAndIncidenceGraph<int, IEdge<int>>> GetGraphsDict()
         {   
-            var _graphDict = new Dictionary<string, IEdgeListAndIncidenceGraph<int, Edge<int>>>();
+            var _graphDict = new Dictionary<string, IEdgeListAndIncidenceGraph<int, IEdge<int>>>();
             _graphDict.Add("DGraph1",GraphFactory.CreateDGraph1());
             _graphDict.Add("DGraph2",GraphFactory.CreateDGraph2());
             _graphDict.Add("DGraph3",GraphFactory.CreateDGraph3());

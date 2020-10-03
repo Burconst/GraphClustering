@@ -7,7 +7,7 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TGraphPartition
     {
-        private Dictionary<string,IEdgeListAndIncidenceGraph<int, Edge<int>>> _graphDict;
+        private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
         public void SetUp()

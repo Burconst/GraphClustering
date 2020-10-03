@@ -91,6 +91,11 @@ namespace GraphClustering
             _vertices.Clear();
         }
 
+        public List<TVertex>.Enumerator GetEnumerator() 
+        {
+            return _vertices.GetEnumerator();
+        }
+
     }
 
 }

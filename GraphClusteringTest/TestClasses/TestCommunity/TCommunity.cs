@@ -7,7 +7,7 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TCommunity
     {
-        private Dictionary<string,IEdgeListAndIncidenceGraph<int, Edge<int>>> _graphDict;
+        private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
         public void SetUp()
@@ -195,6 +195,22 @@ namespace GraphClustering.UnitTests
                 }
                 community.Clear();
                 Assert.IsTrue(community.GetVertexCount() == 0,"TODo");
+            }
+        }
+
+        [Test]
+        public void Community_GetEnumerator_ReturnTrue() 
+        {
+            foreach(var graph in _graphDict)
+            {
+                var community = new Community<int>(graph.Value.Vertices);
+                bool enumeratorWasReceived = false;
+                foreach(var vertex in community)
+                {
+                    enumeratorWasReceived = true;
+                    break;
+                }
+                Assert.IsTrue((graph.Value.VertexCount > 0) && enumeratorWasReceived,"TODO");
             }
         }
 

@@ -8,12 +8,12 @@ namespace GraphClustering
     {
         private readonly List<ICommunity<TVertex>> _communities;
         private readonly CommunityManager<TVertex> _communityManager;
-        public IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> Graph
+        public IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> Graph
         {
             get;
         }
 
-        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> graph) 
+        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) 
         {
             if (graph == null) 
             {
