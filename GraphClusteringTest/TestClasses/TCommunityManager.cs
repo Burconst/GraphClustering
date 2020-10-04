@@ -76,117 +76,62 @@ namespace GraphClustering.UnitTests
         [Test]
         public void CommunityManager_GetEdgeCountFromVertToComm_ReturnTrue()
         {
-            // DGraph1
-            // edge count from 0 to { 1,3,4,5,7 }
             var communityManager = new CommunityManager<int>(_graphDict["DGraph1"]);
-            var community = new Community<int>();
-            community.Add(new List<int>(){ 1,3,4,5,7 });
-            Assert.True(communityManager.GetEdgeCount(0,community) == 0,"TODO");
-            community.Clear();
-            // edge count from 10 to { 2,4,11,6 }
-            community.Add(new List<int>(){ 2,4,11,6 });
-            Assert.True(communityManager.GetEdgeCount(10,community) == 2,"TODO");
-            community.Clear();
-            // edge count from 0 to { 0,1,5,7 }
-            community.Add(new List<int>(){ 0,1,5,7 });
-            Assert.True(communityManager.GetEdgeCount(0,community) == 0,"TODO");
-            community.Clear();
-            // edge count from 5 to { 0,1,5,7 }
-            community.Add(new List<int>(){ 0,1,5,7 });
-            Assert.True(communityManager.GetEdgeCount(5,community) == 2,"TODO");
-            community.Clear();
+            Assert.True(0 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new int[]{ 1,3,4,5,7 }),"TODO");
+            Assert.True(2 == getEdgeCount(communityManager,vertexFrom: 10,verticesTo: new int[]{ 2,4,11,6 }),"TODO");
+            Assert.True(0 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new int[]{ 0,1,5,7 }),"TODO");
+            Assert.True(2 == getEdgeCount(communityManager,vertexFrom: 5,verticesTo: new int[]{ 0,1,5,7 }),"TODO");
 
-            // UGraph1
-            // edge count from 0 to { 1,2,4,6 }
             communityManager = new CommunityManager<int>(_graphDict["UGraph1"]);
-            community = new Community<int>();
-            community.Add(new List<int>(){ 1,2,4,6 });
-            Assert.True(communityManager.GetEdgeCount(0,community) == 2,"TODO");
-            community.Clear();
-            // edge count from 0 to { 0,1,2,4,6 }
-            community.Add(new List<int>(){ 2,4,11,6 });
-            Assert.True(communityManager.GetEdgeCount(0,community) == 4,"TODO");
-            community.Clear();
+            Assert.True(2 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new int[]{ 1,2,4,6 }),"TODO");
+            Assert.True(4 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new int[]{ 2,4,11,6 }),"TODO");
+
+            int getEdgeCount<TVertex>(CommunityManager<TVertex> communityManager,TVertex vertexFrom,IEnumerable<TVertex> verticesTo) 
+            {
+                var community = new Community<TVertex>(verticesTo);
+                return communityManager.GetEdgeCount(vertexFrom,community);
+            }
         }
 
         [Test]
         public void CommunityManager_GetEdgeCountFromCommToVert_ReturnTrue()
         {
-            // DGraph1
-            // edge count from { 1,3,4,5,7 } to 0
             var communityManager = new CommunityManager<int>(_graphDict["DGraph1"]);
-            var community = new Community<int>();
-            community.Add(new List<int>(){ 1,3,4,5,7 });
-            Assert.True(communityManager.GetEdgeCount(community,0) == 3,"TODO");
-            community.Clear();
-            // edge count from { 2,4,11,6 } to 10
-            community.Add(new List<int>(){ 2,4,11,6 });
-            Assert.True(communityManager.GetEdgeCount(community,10) == 0,"TODO");
-            community.Clear();
-            // edge count from { 0,1,5,7 } to 0
-            community.Add(new List<int>(){ 0,1,5,7 });
-            Assert.True(communityManager.GetEdgeCount(community,0) == 3,"TODO");
-            community.Clear();
-            // edge count from { 0,1,5,7 } to 5
-            community.Add(new List<int>(){ 0,1,5,7 });
-            Assert.True(communityManager.GetEdgeCount(community,5) == 1,"TODO");
-            community.Clear();
+            Assert.True(3 == getEdgeCount(communityManager,verticesFrom: new int[]{ 1,3,4,5,7 },vertexTo: 0),"TODO");
+            Assert.True(0 == getEdgeCount(communityManager,verticesFrom: new int[]{ 2,4,11,6 },vertexTo: 10),"TODO");
+            Assert.True(3 == getEdgeCount(communityManager,verticesFrom: new int[]{ 0,1,5,7 },vertexTo: 0),"TODO");
+            Assert.True(1 == getEdgeCount(communityManager,verticesFrom: new int[]{ 0,1,5,7 },vertexTo: 5),"TODO");
 
-            // UGraph1
-            // edge count from { 1,2,4,6 } to 0
             communityManager = new CommunityManager<int>(_graphDict["UGraph1"]);
-            community = new Community<int>();
-            community.Add(new List<int>(){ 1,2,4,6 });
-            Assert.True(communityManager.GetEdgeCount(community,0) == 2,"TODO");
-            community.Clear();
-            // edge count from { 0,1,2,4,6 } to 0
-            community.Add(new List<int>(){ 2,4,11,6 });
-            Assert.True(communityManager.GetEdgeCount(community,0) == 4,"TODO");
-            community.Clear();
+            Assert.True(2 == getEdgeCount(communityManager,verticesFrom: new int[]{ 1,2,4,6 },vertexTo: 0),"TODO");
+            Assert.True(4 == getEdgeCount(communityManager,verticesFrom: new int[]{ 0,1,2,4,6 },vertexTo: 0),"TODO");
+
+            int getEdgeCount<TVertex>(CommunityManager<TVertex> communityManager,IEnumerable<TVertex> verticesFrom, TVertex vertexTo) 
+            {
+                var communityFrom = new Community<TVertex>(verticesFrom);
+                return communityManager.GetEdgeCount(communityFrom, vertexTo);
+            }
         }
 
         [Test]
         public void CommunityManager_GetEdgeCountFromCommToComm_ReturnTrue()
         {
-            // DGraph1
-            // edge count from { 0,1,3,4,5,7 } to { 2,6,8,9,10,11 }
             var communityManager = new CommunityManager<int>(_graphDict["DGraph1"]);
-            var communityForm = new Community<int>();
-            var communityTo = new Community<int>();
-            communityForm.Add(new List<int>(){ 0,1,3,4,5,7 });
-            communityTo.Add(new List<int>(){ 2,6,8,9,10,11 });
-            Assert.True(communityManager.GetEdgeCount(communityForm,communityTo) == 0,"TODO");
-            communityForm.Clear();
-            communityTo.Clear();
-            // edge count from { 5,1,0 } to { 7,3,4 }
-            communityForm.Add(new List<int>(){ 5,1,0 });
-            communityTo.Add(new List<int>(){ 7,3,4 });
-            Assert.True(communityManager.GetEdgeCount(communityForm,communityTo) == 0,"TODO");
-            communityForm.Clear();
-            communityTo.Clear();
-            // edge count from { 7,3,4 } to { 5,1,0 } 
-            communityForm.Add(new List<int>(){ 7,3,4 });
-            communityTo.Add(new List<int>(){ 5,1,0 });
-            Assert.True(communityManager.GetEdgeCount(communityForm,communityTo) == 2,"TODO");
-            communityForm.Clear();
-            communityTo.Clear();
+            Assert.True(0 == getEdgeCount(communityManager,verticesFrom: new int[]{ 0,1,3,4,5,7 },verticesTo: new int[]{ 2,6,8,9,10,11 }),"TODO");
+            Assert.True(0 == getEdgeCount(communityManager,verticesFrom: new int[]{ 5,1,0 },verticesTo: new int[]{ 7,3,4 }),"TODO");
+            Assert.True(2 == getEdgeCount(communityManager,verticesFrom: new int[]{ 7,3,4 },verticesTo: new int[]{ 5,1,0 }),"TODO");
 
-            // UGraph1
-            // edge count from { 0,4,8 } to { 1,2,3 }
             communityManager = new CommunityManager<int>(_graphDict["UGraph1"]);
-            communityForm = new Community<int>();
-            communityTo = new Community<int>();
-            communityForm.Add(new List<int>(){ 0,4,8 });
-            communityTo.Add(new List<int>(){ 1,2,3 });
-            Assert.True(communityManager.GetEdgeCount(communityForm,communityTo) == 2,"TODO");
-            communityForm.Clear();
-            communityTo.Clear();
-            // edge count from { 0,4,8 } to { 0,1,2,3 }
-            communityForm.Add(new List<int>(){ 0,4,8 });
-            communityTo.Add(new List<int>(){ 0,1,2,3 });
-            Assert.True(communityManager.GetEdgeCount(communityForm,communityTo) == 6,"TODO");
-            communityForm.Clear();
-            communityTo.Clear();
+            Assert.True(2 == getEdgeCount(communityManager,verticesFrom: new int[]{ 0,4,8 },verticesTo: new int[]{ 1,2,3 }),"TODO");
+            Assert.True(6 == getEdgeCount(communityManager,verticesFrom: new int[]{ 0,4,8 },verticesTo: new int[]{ 0,1,2,3 }),"TODO");
+
+
+            int getEdgeCount<TVertex>(CommunityManager<TVertex> communityManager,IEnumerable<TVertex> verticesFrom, IEnumerable<TVertex> verticesTo) 
+            {
+                var communityFrom = new Community<TVertex>(verticesFrom);
+                var communityTo = new Community<TVertex>(verticesTo);
+                return communityManager.GetEdgeCount(communityFrom, communityTo);
+            }
         }
 
 
