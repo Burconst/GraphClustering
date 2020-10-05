@@ -19,10 +19,21 @@ namespace GraphClustering.UnitTests
             foreach(var graph in _graphDict.Values) 
             {
                 var partition = new GraphPartition<int>(graph);
-                Assert.IsTrue(partition.Graph == graph, "TODO");
-                Assert.IsTrue(partition.GetCommunityCount() == graph.VertexCount, "TODO");
+                Assert.IsTrue(partition.Graph == graph, "A partition must refer to the graph that it was created with.");
             }
+
+            bool wasExeption = false;
+            try 
+            {
+                var partition = new GraphPartition<int>(null);
+            }
+            catch 
+            {
+                wasExeption = true;
+            }
+            Assert.IsTrue(wasExeption, "The constructor must throw an exceptions if the graph is null.");
         }
+
 
         [Test]
         public void GraphPartition_AddVertexToCommunity_ReturnTrue() 
@@ -34,7 +45,7 @@ namespace GraphClustering.UnitTests
                 {
                     partition.AddVertexToCommunity(vertex, 0);
                 }
-                Assert.IsTrue(partition.GetCommunityCount() == 1, "TODU");
+                Assert.IsTrue(partition.GetCommunityCount() == 1);
             }
         }
 

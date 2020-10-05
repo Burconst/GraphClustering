@@ -24,6 +24,17 @@ namespace GraphClustering.UnitTests
                     break;
                 }
             }
+
+            bool wasExeption = false;
+            try 
+            {
+                var community = new Community<int>(null);
+            }
+            catch 
+            {
+                wasExeption = true;
+            }
+            Assert.IsTrue(wasExeption, "The constructor must throw an exceptions if the constructor parameter is null.");
         }
 
         [Test]

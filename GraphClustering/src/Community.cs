@@ -13,11 +13,19 @@ namespace GraphClustering
         }
         public Community(TVertex vertex) 
         {
+            if (vertex == null) 
+            {
+                throw new System.ArgumentNullException("The vertex must be not null.");
+            }
             _vertices = new VertexList<TVertex> { vertex };
         }
 
         public Community(IEnumerable<TVertex> vertices) 
         {
+            if (vertices == null) 
+            {
+                throw new System.ArgumentNullException("Th vertices must be not null.");
+            }
             if (_vertices == null) 
             {
                 _vertices = new VertexList<TVertex>();
