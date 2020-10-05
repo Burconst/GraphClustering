@@ -10,10 +10,7 @@ namespace GraphClustering.UnitTests
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
-        public void SetUp()
-        {   
-            _graphDict = UtilityFunctions.GetGraphsDict();
-        }
+        public void SetUp() => _graphDict = UtilityFunctions.GetGraphsDict();
 
         [Test]
         public void Community_Constructor_ReturnTrue()
