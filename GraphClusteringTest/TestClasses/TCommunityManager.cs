@@ -10,10 +10,7 @@ namespace GraphClustering.UnitTests
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
-        public void SetUp()
-        {   
-            _graphDict = UtilityFunctions.GetGraphsDict();
-        }
+        public void SetUp() => _graphDict = UtilityFunctions.GetGraphsDict();
 
         [Test]
         public void CommunityManager_Constructor_ReturnTrue() 
@@ -23,11 +20,10 @@ namespace GraphClustering.UnitTests
                 try 
                 {
                     var communityManager = new CommunityManager<int>(graph);
-                    Assert.IsTrue(true, "TODO");
                 }
                 catch 
                 {
-                    Assert.IsTrue(false, "TODO");
+                    Assert.IsTrue(false, "The constructor mustn't throw an exceptions if the graph is not null.");
                 }
             }
         }
@@ -38,11 +34,10 @@ namespace GraphClustering.UnitTests
             try 
             {
                 var communityManager = new CommunityManager<int>(null);
-                Assert.IsFalse(true, "TODO");
             }
             catch 
             {
-                Assert.IsFalse(false, "TODO");
+                Assert.IsFalse(false, "The constructor must throw an exceptions if the graph is null.");
             }
         }
 
@@ -55,10 +50,10 @@ namespace GraphClustering.UnitTests
                 foreach(var vertex in graph.Vertices) 
                 {
                     var singleVertexCommunity = new Community<int>(vertex);
-                    Assert.IsTrue(communityManager.IsValidCommunity(singleVertexCommunity),"TODO");
+                    Assert.IsTrue(communityManager.IsValidCommunity(singleVertexCommunity),"A community must be valid if it consists of vertices from graph that object was created with.");
                 }
                 var allVerticesCommunity = new Community<int>(graph.Vertices);
-                Assert.IsTrue(communityManager.IsValidCommunity(allVerticesCommunity),"TODO");
+                Assert.IsTrue(communityManager.IsValidCommunity(allVerticesCommunity),"A community must be valid if it consists of vertices from graph that object was created with.");
             }
         }
 
@@ -69,25 +64,24 @@ namespace GraphClustering.UnitTests
             {
                 var communityManager = new CommunityManager<int>(graph);
                 var community = new Community<int>(graph.Vertices);
-                Assert.IsTrue(communityManager.GetEdgeCount(community) == graph.EdgeCount, "TODO");
+                Assert.IsTrue(communityManager.GetEdgeCount(community) == graph.EdgeCount);
             }
         }
 
         [Test]
         public void CommunityManager_GetEdgeCountFromVertToComm_ReturnTrue()
         {
-            var communityManager = new CommunityManager<int>(_graphDict["DGraph1"]);
-            Assert.True(0 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new []{ 1,3,4,5,7 }),"TODO");
-            Assert.True(2 == getEdgeCount(communityManager,vertexFrom: 10,verticesTo: new []{ 2,4,11,6 }),"TODO");
-            Assert.True(0 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new []{ 0,1,5,7 }),"TODO");
-            Assert.True(2 == getEdgeCount(communityManager,vertexFrom: 5,verticesTo: new []{ 0,1,5,7 }),"TODO");
+            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 0,verticesTo: new []{ 1,3,4,5,7 }));
+            Assert.True(2 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 10,verticesTo: new []{ 2,4,11,6 }));
+            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 0,verticesTo: new []{ 0,1,5,7 }));
+            Assert.True(2 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 5,verticesTo: new []{ 0,1,5,7 }));
 
-            communityManager = new CommunityManager<int>(_graphDict["UGraph1"]);
-            Assert.True(2 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new []{ 1,2,4,6 }),"TODO");
-            Assert.True(4 == getEdgeCount(communityManager,vertexFrom: 0,verticesTo: new []{ 2,4,11,6 }),"TODO");
+            Assert.True(2 == getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new []{ 1,2,4,6 }));
+            Assert.True(4 == getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new []{ 2,4,11,6 }));
 
-            int getEdgeCount<TVertex>(CommunityManager<TVertex> communityManager,TVertex vertexFrom,IEnumerable<TVertex> verticesTo) 
+            int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom,IEnumerable<TVertex> verticesTo) 
             {
+                var communityManager = new CommunityManager<TVertex>(graph);
                 var community = new Community<TVertex>(verticesTo);
                 return communityManager.GetEdgeCount(vertexFrom,community);
             }
@@ -96,18 +90,17 @@ namespace GraphClustering.UnitTests
         [Test]
         public void CommunityManager_GetEdgeCountFromCommToVert_ReturnTrue()
         {
-            var communityManager = new CommunityManager<int>(_graphDict["DGraph1"]);
-            Assert.True(3 == getEdgeCount(communityManager,verticesFrom: new []{ 1,3,4,5,7 },vertexTo: 0),"TODO");
-            Assert.True(0 == getEdgeCount(communityManager,verticesFrom: new []{ 2,4,11,6 },vertexTo: 10),"TODO");
-            Assert.True(3 == getEdgeCount(communityManager,verticesFrom: new []{ 0,1,5,7 },vertexTo: 0),"TODO");
-            Assert.True(1 == getEdgeCount(communityManager,verticesFrom: new []{ 0,1,5,7 },vertexTo: 5),"TODO");
+            Assert.True(3 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 1,3,4,5,7 },vertexTo: 0));
+            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 2,4,11,6 },vertexTo: 10));
+            Assert.True(3 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 0,1,5,7 },vertexTo: 0));
+            Assert.True(1 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 0,1,5,7 },vertexTo: 5));
 
-            communityManager = new CommunityManager<int>(_graphDict["UGraph1"]);
-            Assert.True(2 == getEdgeCount(communityManager,verticesFrom: new []{ 1,2,4,6 },vertexTo: 0),"TODO");
-            Assert.True(4 == getEdgeCount(communityManager,verticesFrom: new []{ 0,1,2,4,6 },vertexTo: 0),"TODO");
+            Assert.True(2 == getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 1,2,4,6 },vertexTo: 0));
+            Assert.True(4 == getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 0,1,2,4,6 },vertexTo: 0));
 
-            int getEdgeCount<TVertex>(CommunityManager<TVertex> communityManager,IEnumerable<TVertex> verticesFrom, TVertex vertexTo) 
+            int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,IEnumerable<TVertex> verticesFrom, TVertex vertexTo) 
             {
+                var communityManager = new CommunityManager<TVertex>(graph);
                 var communityFrom = new Community<TVertex>(verticesFrom);
                 return communityManager.GetEdgeCount(communityFrom, vertexTo);
             }
@@ -116,18 +109,17 @@ namespace GraphClustering.UnitTests
         [Test]
         public void CommunityManager_GetEdgeCountFromCommToComm_ReturnTrue()
         {
-            var communityManager = new CommunityManager<int>(_graphDict["DGraph1"]);
-            Assert.True(0 == getEdgeCount(communityManager,verticesFrom: new []{ 0,1,3,4,5,7 },verticesTo: new []{ 2,6,8,9,10,11 }),"TODO");
-            Assert.True(0 == getEdgeCount(communityManager,verticesFrom: new []{ 5,1,0 },verticesTo: new []{ 7,3,4 }),"TODO");
-            Assert.True(2 == getEdgeCount(communityManager,verticesFrom: new []{ 7,3,4 },verticesTo: new []{ 5,1,0 }),"TODO");
+            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 0,1,3,4,5,7 },verticesTo: new []{ 2,6,8,9,10,11 }));
+            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 5,1,0 },verticesTo: new []{ 7,3,4 }));
+            Assert.True(2 == getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 7,3,4 },verticesTo: new []{ 5,1,0 }));
 
-            communityManager = new CommunityManager<int>(_graphDict["UGraph1"]);
-            Assert.True(2 == getEdgeCount(communityManager,verticesFrom: new []{ 0,4,8 },verticesTo: new []{ 1,2,3 }),"TODO");
-            Assert.True(6 == getEdgeCount(communityManager,verticesFrom: new []{ 0,4,8 },verticesTo: new []{ 0,1,2,3 }),"TODO");
+            Assert.True(2 == getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 0,4,8 },verticesTo: new []{ 1,2,3 }));
+            Assert.True(6 == getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 0,4,8 },verticesTo: new []{ 0,1,2,3 }));
 
 
-            int getEdgeCount<TVertex>(CommunityManager<TVertex> communityManager,IEnumerable<TVertex> verticesFrom, IEnumerable<TVertex> verticesTo) 
+            int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,IEnumerable<TVertex> verticesFrom, IEnumerable<TVertex> verticesTo) 
             {
+                var communityManager = new CommunityManager<TVertex>(graph);
                 var communityFrom = new Community<TVertex>(verticesFrom);
                 var communityTo = new Community<TVertex>(verticesTo);
                 return communityManager.GetEdgeCount(communityFrom, communityTo);
