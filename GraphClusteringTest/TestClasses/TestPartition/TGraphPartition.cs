@@ -14,7 +14,7 @@ namespace GraphClustering.UnitTests
         public void SetUp() => _graphDict = UtilityFunctions.GetGraphsDict();
 
         [Test]
-        public void Partition_Constructor_ReturnTrue() 
+        public void GraphPartition_Constructor_ReturnTrue() 
         {
             foreach(var graph in _graphDict.Values) 
             {
@@ -25,7 +25,7 @@ namespace GraphClustering.UnitTests
         }
 
         [Test]
-        public void Partition_AddVertexToCommunity_ReturnTrue() 
+        public void GraphPartition_AddVertexToCommunity_ReturnTrue() 
         {
             foreach(var graph in _graphDict.Values)
             {
@@ -39,7 +39,7 @@ namespace GraphClustering.UnitTests
         }
 
         [Test]
-        public void Partition_GetCommunityNumber_ReturnTrue() 
+        public void GraphPartition_GetCommunityNumber_ReturnTrue() 
         {
             foreach(var graph in _graphDict.Values)
             {
