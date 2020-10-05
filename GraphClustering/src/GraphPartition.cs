@@ -4,16 +4,17 @@ using QuikGraph;
 
 namespace GraphClustering 
 {
-    public sealed class GraphPartition<TVertex> : IPartition<TVertex>
+    public sealed class GraphPartition<TVertex> : IGraphPartition<TVertex>
     {
-        private readonly List<ICommunity<TVertex>> _communities;
+        private readonly ICollection<ICommunity<TVertex>> _communities;
         private readonly CommunityManager<TVertex> _communityManager;
+
         public IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> Graph
         {
             get;
         }
 
-        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) 
+        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, PartitionType type = PartitionType.Singletone) 
         {
             if (graph == null) 
             {
@@ -22,10 +23,16 @@ namespace GraphClustering
             Graph = graph;
             _communityManager = new CommunityManager<TVertex>(graph);
             _communities = new List<ICommunity<TVertex>>();
-            foreach(var vertex in Graph.Vertices) 
+            switch (type)
             {
-                _communities.Add(new Community<TVertex>(vertex));
+                case PartitionType.Singletone:
+                    foreach(var vertex in Graph.Vertices)
+                    {
+                        _communities.Add(new Community<TVertex>(vertex));
+                    }
+                    break;
             }
+
         }
 
         public int GetCommunityCount() 
@@ -43,6 +50,11 @@ namespace GraphClustering
             throw new NotImplementedException("TODO");
         }
 
+        public void RemoveVertexFromCommunity(TVertex vertex)
+        {
+            throw new NotImplementedException("TODO");
+        }
+
         public void RemoveVertexFromCommunity(TVertex vertex, int communityNumber)
         {
             throw new NotImplementedException("TODO");
@@ -52,6 +64,7 @@ namespace GraphClustering
         {
             throw new NotImplementedException("TODO");
         }
+
         public int GetEdgeCountBetween(int firstCommunityNumber, int secondCommunityNumber) 
         {
             throw new NotImplementedException("TODO");
@@ -62,10 +75,12 @@ namespace GraphClustering
             throw new NotImplementedException("TODO");
         }
 
-        public IEdgeListAndIncidenceGraph<TVertex, Edge<TVertex>> AggregatePartition() 
+        public IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> AggregatePartition() 
         {
             throw new NotImplementedException("TODO");
         }
+
+        public IEnumerator<ICommunity<TVertex>> GetEnumerator() => _communities.GetEnumerator();
         
     }
 

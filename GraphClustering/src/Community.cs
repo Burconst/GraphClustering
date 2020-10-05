@@ -25,25 +25,13 @@ namespace GraphClustering
             _vertices.AddRange(vertices);
         }
 
-        public int GetVertexCount() 
-        {
-            return _vertices.Count;
-        }
+        public int GetVertexCount() => _vertices.Count;
 
-        public void Add(TVertex vertex) 
-        {
-            _vertices.Add(vertex);
-        }
+        public void Add(TVertex vertex) => _vertices.Add(vertex);
 
-        public void Add(IEnumerable<TVertex> vertices) 
-        {
-            _vertices.AddRange(vertices);
-        }
+        public void Add(IEnumerable<TVertex> vertices) => _vertices.AddRange(vertices);
 
-        public bool Remove(TVertex vertex) 
-        {
-            return _vertices.Remove(vertex);
-        }
+        public bool Remove(TVertex vertex) => _vertices.Remove(vertex);
 
         public bool Remove(IEnumerable<TVertex> vertices) 
         {
@@ -85,15 +73,9 @@ namespace GraphClustering
             return contains;
         }
 
-        public void Clear() 
-        {
-            _vertices.Clear();
-        }
+        public void Clear() => _vertices.Clear();
 
-        public List<TVertex>.Enumerator GetEnumerator() 
-        {
-            return _vertices.GetEnumerator();
-        }
+        public IEnumerator<TVertex> GetEnumerator() =>  _vertices.GetEnumerator();
 
     }
 

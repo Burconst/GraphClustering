@@ -10,10 +10,7 @@ namespace GraphClustering.UnitTests
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
-        public void SetUp()
-        {   
-            _graphDict = UtilityFunctions.GetGraphsDict();
-        }
+        public void SetUp() => _graphDict = UtilityFunctions.GetGraphsDict();
 
         [Test]
         public void Partition_Constructor_ReturnTrue() 
@@ -29,41 +26,60 @@ namespace GraphClustering.UnitTests
         [Test]
         public void Partition_AddVertexToCommunity_ReturnTrue() 
         {
-            foreach(var graph in _graphDict.Values) 
+            foreach(var graph in _graphDict.Values)
             {
                 var partition = new GraphPartition<int>(graph);
-                if(graph.VertexCount > 0) 
+                foreach (var vertex in graph.Vertices)
                 {
-                    foreach(var vertex in graph.Vertices) 
-                    {
-                        partition.AddVertexToCommunity(vertex, 0);
-                    }
-                    Assert.IsTrue(partition.GetCommunityCount() == 1, "TODU");
+                    partition.AddVertexToCommunity(vertex, 0);
                 }
+                Assert.IsTrue(partition.GetCommunityCount() == 1, "TODU");
             }
         }
 
         [Test]
         public void Partition_GetCommunityNumber_ReturnTrue() 
         {
-            foreach(var graph in _graphDict.Values) 
+            foreach(var graph in _graphDict.Values)
             {
                 var partition = new GraphPartition<int>(graph);
-                if(graph.VertexCount > 0) 
+                foreach (var vertex in graph.Vertices)
                 {
-                    foreach(var vertex in graph.Vertices) 
-                    {
-                        partition.AddVertexToCommunity(vertex, 0);
-                    }
-                    foreach(var vertex in graph.Vertices) 
-                    {
-                        Assert.IsTrue(partition.GetCommunityNumber(vertex) == 0, "TODU");
-                    }
+                    partition.AddVertexToCommunity(vertex, 0);
+                    Assert.IsTrue(partition.GetCommunityNumber(vertex) == 0, "TODU");
                 }
             }
         }
 
+        [Test]
+        public void GraphPartition_RemoveVertexFromCommunity_ReturnTrue() 
+        {
+            foreach(var graph in _graphDict.Values)
+            {
+                var partition = new GraphPartition<int>(graph);
+                foreach (var vertex in graph.Vertices)
+                {
+                    partition.RemoveVertexFromCommunity(vertex);
+                    Assert.IsTrue(partition.GetCommunityNumber(vertex) == null, "TODU");
+                }
+            }
+        }
         
+        [Test]
+        public void GraphPartition_RemoveVertexFromCommunityWithCommNumber_ReturnTrue() 
+        {
+            foreach(var graph in _graphDict.Values)
+            {
+                var partition = new GraphPartition<int>(graph);
+                foreach (var vertex in graph.Vertices)
+                {
+                    partition.RemoveVertexFromCommunity(vertex);
+                    Assert.IsTrue(partition.GetCommunityNumber(vertex) == null, "TODU");
+                }
+            }
+        }    
+
+
 
     }
     
