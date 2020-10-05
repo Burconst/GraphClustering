@@ -26,19 +26,17 @@ namespace GraphClustering.UnitTests
                     Assert.IsTrue(false, "The constructor mustn't throw an exceptions if the graph is not null.");
                 }
             }
-        }
-        
-        [Test]
-        public void CommunityManager_Constructor_ReturnFalse() 
-        {
+
+            bool wasExeption = false;
             try 
             {
                 var communityManager = new CommunityManager<int>(null);
             }
             catch 
             {
-                Assert.IsFalse(false, "The constructor must throw an exceptions if the graph is null.");
+                wasExeption = true;
             }
+            Assert.IsTrue(wasExeption, "The constructor must throw an exceptions if the graph is null.");
         }
 
         [Test]
