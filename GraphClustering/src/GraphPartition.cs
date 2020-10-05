@@ -40,7 +40,7 @@ namespace GraphClustering
             return _communities.Count;
         }
 
-        public int? GetCommunityNumber(TVertex vertex) 
+        public int GetCommunityNumber(TVertex vertex) 
         {
             throw new NotImplementedException("TODO");
         }
@@ -60,12 +60,22 @@ namespace GraphClustering
             throw new NotImplementedException("TODO");
         } 
 
-        public int GetEdgeCountBetween(TVertex vertex, int communityNumber) 
+        public int UniteCommunities(int firstCommunityNumber, int secondCommunityNumber) 
         {
             throw new NotImplementedException("TODO");
         }
 
-        public int GetEdgeCountBetween(int firstCommunityNumber, int secondCommunityNumber) 
+        public int UniteCommunities(IEnumerable<int> communityNumbers) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public int GetEdgeCount(TVertex fromVertex, int toCommunityNumber) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
+        public int GetEdgeCount(int fromCommunityNumber, int toCommunityNumber) 
         {
             throw new NotImplementedException("TODO");
         }
