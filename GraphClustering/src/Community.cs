@@ -15,7 +15,7 @@ namespace GraphClustering
         {
             if (vertex == null) 
             {
-                throw new System.ArgumentNullException("The vertex must be not null.");
+                throw new System.ArgumentNullException("The vertex cannot be null.");
             }
             _vertices = new VertexList<TVertex> { vertex };
         }

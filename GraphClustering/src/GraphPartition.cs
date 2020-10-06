@@ -16,11 +16,7 @@ namespace GraphClustering
 
         public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, PartitionType type = PartitionType.Singletone) 
         {
-            if (graph == null) 
-            {
-                throw new ArgumentNullException("TODO");
-            }
-            Graph = graph;
+            Graph = graph ?? throw new ArgumentNullException("The graph cannot be null.");
             _communityManager = new CommunityManager<TVertex>(graph);
             _communities = new List<ICommunity<TVertex>>();
             switch (type)
@@ -31,8 +27,9 @@ namespace GraphClustering
                         _communities.Add(new Community<TVertex>(vertex));
                     }
                     break;
+                default: 
+                    throw new ArgumentException("Wrong partition type value.");
             }
-
         }
 
         public int GetCommunityCount() 
