@@ -4,8 +4,8 @@ namespace GraphClustering
 {
     public interface ICommunity<TVertex> 
     {
-        void Add(TVertex vertex);
-        void Add(IEnumerable<TVertex> vertices);
+        bool Add(TVertex vertex);
+        bool Add(IEnumerable<TVertex> vertices);
         bool Remove(TVertex vertex);
         bool Remove(IEnumerable<TVertex> vertices);
         void Clear();

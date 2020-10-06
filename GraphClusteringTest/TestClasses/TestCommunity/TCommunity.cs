@@ -20,7 +20,7 @@ namespace GraphClustering.UnitTests
                 foreach(var vertex in graph.Vertices) 
                 {
                     var community = new Community<int>(vertex);
-                    Assert.IsTrue(community.GetVertexCount() == 1,"The community must consist of one vertex.");
+                    Assert.IsTrue(community.GetVertexCount() == 1,"The community should consist of one vertex.");
                     break;
                 }
             }
@@ -34,14 +34,14 @@ namespace GraphClustering.UnitTests
             {
                 wasExeption = true;
             }
-            Assert.IsTrue(wasExeption, "The constructor must throw an exceptions if the constructor parameter is null.");
+            Assert.IsTrue(wasExeption, "The constructor should throw an exceptions if the constructor parameter is null.");
         }
 
         [Test]
         public void Community_Constructor_ReturnFalse()
         {
             var community1 = new Community<int>();
-            Assert.IsFalse(community1.GetVertexCount() > 0,"The community must be empty.");
+            Assert.IsFalse(community1.GetVertexCount() > 0,"The community should be empty in initial state.");
         }
 
         [Test]
@@ -50,7 +50,7 @@ namespace GraphClustering.UnitTests
             foreach(var graph in _graphDict.Values) 
             {
                 var community = new Community<int>(graph.Vertices);
-                Assert.IsTrue(community.GetVertexCount() == graph.VertexCount,"The community must be the same size as the graph.");
+                Assert.IsTrue(community.GetVertexCount() == graph.VertexCount,"The community should be the same size as the graph.");
             }
         }
 
@@ -61,15 +61,15 @@ namespace GraphClustering.UnitTests
             var verticesInt = new List<int>{ 1, 2, 3 };
             var communityInt = new Community<int>(verticesInt);
             verticesInt.Add(4);
-            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"The community must be independent of the collection that it was created with.");
+            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"The community should be independent of the collection that it was created with.");
             verticesInt.Clear();
-            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"The community must be independent of the collection that it was created with.");
+            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"The community should be independent of the collection that it was created with.");
             
             // Reference type Testing
             var verticesString = new List<string> { "one", "two", "three"}; 
             var communityString = new Community<string>(verticesString);
             verticesString.Clear();
-            Assert.IsFalse(verticesInt.Count == communityString.GetVertexCount(),"The community must be independent of the collection that it was created with.");
+            Assert.IsFalse(verticesInt.Count == communityString.GetVertexCount(),"The community should be independent of the collection that it was created with.");
         }
 
         [Test]
@@ -80,12 +80,12 @@ namespace GraphClustering.UnitTests
                 foreach(var vertex in graph.Value.Vertices) 
                 {
                     var community = new Community<int>(vertex);
-                    Assert.IsTrue(community.Contains(vertex),"The community must contain vertex that it was created with.");
+                    Assert.IsTrue(community.Contains(vertex),"The community should contain vertex that it was created with.");
                 }
             }
             var verticesInt = new List<int>{ 1, 2, 3 };
             var communityInt = new Community<int>(verticesInt);
-            Assert.IsTrue(communityInt.Contains(verticesInt[2]),"The community must contain collection that it was created with.");
+            Assert.IsTrue(communityInt.Contains(verticesInt[2]),"The community should contain collection that it was created with.");
         }
 
         [Test]
@@ -94,7 +94,7 @@ namespace GraphClustering.UnitTests
             var verticesInt = new List<int>{ 1, 2, 3 };
             var communityInt = new Community<int>(verticesInt);
             verticesInt.Add(4);
-            Assert.IsFalse(communityInt.Contains(verticesInt[3]),"The community must be independent of the collection that it was created with.");
+            Assert.IsFalse(communityInt.Contains(verticesInt[3]),"The community should be independent of the collection that it was created with.");
             var verticesString = new List<string> { "one", "two", "three"}; 
             var communityString = new Community<string>(verticesString);
             var one = new string("one");
@@ -107,7 +107,7 @@ namespace GraphClustering.UnitTests
             foreach(var graph in _graphDict.Values) 
             {
                 var community = new Community<int>(graph.Vertices);
-                Assert.IsTrue(community.Contains(graph.Vertices),"The community must contain collection that it was created with.");
+                Assert.IsTrue(community.Contains(graph.Vertices),"The community should contain collection that it was created with.");
             }
         }
 
@@ -128,7 +128,7 @@ namespace GraphClustering.UnitTests
                     }
                     i++;
                 }
-                Assert.IsTrue(community.Contains(vertList),"The community must contain added vertices.");
+                Assert.IsTrue(community.Contains(vertList),"The community should contain added vertices.");
             }
         }
 
@@ -148,8 +148,7 @@ namespace GraphClustering.UnitTests
                     }
                     i++;
                 }
-                community.Add(vertList);
-                Assert.IsTrue(community.Contains(vertList),"The community must contain added vertices.");
+                Assert.IsTrue(community.Add(vertList),"It should be possible to add any vertex to an empty community.");
             }
         }
 
@@ -162,13 +161,24 @@ namespace GraphClustering.UnitTests
                 foreach(var vertex in graph.Value.Vertices) 
                 {
                     bool answer = community.Remove(vertex);
-                    Assert.IsTrue((answer == true )&& !community.Contains(vertex),"The community mustn't contain removed vertices.");
+                    Assert.IsTrue((answer == true )&& !community.Contains(vertex),"The community shouldn't contain removed vertices.");
                 }
             }
         }
         
         [Test]
-         public void Community_RemoveRange_ReturnTrue() 
+        public void Community_Remove_ReturnFalse() 
+        {
+            var communityOfInts = new Community<int>(new [] {1,2,3,4,5,6});
+            Assert.IsFalse(communityOfInts.Remove(0), "A removal was successful if argument was found and removed.");
+
+            var communityOfStrings = new Community<string>(new []{ "one", "two", "three"});
+            var stringToRemove = new string("one");
+            Assert.IsFalse(communityOfStrings.Remove(stringToRemove), "A removal must be by reference.");
+        }
+
+        [Test]
+        public void Community_RemoveRange_ReturnTrue() 
         {
             foreach(var graph in _graphDict)
             {
@@ -183,9 +193,15 @@ namespace GraphClustering.UnitTests
                     }
                     i++;
                 }
-                bool answer = community.Remove(vertList);
-                Assert.IsTrue(answer == true && !community.Contains(vertList),"The community mustn't contain removed vertices.");
+                Assert.IsTrue(community.Remove(vertList) && !community.Contains(vertList),"The community shouldn't contain removed vertices.");
             }
+        }
+
+        [Test]
+        public void Community_RemoveRange_ReturnFalse() 
+        {
+            var communityOfInts = new Community<int>(new [] {1,2,3,4,5,6});
+            Assert.IsFalse(communityOfInts.Remove(new []{0,1,2,3}), "A removal was successful if all elements in collection was removed.");
         }
 
         [Test]
@@ -205,7 +221,7 @@ namespace GraphClustering.UnitTests
                     i++;
                 }
                 community.Clear();
-                Assert.IsTrue(community.GetVertexCount() == 0,"The cleared community must be empty.");
+                Assert.IsTrue(community.GetVertexCount() == 0,"The cleared community should be empty.");
             }
         }
 
@@ -221,7 +237,7 @@ namespace GraphClustering.UnitTests
                     enumeratorWasReceived = true;
                     break;
                 }
-                Assert.IsTrue((graph.Value.VertexCount > 0) && enumeratorWasReceived,"You must be able to get enumerator of a community.");
+                Assert.IsTrue((graph.Value.VertexCount > 0) && enumeratorWasReceived,"You should be able to get enumerator of a community.");
             }
         }
 

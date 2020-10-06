@@ -35,9 +35,25 @@ namespace GraphClustering
 
         public int GetVertexCount() => _vertices.Count;
 
-        public void Add(TVertex vertex) => _vertices.Add(vertex);
+        public bool Add(TVertex vertex)
+        {
+            if(Contains(vertex)) 
+            {
+                return false;
+            }
+            _vertices.Add(vertex);
+            return true;    
+        } 
 
-        public void Add(IEnumerable<TVertex> vertices) => _vertices.AddRange(vertices);
+        public bool Add(IEnumerable<TVertex> vertices)
+        {
+            if (Contains(vertices)) 
+            {
+                return false;
+            }
+            _vertices.AddRange(vertices);
+            return true;
+        }
 
         public bool Remove(TVertex vertex) => _vertices.Remove(vertex);
 
