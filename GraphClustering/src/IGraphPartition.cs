@@ -1,11 +1,11 @@
-using System;
 using System.Collections.Generic;
 using QuikGraph;
 
 namespace GraphClustering 
 {
-    interface IGraphPartition<TVertex>
+    public interface IGraphPartition<TVertex>
     {
+        IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> Graph { get; }
         int GetCommunityCount();
         int GetCommunityNumber(TVertex vertex);
         void AddVertexToCommunity(TVertex vertex, int communityNumber);

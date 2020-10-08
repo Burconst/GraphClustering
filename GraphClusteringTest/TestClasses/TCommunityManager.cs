@@ -10,7 +10,7 @@ namespace GraphClustering.UnitTests
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = UtilityFunctions.GetGraphsDict();
+        public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
 
         [Test]
         public void CommunityManager_Constructor_ReturnTrue() 
@@ -19,7 +19,7 @@ namespace GraphClustering.UnitTests
             {
                 try 
                 {
-                    var communityManager = new CommunityManager<int>(graph);
+                    var communityManager = Builders.CommunityManagerBuilder.Create<int>(graph);
                 }
                 catch 
                 {
@@ -30,7 +30,7 @@ namespace GraphClustering.UnitTests
             bool wasExeption = false;
             try 
             {
-                var communityManager = new CommunityManager<int>(null);
+                var communityManager = Builders.CommunityManagerBuilder.Create<int>(null);
             }
             catch 
             {
@@ -44,13 +44,13 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values) 
             {
-                var communityManager = new CommunityManager<int>(graph);
+                var communityManager = Builders.CommunityManagerBuilder.Create<int>(graph);
                 foreach(var vertex in graph.Vertices) 
                 {
-                    var singleVertexCommunity = new Community<int>(vertex);
+                    var singleVertexCommunity = Builders.CommunityBuilder.Create<int>(vertex);
                     Assert.IsTrue(communityManager.IsValidCommunity(singleVertexCommunity),"A community must be valid if it consists of vertices from graph that object was created with.");
                 }
-                var allVerticesCommunity = new Community<int>(graph.Vertices);
+                var allVerticesCommunity = Builders.CommunityBuilder.Create<int>(graph.Vertices);
                 Assert.IsTrue(communityManager.IsValidCommunity(allVerticesCommunity),"A community must be valid if it consists of vertices from graph that object was created with.");
             }
         }
@@ -60,8 +60,8 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values) 
             {
-                var communityManager = new CommunityManager<int>(graph);
-                var community = new Community<int>(graph.Vertices);
+                var communityManager = Builders.CommunityManagerBuilder.Create<int>(graph);
+                var community = Builders.CommunityBuilder.Create<int>(graph.Vertices);
                 Assert.IsTrue(communityManager.GetEdgeCount(community) == graph.EdgeCount);
             }
         }
@@ -79,8 +79,8 @@ namespace GraphClustering.UnitTests
 
             int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom,IEnumerable<TVertex> verticesTo) 
             {
-                var communityManager = new CommunityManager<TVertex>(graph);
-                var community = new Community<TVertex>(verticesTo);
+                var communityManager = Builders.CommunityManagerBuilder.Create<TVertex>(graph);
+                var community = Builders.CommunityBuilder.Create<TVertex>(verticesTo);
                 return communityManager.GetEdgeCount(vertexFrom,community);
             }
         }
@@ -98,8 +98,8 @@ namespace GraphClustering.UnitTests
 
             int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,IEnumerable<TVertex> verticesFrom, TVertex vertexTo) 
             {
-                var communityManager = new CommunityManager<TVertex>(graph);
-                var communityFrom = new Community<TVertex>(verticesFrom);
+                var communityManager = Builders.CommunityManagerBuilder.Create<TVertex>(graph);
+                var communityFrom = Builders.CommunityBuilder.Create<TVertex>(verticesFrom);
                 return communityManager.GetEdgeCount(communityFrom, vertexTo);
             }
         }
@@ -117,9 +117,9 @@ namespace GraphClustering.UnitTests
 
             int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,IEnumerable<TVertex> verticesFrom, IEnumerable<TVertex> verticesTo) 
             {
-                var communityManager = new CommunityManager<TVertex>(graph);
-                var communityFrom = new Community<TVertex>(verticesFrom);
-                var communityTo = new Community<TVertex>(verticesTo);
+                var communityManager = Builders.CommunityManagerBuilder.Create<TVertex>(graph);
+                var communityFrom = Builders.CommunityBuilder.Create<TVertex>(verticesFrom);
+                var communityTo = Builders.CommunityBuilder.Create<TVertex>(verticesTo);
                 return communityManager.GetEdgeCount(communityFrom, communityTo);
             }
         }

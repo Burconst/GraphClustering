@@ -1,10 +1,26 @@
 using System.Collections.Generic;
 using QuikGraph;
 
-namespace GraphClustering.UnitTests 
+namespace GraphClustering.UnitTests.Builders
 {
-    public static class GraphFactory 
+    public static class GraphBuilder
     {
+        public static Dictionary<string, IEdgeListAndIncidenceGraph<int, IEdge<int>>> GetGraphsDict()
+        {   
+            var _graphDict = new Dictionary<string, IEdgeListAndIncidenceGraph<int, IEdge<int>>>();
+            _graphDict.Add("DGraph1",CreateDGraph1());
+            _graphDict.Add("DGraph2",CreateDGraph2());
+            _graphDict.Add("DGraph3",CreateDGraph3());
+            _graphDict.Add("DGraph4",CreateDGraph4());
+            _graphDict.Add("DGraph5",CreateDGraph5());
+            _graphDict.Add("UGraph1",CreateUGraph1());
+            _graphDict.Add("UGraph2",CreateUGraph2());
+            _graphDict.Add("UGraph3",CreateUGraph3());
+            _graphDict.Add("UGraph4",CreateUGraph4());
+            _graphDict.Add("UGraph5",CreateUGraph5());
+            return _graphDict;
+        }
+
         public static IEdgeListAndIncidenceGraph<int, IEdge<int>> CreateDGraph1() 
         {
             var graph = new AdjacencyGraph<int, IEdge<int>>();

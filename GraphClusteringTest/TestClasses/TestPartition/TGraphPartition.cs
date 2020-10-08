@@ -11,21 +11,21 @@ namespace GraphClustering.UnitTests
         private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = UtilityFunctions.GetGraphsDict();
+        public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
 
         [Test]
         public void GraphPartition_Constructor_ReturnTrue() 
         {
             foreach(var graph in _graphDict.Values) 
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 Assert.IsTrue(partition.Graph == graph, "A partition must refer to the graph that it was created with.");
             }
 
             bool wasExeption = false;
             try 
             {
-                var partition = new GraphPartition<int>(null);
+                var partition = Builders.PartitionBuilder.Create<int>(null);
             }
             catch 
             {
@@ -40,7 +40,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     partition.AddVertexToCommunity(vertex, 0);
@@ -54,7 +54,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     partition.AddVertexToCommunity(vertex, 0);
@@ -68,7 +68,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     partition.RemoveVertexFromCommunity(vertex);
@@ -90,7 +90,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     partition.RemoveVertexFromCommunity(vertex, partition.GetCommunityNumber(vertex));
@@ -112,7 +112,7 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 if (partition.GetCommunityCount() <= 0)
                 {
                     continue;
@@ -130,7 +130,7 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 partition.UniteCommunities(Enumerable.Range(0, partition.GetCommunityCount()));
                 Assert.IsTrue(partition.GetCommunityCount() == 1,"TODO");
             }
@@ -148,15 +148,58 @@ namespace GraphClustering.UnitTests
 
             int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom, IEnumerable<TVertex> verticesTo) 
             {
-                var partition = new GraphPartition<TVertex>(graph);
+                var partition = Builders.PartitionBuilder.Create<TVertex>(graph);
                 var commNumbers = new List<int>();
                 foreach(var vertex in verticesTo) 
                 {
                     commNumbers.Add(partition.GetCommunityNumber(vertex));
                 }
                 int commToNUmber = partition.UniteCommunities(commNumbers);
-                var communityTo = new Community<TVertex>(verticesTo);
+                var communityTo = Builders.CommunityBuilder.Create<TVertex>(verticesTo);
                 return partition.GetEdgeCount(vertexFrom, commToNUmber);
+            }
+        }
+
+        [Test]
+        public void GraphPartition_GetVerticesFromCommunity_ReturnTrue() 
+        {
+            var partition = Builders.PartitionBuilder.Create(_graphDict["DGraph1"]);
+            var comm = new [] { 0,1,3,4,5,7 };
+            int commNumber = partition.UniteCommunities(comm);
+            foreach(var vertex in partition.GetVerticesFromCommunity(commNumber)) 
+            {
+                Assert.IsTrue(comm.Contains(vertex));
+            }
+            foreach(var vertex in comm) 
+            {
+                Assert.IsTrue(partition.GetVerticesFromCommunity(commNumber).Contains(vertex));
+            }
+        }
+
+        [Test]
+        public void GraphPartition_AggregatePartition_ReturnTrue() 
+        {
+            var graph = getAgregationOfPartition(_graphDict["DGraph1"], new[] { new [] { 0,1,3,4,5,7 },  new [] { 2,6,8,9,10,11 } });
+            Assert.IsTrue(graph.VertexCount == 2);
+            Assert.IsTrue(graph.EdgeCount == 0);
+
+            graph = getAgregationOfPartition(_graphDict["UGraph1"], new[] { new [] { 5,9 },  new [] { 0,4,8 }, new [] { 1,2,3,6,7 } });
+            Assert.IsTrue(graph.VertexCount == 3);
+            Assert.IsTrue(graph.EdgeCount == 2);
+
+            IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> getAgregationOfPartition<TVertex>(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, IEnumerable<IEnumerable<TVertex>> verticesSets) 
+            {
+                var partition = Builders.PartitionBuilder.Create(graph);
+                foreach(var vertices in verticesSets) 
+                {
+                    var commNumbers = new List<int>();
+                    foreach(var vertex in vertices) 
+                    {
+                        commNumbers.Add(partition.GetCommunityNumber(vertex));
+                    }
+                    partition.UniteCommunities(commNumbers);
+                }
+                return partition.AggregatePartition();
             }
         }
 
@@ -165,7 +208,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = new GraphPartition<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int>(graph);
                 bool enumeratorWasReceived = false;
                 foreach(var community in partition)
                 {
