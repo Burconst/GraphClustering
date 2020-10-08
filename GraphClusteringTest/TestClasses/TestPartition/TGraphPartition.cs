@@ -25,7 +25,7 @@ namespace GraphClustering.UnitTests
             bool wasExeption = false;
             try 
             {
-                var partition = Builders.PartitionBuilder.Create<int>(null);
+                Builders.PartitionBuilder.Create<int>(null);
             }
             catch 
             {
@@ -154,9 +154,8 @@ namespace GraphClustering.UnitTests
                 {
                     commNumbers.Add(partition.GetCommunityNumber(vertex));
                 }
-                int commToNUmber = partition.UniteCommunities(commNumbers);
-                var communityTo = Builders.CommunityBuilder.Create<TVertex>(verticesTo);
-                return partition.GetEdgeCount(vertexFrom, commToNUmber);
+                int commToNumber = partition.UniteCommunities(commNumbers);
+                return partition.GetEdgeCount(vertexFrom, commToNumber);
             }
         }
 

@@ -24,7 +24,7 @@ namespace GraphClustering
         {
             if (vertices == null) 
             {
-                throw new System.ArgumentNullException("Th vertices must be not null.");
+                throw new System.ArgumentNullException("The vertices must be not null.");
             }
             if (_vertices == null) 
             {

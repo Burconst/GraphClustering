@@ -13,8 +13,12 @@ namespace GraphClustering
         {
             get;
         }
+        
+        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) : this(graph, PartitionType.Singletone) 
+        {
+        }
 
-        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, PartitionType type = PartitionType.Singletone) 
+        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, PartitionType type) 
         {
             Graph = graph ?? throw new ArgumentNullException("The graph cannot be null.");
             _communityManager = new CommunityManager<TVertex>(graph);

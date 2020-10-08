@@ -6,7 +6,7 @@ namespace GraphClustering.UnitTests.Builders
     {
         public static IGraphPartition<TVertex> Create<TVertex>(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph)
         {
-            return Create<TVertex>(graph,PartitionType.Singletone);    
+            return Create<TVertex>(graph);    
         }
 
         public static IGraphPartition<TVertex> Create<TVertex>(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, PartitionType type)

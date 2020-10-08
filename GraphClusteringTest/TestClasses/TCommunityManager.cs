@@ -19,7 +19,7 @@ namespace GraphClustering.UnitTests
             {
                 try 
                 {
-                    var communityManager = Builders.CommunityManagerBuilder.Create<int>(graph);
+                    Builders.CommunityManagerBuilder.Create<int>(graph);
                 }
                 catch 
                 {
@@ -30,7 +30,7 @@ namespace GraphClustering.UnitTests
             bool wasExeption = false;
             try 
             {
-                var communityManager = Builders.CommunityManagerBuilder.Create<int>(null);
+                Builders.CommunityManagerBuilder.Create<int>(null);
             }
             catch 
             {

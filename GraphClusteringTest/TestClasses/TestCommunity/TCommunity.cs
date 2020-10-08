@@ -29,7 +29,7 @@ namespace GraphClustering.UnitTests
             try 
             {
                 object nullVertex = null;
-                var community = Builders.CommunityBuilder.Create(nullVertex);
+                Builders.CommunityBuilder.Create(nullVertex);
             }
             catch 
             {
