@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using QuikGraph;
 
 namespace GraphClustering 
 {
     public interface IGraphPartition<TVertex>
     {
-        IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> Graph { get; }
+        IPartitionableGraph<TVertex,IEdge<TVertex>> Graph { get; }
         int GetCommunityCount();
         int GetCommunityNumber(TVertex vertex);
         void AddVertexToCommunity(TVertex vertex, int communityNumber);
@@ -16,7 +15,7 @@ namespace GraphClustering
         int GetEdgeCount(TVertex fromVertex, int toCommunityNumber);
         int GetEdgeCount(int fromCommunityNumber, int toCommunityNumber);
         IEnumerable<TVertex> GetVerticesFromCommunity(int communityNumber);
-        IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> AggregatePartition();
+        IPartitionableGraph<TVertex,IEdge<TVertex>> AggregatePartition();
         IEnumerator<ICommunity<TVertex>> GetEnumerator();
     }
 

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using QuikGraph;
 
 namespace GraphClustering 
 {
@@ -9,16 +8,16 @@ namespace GraphClustering
         private readonly ICollection<ICommunity<TVertex>> _communities;
         private readonly CommunityManager<TVertex> _communityManager;
 
-        public IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> Graph
+        public IPartitionableGraph<TVertex,IEdge<TVertex>> Graph
         {
             get;
         }
         
-        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) : this(graph, PartitionType.Singletone) 
+        public GraphPartition(IPartitionableGraph<TVertex,IEdge<TVertex>> graph) : this(graph, PartitionType.Singletone) 
         {
         }
 
-        public GraphPartition(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, PartitionType type) 
+        public GraphPartition(IPartitionableGraph<TVertex,IEdge<TVertex>> graph, PartitionType type) 
         {
             Graph = graph ?? throw new ArgumentNullException("The graph cannot be null.");
             _communityManager = new CommunityManager<TVertex>(graph);
@@ -43,7 +42,16 @@ namespace GraphClustering
 
         public int GetCommunityNumber(TVertex vertex) 
         {
-            throw new NotImplementedException("TODO");
+            int i = 0;
+            foreach(var community in _communities)
+            {
+                if(community.Contains(vertex))
+                {
+                    return i;
+                }
+                i++;
+            }  
+            throw new ArgumentException("");
         }
         
         public void AddVertexToCommunity(TVertex vertex, int communityNumber) 
@@ -86,7 +94,7 @@ namespace GraphClustering
             throw new NotImplementedException("TODO");
         }
 
-        public IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> AggregatePartition() 
+        public IPartitionableGraph<TVertex,IEdge<TVertex>> AggregatePartition() 
         {
             throw new NotImplementedException("TODO");
         }

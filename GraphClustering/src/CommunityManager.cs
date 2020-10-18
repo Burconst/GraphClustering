@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using QuikGraph.Collections;
 using System.Runtime.CompilerServices;
-using QuikGraph;
+
 
 #if DEBUG
 [assembly: InternalsVisibleTo("GraphClusteringTest")]
@@ -11,8 +10,8 @@ namespace GraphClustering
 {
     internal sealed class CommunityManager<TVertex> 
     {
-        private readonly IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> _graph;
-        public CommunityManager(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph) 
+        private readonly IPartitionableGraph<TVertex,IEdge<TVertex>> _graph;
+        public CommunityManager(IPartitionableGraph<TVertex,IEdge<TVertex>> graph) 
         {
             if (graph == null) 
             {
@@ -28,12 +27,31 @@ namespace GraphClustering
 
         public int GetEdgeCount(ICommunity<TVertex> community) 
         {
-            throw new NotImplementedException("TODO");
+            if(community == null) 
+            {
+                throw new ArgumentNullException("Community shouldn't be null.");
+            }
+            int edgeCount = 0;
+            
+
+            return edgeCount;
         }
 
         public int GetEdgeCount(TVertex fromVertex, ICommunity<TVertex> toCommunity) 
         {
-            throw new NotImplementedException("TODO");
+            if(toCommunity == null) 
+            {
+                throw new ArgumentNullException("Community shouldn't be null.");
+            }
+            int edgeCount = 0;
+            // foreach(var edge in _graph.OutEdges(fromVertex)) 
+            // {
+            //     if(toCommunity.Contains(edge.Target)) 
+            //     {
+            //         edgeCount++;
+            //     }
+            // }
+            return edgeCount;
         }
         
         public int GetEdgeCount(ICommunity<TVertex> fromCommunity, TVertex toVertex) 

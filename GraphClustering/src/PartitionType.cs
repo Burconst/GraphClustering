@@ -1,4 +1,3 @@
-
 namespace GraphClustering 
 {
     public enum PartitionType 

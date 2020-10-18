@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using QuikGraph;
 using System.Linq;
 
 namespace GraphClustering.UnitTests
@@ -8,7 +7,7 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TGraphPartition
     {
-        private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
+        private Dictionary<string, IPartitionableGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
         public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
@@ -146,7 +145,7 @@ namespace GraphClustering.UnitTests
             Assert.True(2 == getEdgeCount(_graphDict["UGraph1"],vertexFrom: 5,verticesTo: new []{ 1,2,3 }),"TODO");
             Assert.True(5 == getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new []{ 0,1,2,3,8 }),"TODO");
 
-            int getEdgeCount<TVertex>(IEdgeListAndIncidenceGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom, IEnumerable<TVertex> verticesTo) 
+            int getEdgeCount<TVertex>(IPartitionableGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom, IEnumerable<TVertex> verticesTo) 
             {
                 var partition = Builders.PartitionBuilder.Create<TVertex>(graph);
                 var commNumbers = new List<int>();
@@ -186,7 +185,7 @@ namespace GraphClustering.UnitTests
             Assert.IsTrue(graph.VertexCount == 3);
             Assert.IsTrue(graph.EdgeCount == 2);
 
-            IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> getAgregationOfPartition<TVertex>(IEdgeListAndIncidenceGraph<TVertex, IEdge<TVertex>> graph, IEnumerable<IEnumerable<TVertex>> verticesSets) 
+            IPartitionableGraph<TVertex, IEdge<TVertex>> getAgregationOfPartition<TVertex>(IPartitionableGraph<TVertex, IEdge<TVertex>> graph, IEnumerable<IEnumerable<TVertex>> verticesSets) 
             {
                 var partition = Builders.PartitionBuilder.Create(graph);
                 foreach(var vertices in verticesSets) 

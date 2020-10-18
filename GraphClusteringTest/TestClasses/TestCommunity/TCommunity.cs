@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using QuikGraph;
 
 namespace GraphClustering.UnitTests
 {
     [TestFixture]
     public class TCommunity
     {
-        private Dictionary<string,IEdgeListAndIncidenceGraph<int, IEdge<int>>> _graphDict;
+        private Dictionary<string, IPartitionableGraph<int, IEdge<int>>> _graphDict;
 
         [SetUp]
         public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();

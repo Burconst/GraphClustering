@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -19,5 +18,10 @@
   <ItemGroup>
     <ProjectReference Include="..\GraphClustering\GraphClustering.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="QuikGraph" Version="2.2.0" />
+  </ItemGroup>
+
 
 </Project>

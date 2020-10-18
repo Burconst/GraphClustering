@@ -1,23 +1,30 @@
 using System.Collections.Generic;
-using QuikGraph.Collections;
 
 namespace GraphClustering
 {
     public sealed class Community<TVertex> : ICommunity<TVertex>
     {
-        private readonly VertexList<TVertex> _vertices;
+        private readonly List<TVertex> _vertices;
+
+        public int? Id { get; }
 
         public Community()
         {
-            _vertices = new VertexList<TVertex>();
+            _vertices = new List<TVertex>();
+            Id = null;
         }
-        public Community(TVertex vertex) 
+        public Community(TVertex vertex) : this(vertex,null)
+        {
+        }
+
+        public Community(TVertex vertex, int? id) 
         {
             if (vertex == null) 
             {
                 throw new System.ArgumentNullException("The vertex cannot be null.");
             }
-            _vertices = new VertexList<TVertex> { vertex };
+            Id = id;
+            _vertices = new List<TVertex> { vertex };
         }
 
         public Community(IEnumerable<TVertex> vertices) 
@@ -28,7 +35,7 @@ namespace GraphClustering
             }
             if (_vertices == null) 
             {
-                _vertices = new VertexList<TVertex>();
+                _vertices = new List<TVertex>();
             }
             _vertices.AddRange(vertices);
         }
