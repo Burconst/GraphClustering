@@ -19,7 +19,7 @@ namespace GraphClustering.UnitTests
                 foreach(var vertex in graph.Vertices) 
                 {
                     var community = Builders.CommunityBuilder.Create(vertex);
-                    Assert.IsTrue(community.GetVertexCount() == 1,"The community should consist of one vertex.");
+                    Assert.AreEqual(1,community.GetVertexCount(),"The community should consist of one vertex.");
                     break;
                 }
             }
@@ -38,38 +38,38 @@ namespace GraphClustering.UnitTests
         }
 
         [Test]
-        public void Community_Constructor_ReturnFalse()
+        public void Community_Constructor_AreEqual()
         {
             var community = Builders.CommunityBuilder.Create<int>();
-            Assert.IsFalse(community.GetVertexCount() > 0,"The community should be empty in initial state.");
+            Assert.AreEqual(0, community.GetVertexCount(),"The community should be empty in initial state.");
         }
 
         [Test]
-        public void Community_ConstructorWithRange_ReturnTrue()
+        public void Community_ConstructorWithRange_AreEqual()
         {
             foreach(var graph in _graphDict.Values) 
             {
                 var community = Builders.CommunityBuilder.Create(graph.Vertices);
-                Assert.IsTrue(community.GetVertexCount() == graph.VertexCount,"The community should be the same size as the graph.");
+                Assert.AreEqual(graph.VertexCount, community.GetVertexCount(), "The community should be the same size as the graph.");
             }
         }
 
         [Test]
-        public void Community_ConstructorWithRange_ReturnFalse() 
+        public void Community_ConstructorWithRange_AreNotEqual() 
         {
             // Value type testing
             var verticesInt = new List<int>{ 1, 2, 3 };
             var communityInt = Builders.CommunityBuilder.Create<int>(verticesInt);
             verticesInt.Add(4);
-            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"The community should be independent of the collection that it was created with.");
+            Assert.AreNotEqual(verticesInt.Count, communityInt.GetVertexCount(),"The community should be independent of the collection that it was created with.");
             verticesInt.Clear();
-            Assert.IsFalse(verticesInt.Count == communityInt.GetVertexCount(),"The community should be independent of the collection that it was created with.");
+            Assert.AreNotEqual(verticesInt.Count, communityInt.GetVertexCount(),"The community should be independent of the collection that it was created with.");
             
             // Reference type Testing
             var verticesString = new List<string> { "one", "two", "three"}; 
             var communityString = Builders.CommunityBuilder.Create<string>(verticesString);
             verticesString.Clear();
-            Assert.IsFalse(verticesInt.Count == communityString.GetVertexCount(),"The community should be independent of the collection that it was created with.");
+            Assert.AreNotEqual(verticesInt.Count, communityString.GetVertexCount(),"The community should be independent of the collection that it was created with.");
         }
 
         [Test]
@@ -161,7 +161,7 @@ namespace GraphClustering.UnitTests
                 foreach(var vertex in graph.Value.Vertices) 
                 {
                     bool answer = community.Remove(vertex);
-                    Assert.IsTrue((answer == true )&& !community.Contains(vertex),"The community shouldn't contain removed vertices.");
+                    Assert.IsTrue((answer == true) && !community.Contains(vertex),"The community shouldn't contain removed vertices.");
                 }
             }
         }
@@ -205,7 +205,7 @@ namespace GraphClustering.UnitTests
         }
 
         [Test]
-        public void Community_Clear_ReturnTrue() 
+        public void Community_Clear_AreEqual() 
         {
             foreach(var graph in _graphDict)
             {
@@ -221,7 +221,7 @@ namespace GraphClustering.UnitTests
                     i++;
                 }
                 community.Clear();
-                Assert.IsTrue(community.GetVertexCount() == 0,"The cleared community should be empty.");
+                Assert.AreEqual(0, community.GetVertexCount(),"The cleared community should be empty.");
             }
         }
 

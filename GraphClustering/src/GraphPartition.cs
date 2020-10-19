@@ -5,7 +5,7 @@ namespace GraphClustering
 {
     public sealed class GraphPartition<TVertex> : IGraphPartition<TVertex>
     {
-        private readonly ICollection<ICommunity<TVertex>> _communities;
+        private readonly Dictionary<int,ICommunity<TVertex>> _communities;
         private readonly CommunityManager<TVertex> _communityManager;
 
         public IPartitionableGraph<TVertex,IEdge<TVertex>> Graph
@@ -21,13 +21,15 @@ namespace GraphClustering
         {
             Graph = graph ?? throw new ArgumentNullException("The graph cannot be null.");
             _communityManager = new CommunityManager<TVertex>(graph);
-            _communities = new List<ICommunity<TVertex>>();
+            _communities = new Dictionary<int,ICommunity<TVertex>>();
             switch (type)
             {
                 case PartitionType.Singletone:
+                    int communityNumber = 0;
                     foreach(var vertex in Graph.Vertices)
                     {
-                        _communities.Add(new Community<TVertex>(vertex));
+                        _communities.Add(communityNumber, new Community<TVertex>(vertex));
+                        communityNumber++;
                     }
                     break;
                 default: 
@@ -35,72 +37,163 @@ namespace GraphClustering
             }
         }
 
-        public int GetCommunityCount() 
-        {
-            return _communities.Count;
-        }
+        public int GetCommunityCount() => _communities.Count;
 
         public int GetCommunityNumber(TVertex vertex) 
         {
-            int i = 0;
             foreach(var community in _communities)
             {
-                if(community.Contains(vertex))
+                if(community.Value.Contains(vertex))
                 {
-                    return i;
+                    return community.Key;
                 }
-                i++;
             }  
             throw new ArgumentException("");
         }
         
-        public void AddVertexToCommunity(TVertex vertex, int communityNumber) 
+        // TODO
+        public bool MoveVertexToCommunity(TVertex vertex, int communityNumber) 
         {
-            throw new NotImplementedException("TODO");
+            try 
+            {
+                RemoveVertexFromCommunity(vertex, GetCommunityNumber(vertex));
+                return _communities[communityNumber].Add(vertex);
+            } 
+            catch 
+            {
+                return false;
+            }
         }
 
-        public void RemoveVertexFromCommunity(TVertex vertex)
+        public bool RemoveVertexFromCommunity(TVertex vertex)
         {
-            throw new NotImplementedException("TODO");
+            foreach(var community in _communities.Values)
+            {
+                if(community.Remove(vertex))
+                {
+                    return true;
+                }
+            } 
+            return false;
         }
 
-        public void RemoveVertexFromCommunity(TVertex vertex, int communityNumber)
+        // TODO
+        public bool RemoveVertexFromCommunity(TVertex vertex, int communityNumber)
         {
-            throw new NotImplementedException("TODO");
+            try 
+            {
+                return _communities[communityNumber].Remove(vertex);
+            }
+            catch 
+            {
+                
+            }
+            return false;
         } 
 
         public int UniteCommunities(int firstCommunityNumber, int secondCommunityNumber) 
         {
-            throw new NotImplementedException("TODO");
+            if (firstCommunityNumber == secondCommunityNumber) 
+            {
+                return firstCommunityNumber;
+            }
+            try 
+            {
+                _communities[firstCommunityNumber].Add(_communities[secondCommunityNumber].Vertices);
+            } 
+            catch 
+            {
+
+            }
+            _communities.Remove(secondCommunityNumber);
+            return firstCommunityNumber;
         }
 
         public int UniteCommunities(IEnumerable<int> communityNumbers) 
         {
-            throw new NotImplementedException("TODO");
+            int? minCommunityNumber = null;
+            bool thisIsFirstIteration = true;
+            foreach(var communityNumber in communityNumbers) 
+            {
+                if (thisIsFirstIteration) 
+                {
+                    minCommunityNumber = communityNumber;
+                    thisIsFirstIteration = false;
+                    continue;
+                }
+                if (minCommunityNumber > communityNumber) 
+                {
+                    UniteCommunities(communityNumber, minCommunityNumber.Value);
+                    minCommunityNumber = communityNumber;
+                }
+                else 
+                {
+                    UniteCommunities(minCommunityNumber.Value, communityNumber);
+                }
+            }
+
+            if (!minCommunityNumber.HasValue) 
+            {
+                throw new Exception("TODO");
+            }
+            return minCommunityNumber.Value;
         }
 
+        // TODO
         public int GetEdgeCount(TVertex fromVertex, int toCommunityNumber) 
         {
-            throw new NotImplementedException("TODO");
+            validateCommunityNumber(toCommunityNumber);
+            return _communityManager.GetEdgeCount(fromVertex, _communities[toCommunityNumber]);
         }
 
         public int GetEdgeCount(int fromCommunityNumber, int toCommunityNumber) 
         {
-            throw new NotImplementedException("TODO");
+            int edgeCount = 0;
+            try 
+            {
+                edgeCount = _communityManager.GetEdgeCount(_communities[fromCommunityNumber], _communities[toCommunityNumber]);
+            } 
+            catch
+            {
+
+            }
+            return edgeCount;
         }
 
-        public IEnumerable<TVertex> GetVerticesFromCommunity(int communityNumber) 
+        public IEnumerable<TVertex> GetCommunityVertices(int communityNumber) 
         {
-            throw new NotImplementedException("TODO");
+            if(!_communities.TryGetValue(communityNumber, out _)) 
+            {
+                throw new ArgumentException("TODO");
+            }
+            return _communities[communityNumber].Vertices;
         }
 
-        public IPartitionableGraph<TVertex,IEdge<TVertex>> AggregatePartition() 
+        public IEnumerator<ICommunity<TVertex>> GetEnumerator() => _communities.Values.GetEnumerator();
+
+        public override string ToString()
         {
-            throw new NotImplementedException("TODO");
+            var stringView = new System.Text.StringBuilder();
+            foreach(var community in _communities) 
+            {
+                stringView.Append($"Community {community.Key} -> {community.Value.ToString()} \n");
+            }
+            return stringView.ToString();
         }
 
-        public IEnumerator<ICommunity<TVertex>> GetEnumerator() => _communities.GetEnumerator();
-        
+        private void validateCommunityNumber(int communityNumber) 
+        {
+            if(!_communities.TryGetValue(communityNumber, out _)) 
+            {
+                throw new KeyNotFoundException($"Community {communityNumber} not found.");
+            }
+        }
+
+        public bool RemoveCommunity(int communityNumber)
+        {
+            validateCommunityNumber(communityNumber);
+            return _communities.Remove(communityNumber);
+        }
     }
 
 }

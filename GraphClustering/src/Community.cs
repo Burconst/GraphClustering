@@ -6,12 +6,11 @@ namespace GraphClustering
     {
         private readonly List<TVertex> _vertices;
 
-        public int? Id { get; }
+        public IEnumerable<TVertex> Vertices => _vertices;
 
         public Community()
         {
             _vertices = new List<TVertex>();
-            Id = null;
         }
         public Community(TVertex vertex) : this(vertex,null)
         {
@@ -23,7 +22,6 @@ namespace GraphClustering
             {
                 throw new System.ArgumentNullException("The vertex cannot be null.");
             }
-            Id = id;
             _vertices = new List<TVertex> { vertex };
         }
 
@@ -107,6 +105,16 @@ namespace GraphClustering
         public void Clear() => _vertices.Clear();
 
         public IEnumerator<TVertex> GetEnumerator() =>  _vertices.GetEnumerator();
+
+        public override string ToString()
+        {
+            var stringView = new System.Text.StringBuilder();
+            foreach(var vertex in Vertices) 
+            {
+                stringView.Append($"{vertex.ToString()} ");
+            }
+            return stringView.ToString();
+        }
 
     }
 

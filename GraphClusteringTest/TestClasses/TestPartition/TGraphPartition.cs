@@ -18,7 +18,7 @@ namespace GraphClustering.UnitTests
             foreach(var graph in _graphDict.Values) 
             {
                 var partition = Builders.PartitionBuilder.Create<int>(graph);
-                Assert.IsTrue(partition.Graph == graph, "A partition must refer to the graph that it was created with.");
+                Assert.AreEqual(graph, partition.Graph, "A partition must refer to the graph that it was created with.");
             }
 
             bool wasExeption = false;
@@ -35,32 +35,24 @@ namespace GraphClustering.UnitTests
 
 
         [Test]
-        public void GraphPartition_AddVertexToCommunity_ReturnTrue() 
+        public void GraphPartition_AddVertexToCommunity_AreEqual() 
         {
             foreach(var graph in _graphDict.Values)
             {
                 var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
-                    partition.AddVertexToCommunity(vertex, 0);
+                    int prevCommNum = partition.GetCommunityNumber(vertex);
+                    partition.MoveVertexToCommunity(vertex, 0);
+                    if (prevCommNum != 0) 
+                    {
+                        partition.RemoveCommunity(prevCommNum);
+                    }
                 }
-                Assert.IsTrue(partition.GetCommunityCount() == 1);
+                Assert.AreEqual(1, partition.GetCommunityCount());
             }
         }
 
-        [Test]
-        public void GraphPartition_GetCommunityNumber_ReturnTrue() 
-        {
-            foreach(var graph in _graphDict.Values)
-            {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
-                foreach (var vertex in graph.Vertices)
-                {
-                    partition.AddVertexToCommunity(vertex, 0);
-                    Assert.IsTrue(partition.GetCommunityNumber(vertex) == 0, "TODU");
-                }
-            }
-        }
 
         [Test]
         public void GraphPartition_RemoveVertexFromCommunity_ReturnTrue() 
@@ -70,48 +62,46 @@ namespace GraphClustering.UnitTests
                 var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
-                    partition.RemoveVertexFromCommunity(vertex);
-                    try 
-                    {
-                        partition.GetCommunityNumber(vertex);
-                        Assert.IsTrue(false, "TODU");
-                    } 
-                    catch 
-                    {
-                        Assert.IsTrue(true, "TODU");
-                    }
+                    Assert.IsTrue(partition.RemoveVertexFromCommunity(vertex));
                 }
             }
         }
-        
+
         [Test]
-        public void GraphPartition_RemoveVertexFromCommunityWithCommNumber_ReturnTrue() 
+        public void GraphPartition_GetCommunityNumber_AreEqual() 
         {
             foreach(var graph in _graphDict.Values)
             {
                 var partition = Builders.PartitionBuilder.Create<int>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
-                    partition.RemoveVertexFromCommunity(vertex, partition.GetCommunityNumber(vertex));
-                    try 
-                    {
-                        partition.GetCommunityNumber(vertex);
-                        Assert.IsTrue(false, "TODU");
-                    } 
-                    catch 
-                    {
-                        Assert.IsTrue(true, "TODU");
-                    }
+                    partition.MoveVertexToCommunity(vertex, 0);
+                    Assert.AreEqual(0, partition.GetCommunityNumber(vertex), "TODU");
                 }
             }
-        }    
+        }
 
         [Test]
-        public void GraphPartition_UniteCommunitiesByNumbers_ReturnTrue() 
+        public void GraphPartition_GetCommunityNumber_ThrowsExeption() 
         {
-            foreach (var graph in _graphDict.Values)
+            foreach(var graph in _graphDict.Values)
             {
                 var partition = Builders.PartitionBuilder.Create<int>(graph);
+                foreach (var vertex in graph.Vertices)
+                {
+                    int communityNumber = partition.GetCommunityNumber(vertex);
+                    partition.RemoveVertexFromCommunity(vertex, communityNumber);
+                    Assert.Throws<System.ArgumentException>(() => partition.GetCommunityNumber(vertex), "TODO");
+                }
+            }
+        }
+        
+        [Test]
+        public void GraphPartition_UniteCommunitiesByNumbers_AreEqual() 
+        {
+            foreach (var graph in _graphDict)
+            {
+                var partition = Builders.PartitionBuilder.Create<int>(graph.Value);
                 if (partition.GetCommunityCount() <= 0)
                 {
                     continue;
@@ -120,30 +110,37 @@ namespace GraphClustering.UnitTests
                 {
                     partition.UniteCommunities(0,commNumber);
                 }
-                Assert.IsTrue(partition.GetCommunityCount() == 1,"TODO");
+                Assert.AreEqual(1,partition.GetCommunityCount(),graph.Key);
             }
         }
 
         [Test]
-        public void GraphPartition_UniteCommunitiesByRange_ReturnTrue() 
+        public void GraphPartition_UniteCommunitiesByRange_AreEqual() 
         {
             foreach (var graph in _graphDict.Values)
             {
                 var partition = Builders.PartitionBuilder.Create<int>(graph);
                 partition.UniteCommunities(Enumerable.Range(0, partition.GetCommunityCount()));
-                Assert.IsTrue(partition.GetCommunityCount() == 1,"TODO");
+                Assert.AreEqual(1, partition.GetCommunityCount(), "TODO");
+            }
+            Assert.AreEqual(2, uniteCommunities(_graphDict["DGraph1"], new []{ 9,10,11,2,6,8 }));
+
+            int uniteCommunities<TVertex>(IPartitionableGraph<TVertex,IEdge<TVertex>> graph, IEnumerable<int> commNumbers) 
+            {
+                var partition = Builders.PartitionBuilder.Create<TVertex>(graph);
+                return partition.UniteCommunities(commNumbers);
             }
         }
 
         [Test]
-        public void GraphPartition_GetEdgeCountBetweenVertAndComm_ReturnTrue() 
+        public void GraphPartition_GetEdgeCountBetweenVertAndComm_AreEqual() 
         {
-            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 4,verticesTo: new []{ 2,6,8,9,10,11 }),"TODO");
-            Assert.True(0 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 5,verticesTo: new []{ 7,3,4 }),"TODO");
-            Assert.True(2 == getEdgeCount(_graphDict["DGraph1"],vertexFrom: 7,verticesTo: new []{ 5,1,0 }),"TODO");
+            Assert.AreEqual(0, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 4,verticesTo: new []{ 2,6,8,9,10,11 }),"TODO");
+            Assert.AreEqual(0, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 5,verticesTo: new []{ 7,3,4 }),"TODO");
+            Assert.AreEqual(2, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 7,verticesTo: new []{ 5,1,0 }),"TODO");
             
-            Assert.True(2 == getEdgeCount(_graphDict["UGraph1"],vertexFrom: 5,verticesTo: new []{ 1,2,3 }),"TODO");
-            Assert.True(5 == getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new []{ 0,1,2,3,8 }),"TODO");
+            Assert.AreEqual(2, getEdgeCount(_graphDict["UGraph1"],vertexFrom: 5,verticesTo: new []{ 1,2,3 }),"TODO");
+            Assert.AreEqual(4, getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new []{ 0,1,2,4,8 }),"TODO");
 
             int getEdgeCount<TVertex>(IPartitionableGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom, IEnumerable<TVertex> verticesTo) 
             {
@@ -159,45 +156,15 @@ namespace GraphClustering.UnitTests
         }
 
         [Test]
-        public void GraphPartition_GetVerticesFromCommunity_ReturnTrue() 
+        public void GraphPartition_GetVerticesFromCommunity_AreEqual() 
         {
             var partition = Builders.PartitionBuilder.Create(_graphDict["DGraph1"]);
             var comm = new [] { 0,1,3,4,5,7 };
             int commNumber = partition.UniteCommunities(comm);
-            foreach(var vertex in partition.GetVerticesFromCommunity(commNumber)) 
+            System.Console.WriteLine(partition);
+            foreach(var vertex in partition.GetCommunityVertices(commNumber)) 
             {
-                Assert.IsTrue(comm.Contains(vertex));
-            }
-            foreach(var vertex in comm) 
-            {
-                Assert.IsTrue(partition.GetVerticesFromCommunity(commNumber).Contains(vertex));
-            }
-        }
-
-        [Test]
-        public void GraphPartition_AggregatePartition_ReturnTrue() 
-        {
-            var graph = getAgregationOfPartition(_graphDict["DGraph1"], new[] { new [] { 0,1,3,4,5,7 },  new [] { 2,6,8,9,10,11 } });
-            Assert.IsTrue(graph.VertexCount == 2);
-            Assert.IsTrue(graph.EdgeCount == 0);
-
-            graph = getAgregationOfPartition(_graphDict["UGraph1"], new[] { new [] { 5,9 },  new [] { 0,4,8 }, new [] { 1,2,3,6,7 } });
-            Assert.IsTrue(graph.VertexCount == 3);
-            Assert.IsTrue(graph.EdgeCount == 2);
-
-            IPartitionableGraph<TVertex, IEdge<TVertex>> getAgregationOfPartition<TVertex>(IPartitionableGraph<TVertex, IEdge<TVertex>> graph, IEnumerable<IEnumerable<TVertex>> verticesSets) 
-            {
-                var partition = Builders.PartitionBuilder.Create(graph);
-                foreach(var vertices in verticesSets) 
-                {
-                    var commNumbers = new List<int>();
-                    foreach(var vertex in vertices) 
-                    {
-                        commNumbers.Add(partition.GetCommunityNumber(vertex));
-                    }
-                    partition.UniteCommunities(commNumbers);
-                }
-                return partition.AggregatePartition();
+                Assert.AreEqual(commNumber, partition.GetCommunityNumber(vertex));
             }
         }
 

@@ -141,7 +141,9 @@ namespace GraphClustering.UnitTests.Builders
             return _graphDict;
         }
 
-        public static IPartitionableGraph<TVertex, IEdge<TVertex>>  CreateGraph<TVertex>(IEnumerable<(TVertex,TVertex)> edges, bool IsDirected, IEnumerable<TVertex> singleVerticesList = null) 
+        public static IPartitionableGraph<TVertex, IEdge<TVertex>> CreateGraph<TVertex>(IEnumerable<(TVertex,TVertex)> edges, bool IsDirected) => CreateGraph(edges, IsDirected, null);
+
+        public static IPartitionableGraph<TVertex, IEdge<TVertex>> CreateGraph<TVertex>(IEnumerable<(TVertex,TVertex)> edges, bool IsDirected, IEnumerable<TVertex> singleVerticesList) 
         {
             IPartitionableGraph<TVertex, IEdge<TVertex>> graph;
             if(IsDirected) 

@@ -22,7 +22,14 @@ namespace GraphClustering
 
         public bool IsValidCommunity(ICommunity<TVertex> community)
         {
-            throw new NotImplementedException("TODO");
+            foreach(var vertex in community) 
+            {
+                if(!_graph.Contains(vertex)) 
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public int GetEdgeCount(ICommunity<TVertex> community) 
@@ -44,24 +51,44 @@ namespace GraphClustering
                 throw new ArgumentNullException("Community shouldn't be null.");
             }
             int edgeCount = 0;
-            // foreach(var edge in _graph.OutEdges(fromVertex)) 
-            // {
-            //     if(toCommunity.Contains(edge.Target)) 
-            //     {
-            //         edgeCount++;
-            //     }
-            // }
+            foreach(var edge in _graph.OutEdges(fromVertex)) 
+            {
+                if(toCommunity.Contains(edge.Target)) 
+                {
+                    edgeCount++;
+                }
+            }
             return edgeCount;
         }
         
         public int GetEdgeCount(ICommunity<TVertex> fromCommunity, TVertex toVertex) 
         {
-            throw new NotImplementedException("TODO");
+            int edgeCount = 0;
+            if(fromCommunity == null) 
+            {
+                throw new ArgumentNullException("Community shouldn't be null.");
+            }
+            foreach(var vertex in fromCommunity) 
+            {
+                edgeCount += _graph.EdgeCountBetween(vertex, toVertex);
+            }
+            return edgeCount;
         }
 
         public int GetEdgeCount(ICommunity<TVertex> fromCommunity, ICommunity<TVertex> toCommunity)
         {
-            throw new NotImplementedException("TODO");
+            int edgeCount = 0;
+
+            if(fromCommunity == null || toCommunity == null) 
+            {
+                throw new ArgumentNullException("Community shouldn't be null.");
+            }
+            foreach(var vertex in fromCommunity) 
+            {
+                edgeCount += GetEdgeCount(vertex, toCommunity);
+            }
+
+            return edgeCount;
         }
 
     }
