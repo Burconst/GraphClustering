@@ -4,11 +4,11 @@ namespace GraphClustering.UnitTests.Builders
 {
     public static class GraphBuilder
     {
-        public static Dictionary<string, IPartitionableGraph<int, IEdge<int>>> GetGraphsDict()
+        public static Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> GetGraphsDict()
         {   
-            var _graphDict = new Dictionary<string, IPartitionableGraph<int, GraphClustering.IEdge<int>>>();
-            _graphDict.Add("DGraph1", CreateGraph<int>(
-                new [] 
+            var _graphDict = new Dictionary<string, IPartitionableGraph<int?, GraphClustering.IEdge<int?>>>();
+            _graphDict.Add("DGraph1", CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (1,0), (7,5), (5,1), (3,7),
                     (4,3), (7,0), (5,0), (8,6),
@@ -17,16 +17,16 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 true
             ));
-            _graphDict.Add("DGraph2",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("DGraph2",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (0,2), (0,4), (0,5), (1,4),
                     (1,5), (2,3), (2,4), (4,5)
                 },
                 true
             ));
-            _graphDict.Add("DGraph3",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("DGraph3",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (1,1), (5,12),  (12,11),
                     (11,4),  (2,4), (2,12),  (5,9),
@@ -34,10 +34,10 @@ namespace GraphClustering.UnitTests.Builders
                     (7,10), (10,15),(15,14), (6,14),
                     (14,6), (15,8), (8,10),  (9,11)
                 },
-                true, new [] { 0, 1 }
+                true, new int?[] { 0, 1 }
             ));
-            _graphDict.Add("DGraph4",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("DGraph4",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (0,2),  (0,4), (0,5),  (1,4),
                     (1,5),  (2,3), (2,4),  (4,5),
@@ -47,8 +47,8 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 true
             ));
-            _graphDict.Add("DGraph5",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("DGraph5",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (8,9),  (5,9), (3,9),  (4,9),
                     (6,9),  (2,9),(7,10), (1,10),
@@ -56,8 +56,8 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 true
             ));
-            _graphDict.Add("UGraph1",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("UGraph1",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (0,1), (0,0), (1,2), (1,3),
                     (4,2), (4,0), (5,3), (1,5),
@@ -66,8 +66,8 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 false
             ));
-            _graphDict.Add("UGraph2",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("UGraph2",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                     (8,8), (7,7), (2,3), (8,3),
                     (0,8), (2,5), (5,1), (1,3),
@@ -76,8 +76,8 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 false
             ));
-            _graphDict.Add("UGraph3",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("UGraph3",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                      (0,0),   (0,3),
                      (3,4),   (4,5),
@@ -102,8 +102,8 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 false
             ));
-            _graphDict.Add("UGraph4",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("UGraph4",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                      (0,1),   (0,2),
                      (1,3),   (1,4),
@@ -121,8 +121,8 @@ namespace GraphClustering.UnitTests.Builders
                 },
                 false
             ));
-            _graphDict.Add("UGraph5",CreateGraph<int>(
-                new [] 
+            _graphDict.Add("UGraph5",CreateGraph<int?>(
+                new (int?,int?)[] 
                 {
                      (4,5),   (4,4),
                      (5,5),   (4,2),
@@ -143,7 +143,7 @@ namespace GraphClustering.UnitTests.Builders
 
         public static IPartitionableGraph<TVertex, IEdge<TVertex>> CreateGraph<TVertex>(IEnumerable<(TVertex,TVertex)> edges, bool IsDirected) => CreateGraph(edges, IsDirected, null);
 
-        public static IPartitionableGraph<TVertex, IEdge<TVertex>> CreateGraph<TVertex>(IEnumerable<(TVertex,TVertex)> edges, bool IsDirected, IEnumerable<TVertex> singleVerticesList) 
+        public static IPartitionableGraph<TVertex, IEdge<TVertex>> CreateGraph<TVertex>(IEnumerable<(TVertex,TVertex)> edges, bool IsDirected, IEnumerable<TVertex> singleVerticesList)
         {
             IPartitionableGraph<TVertex, IEdge<TVertex>> graph;
             if(IsDirected) 
@@ -177,7 +177,7 @@ namespace GraphClustering.UnitTests.Builders
                 }
                 graph.AddVerticesAndEdge((IEdge<TVertex>)new Edge<TVertex>(vertex.Item1,vertex.Item2));
             }
-            return (IPartitionableGraph<TVertex, IEdge<TVertex>> )graph;
+            return graph;
         }
 
     }

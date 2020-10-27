@@ -4,7 +4,7 @@ namespace GraphClustering.UnitTests
 {
     public class AdjacencyGraph<TVertex, TEdge> : IPartitionableGraph<TVertex, TEdge> where TEdge : IEdge<TVertex>
     {
-        private QuikGraph.AdjacencyGraph<TVertex, QuikGraph.IEdge<TVertex>> _graph;
+        private readonly QuikGraph.AdjacencyGraph<TVertex, QuikGraph.IEdge<TVertex>> _graph;
         public AdjacencyGraph() 
         {
             _graph = new QuikGraph.AdjacencyGraph<TVertex, QuikGraph.IEdge<TVertex>>();

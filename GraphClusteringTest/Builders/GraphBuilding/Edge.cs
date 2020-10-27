@@ -2,7 +2,7 @@ namespace GraphClustering.UnitTests
 {
     public class Edge<TVertex> : IEdge<TVertex>
     {
-        private QuikGraph.Edge<TVertex> _edge;
+        private readonly QuikGraph.Edge<TVertex> _edge;
 
         public Edge(TVertex source, TVertex target) 
         {

@@ -6,7 +6,7 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TCommunity
     {
-        private Dictionary<string, IPartitionableGraph<int, IEdge<int>>> _graphDict;
+        private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
         public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
@@ -116,8 +116,8 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict)
             {
-                var community = Builders.CommunityBuilder.Create<int>();
-                var vertList = new List<int>();
+                var community = Builders.CommunityBuilder.Create<int?>();
+                var vertList = new List<int?>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
                 {
@@ -137,8 +137,8 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict)
             {
-                var community = Builders.CommunityBuilder.Create<int>();
-                var vertList = new List<int>();
+                var community = Builders.CommunityBuilder.Create<int?>();
+                var vertList = new List<int?>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
                 {
@@ -179,7 +179,7 @@ namespace GraphClustering.UnitTests
             foreach(var graph in _graphDict)
             {
                 var community = Builders.CommunityBuilder.Create(graph.Value.Vertices);
-                var vertList = new List<int>();
+                var vertList = new List<int?>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
                 {
@@ -206,7 +206,7 @@ namespace GraphClustering.UnitTests
             foreach(var graph in _graphDict)
             {
                 var community = Builders.CommunityBuilder.Create<int>();
-                var vertList = new List<int>();
+                var vertList = new List<int?>();
                 int i = 0;
                 foreach(var vertex in graph.Value.Vertices) 
                 {

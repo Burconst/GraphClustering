@@ -7,7 +7,7 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TGraphPartition
     {
-        private Dictionary<string, IPartitionableGraph<int, IEdge<int>>> _graphDict;
+        private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
         public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
@@ -17,14 +17,14 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values) 
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 Assert.AreEqual(graph, partition.Graph, "A partition must refer to the graph that it was created with.");
             }
 
             bool wasExeption = false;
             try 
             {
-                Builders.PartitionBuilder.Create<int>(null);
+                Builders.PartitionBuilder.Create<int?>(null);
             }
             catch 
             {
@@ -39,7 +39,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     int prevCommNum = partition.GetCommunityNumber(vertex);
@@ -59,7 +59,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     Assert.IsTrue(partition.RemoveVertexFromCommunity(vertex));
@@ -72,7 +72,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     partition.MoveVertexToCommunity(vertex, 0);
@@ -86,7 +86,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 foreach (var vertex in graph.Vertices)
                 {
                     int communityNumber = partition.GetCommunityNumber(vertex);
@@ -101,7 +101,7 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph.Value);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph.Value);
                 if (partition.GetCommunityCount() <= 0)
                 {
                     continue;
@@ -119,7 +119,7 @@ namespace GraphClustering.UnitTests
         {
             foreach (var graph in _graphDict.Values)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 partition.UniteCommunities(Enumerable.Range(0, partition.GetCommunityCount()));
                 Assert.AreEqual(1, partition.GetCommunityCount(), "TODO");
             }
@@ -135,12 +135,12 @@ namespace GraphClustering.UnitTests
         [Test]
         public void GraphPartition_GetEdgeCountBetweenVertAndComm_AreEqual() 
         {
-            Assert.AreEqual(0, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 4,verticesTo: new []{ 2,6,8,9,10,11 }),"TODO");
-            Assert.AreEqual(0, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 5,verticesTo: new []{ 7,3,4 }),"TODO");
-            Assert.AreEqual(2, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 7,verticesTo: new []{ 5,1,0 }),"TODO");
+            Assert.AreEqual(0, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 4,verticesTo: new int?[]{ 2,6,8,9,10,11 }),"TODO");
+            Assert.AreEqual(0, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 5,verticesTo: new int?[]{ 7,3,4 }),"TODO");
+            Assert.AreEqual(2, getEdgeCount(_graphDict["DGraph1"],vertexFrom: 7,verticesTo: new int?[]{ 5,1,0 }),"TODO");
             
-            Assert.AreEqual(2, getEdgeCount(_graphDict["UGraph1"],vertexFrom: 5,verticesTo: new []{ 1,2,3 }),"TODO");
-            Assert.AreEqual(4, getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new []{ 0,1,2,4,8 }),"TODO");
+            Assert.AreEqual(2, getEdgeCount(_graphDict["UGraph1"],vertexFrom: 5,verticesTo: new int?[]{ 1,2,3 }),"TODO");
+            Assert.AreEqual(4, getEdgeCount(_graphDict["UGraph1"],vertexFrom: 0,verticesTo: new int?[]{ 0,1,2,4,8 }),"TODO");
 
             int getEdgeCount<TVertex>(IPartitionableGraph<TVertex,IEdge<TVertex>> graph,TVertex vertexFrom, IEnumerable<TVertex> verticesTo) 
             {
@@ -173,7 +173,7 @@ namespace GraphClustering.UnitTests
         {
             foreach(var graph in _graphDict.Values)
             {
-                var partition = Builders.PartitionBuilder.Create<int>(graph);
+                var partition = Builders.PartitionBuilder.Create<int?>(graph);
                 bool enumeratorWasReceived = false;
                 foreach(var community in partition)
                 {

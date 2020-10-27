@@ -4,7 +4,7 @@ namespace GraphClustering.UnitTests
 {
     public class UndirectedGraph<TVertex, TEdge> : IPartitionableGraph<TVertex, TEdge> where TEdge : IEdge<TVertex>
     {
-        private QuikGraph.UndirectedGraph<TVertex, QuikGraph.IEdge<TVertex>> _graph;
+        private readonly QuikGraph.UndirectedGraph<TVertex, QuikGraph.IEdge<TVertex>> _graph;
 
         public UndirectedGraph()
         {

@@ -6,7 +6,7 @@ namespace GraphClustering.UnitTests
     [TestFixture]
     public class TIPartitionableGraph 
     {
-        private Dictionary<string, IPartitionableGraph<int, IEdge<int>>> _graphDict;
+        private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
         public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
@@ -110,10 +110,10 @@ namespace GraphClustering.UnitTests
         public void IPartitionableGraph_AddVerticesAndEdge_ReturnsTrue()
         {
             Assert.IsTrue(!_graphDict["DGraph1"].Contains(-1) 
-                            && _graphDict["DGraph1"].AddVerticesAndEdge(new Edge<int>(0,-1)) 
+                            && _graphDict["DGraph1"].AddVerticesAndEdge(new Edge<int?>(0,-1)) 
                             && _graphDict["DGraph1"].Contains(-1));
             Assert.IsTrue(!_graphDict["UGraph1"].Contains(-1) 
-                            && _graphDict["UGraph1"].AddVerticesAndEdge(new Edge<int>(0,-1)) 
+                            && _graphDict["UGraph1"].AddVerticesAndEdge(new Edge<int?>(0,-1)) 
                             && _graphDict["UGraph1"].Contains(-1));
         }   
 
@@ -132,35 +132,35 @@ namespace GraphClustering.UnitTests
         [Test]
         public void IPartitionableGraph_OutEdges_ReturnsTrue() 
         {
-            OutEdges(_graphDict["DGraph1"], new List<int>{}, 0);
-            OutEdges(_graphDict["DGraph1"], new List<int>{ 5, 0 }, 7);
+            OutEdges(_graphDict["DGraph1"], new List<int?>{}, 0);
+            OutEdges(_graphDict["DGraph1"], new List<int?>{ 5, 0 }, 7);
 
-            OutEdges(_graphDict["DGraph2"], new List<int>{ 5 }, 4);
-            OutEdges(_graphDict["DGraph2"], new List<int>{ 3, 4 }, 2);
+            OutEdges(_graphDict["DGraph2"], new List<int?>{ 5 }, 4);
+            OutEdges(_graphDict["DGraph2"], new List<int?>{ 3, 4 }, 2);
             
-            OutEdges(_graphDict["DGraph3"], new List<int>{}, 0);
-            OutEdges(_graphDict["DGraph3"], new List<int>{ 1 }, 1);
+            OutEdges(_graphDict["DGraph3"], new List<int?>{}, 0);
+            OutEdges(_graphDict["DGraph3"], new List<int?>{ 1 }, 1);
             
-            OutEdges(_graphDict["DGraph4"], new List<int>{ 1, 10, 11, 12 }, 9);
-            OutEdges(_graphDict["DGraph4"], new List<int>{ 5 }, 4);
+            OutEdges(_graphDict["DGraph4"], new List<int?>{ 1, 10, 11, 12 }, 9);
+            OutEdges(_graphDict["DGraph4"], new List<int?>{ 5 }, 4);
             
-            OutEdges(_graphDict["DGraph5"], new List<int>{ 0 }, 10);
-            OutEdges(_graphDict["DGraph5"], new List<int>{ 9 }, 6);
+            OutEdges(_graphDict["DGraph5"], new List<int?>{ 0 }, 10);
+            OutEdges(_graphDict["DGraph5"], new List<int?>{ 9 }, 6);
 
-            OutEdges(_graphDict["UGraph1"], new List<int>{ 0, 1, 4, 8 }, 0);
-            OutEdges(_graphDict["UGraph1"], new List<int>{ 5 }, 9);
+            OutEdges(_graphDict["UGraph1"], new List<int?>{ 0, 1, 4, 8 }, 0);
+            OutEdges(_graphDict["UGraph1"], new List<int?>{ 5 }, 9);
 
-            OutEdges(_graphDict["UGraph2"], new List<int>{ 8, 0, 3 }, 8);
-            OutEdges(_graphDict["UGraph2"], new List<int>{ 1, 2, 8, 9 }, 3);
+            OutEdges(_graphDict["UGraph2"], new List<int?>{ 8, 0, 3 }, 8);
+            OutEdges(_graphDict["UGraph2"], new List<int?>{ 1, 2, 8, 9 }, 3);
             
-            OutEdges(_graphDict["UGraph3"], new List<int>{ 0, 3, 18, 26, 11, 19, 29, 27, 24, 30, 2, 13, 6, 12}, 0);
-            OutEdges(_graphDict["UGraph3"], new List<int>{ 0 }, 29);
+            OutEdges(_graphDict["UGraph3"], new List<int?>{ 0, 3, 18, 26, 11, 19, 29, 27, 24, 30, 2, 13, 6, 12}, 0);
+            OutEdges(_graphDict["UGraph3"], new List<int?>{ 0 }, 29);
             
-            OutEdges(_graphDict["UGraph4"], new List<int>{ 23, 22, 15, 0 }, 21);
-            OutEdges(_graphDict["UGraph4"], new List<int>{ 0, 6, 5 }, 2);
+            OutEdges(_graphDict["UGraph4"], new List<int?>{ 23, 22, 15, 0 }, 21);
+            OutEdges(_graphDict["UGraph4"], new List<int?>{ 0, 6, 5 }, 2);
             
-            OutEdges(_graphDict["UGraph5"], new List<int>{ 11, 6, 10, 8, 4, 5 }, 5);
-            OutEdges(_graphDict["UGraph5"], new List<int>{ 0, 8, 4 }, 1);
+            OutEdges(_graphDict["UGraph5"], new List<int?>{ 11, 6, 10, 8, 4, 5 }, 5);
+            OutEdges(_graphDict["UGraph5"], new List<int?>{ 0, 8, 4 }, 1);
 
             void OutEdges<TVertex>(IPartitionableGraph<TVertex, IEdge<TVertex>> graph, List<TVertex> vertices, TVertex outVertex) 
             {
