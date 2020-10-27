@@ -111,10 +111,10 @@ namespace GraphClustering
                     UniteCommunities(minCommunityNumber.Value, communityNumber);
                 }
             }
-
+            
             if (!minCommunityNumber.HasValue) 
             {
-                throw new Exception("TODO");
+                throw new ArgumentException("The set of community numbers should be non-empty.");
             }
             return minCommunityNumber.Value;
         }
