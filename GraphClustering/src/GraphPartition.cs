@@ -78,18 +78,13 @@ namespace GraphClustering
 
         public int UniteCommunities(int firstCommunityNumber, int secondCommunityNumber) 
         {
+            validateCommunityNumber(firstCommunityNumber);
+            validateCommunityNumber(secondCommunityNumber);
             if (firstCommunityNumber == secondCommunityNumber) 
             {
                 return firstCommunityNumber;
             }
-            try 
-            {
-                _communities[firstCommunityNumber].Add(_communities[secondCommunityNumber].Vertices);
-            } 
-            catch 
-            {
-
-            }
+             _communities[firstCommunityNumber].Add(_communities[secondCommunityNumber].Vertices);
             _communities.Remove(secondCommunityNumber);
             return firstCommunityNumber;
         }
