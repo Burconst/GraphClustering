@@ -48,21 +48,14 @@ namespace GraphClustering
                     return community.Key;
                 }
             }  
-            throw new ArgumentException("");
+            throw new ArgumentException("Can't find vertex.");
         }
         
-        // TODO
         public bool MoveVertexToCommunity(TVertex vertex, int communityNumber) 
         {
-            try 
-            {
-                RemoveVertexFromCommunity(vertex, GetCommunityNumber(vertex));
-                return _communities[communityNumber].Add(vertex);
-            } 
-            catch 
-            {
-                return false;
-            }
+            validateCommunityNumber(communityNumber);
+            RemoveVertexFromCommunity(vertex, GetCommunityNumber(vertex));
+            return _communities[communityNumber].Add(vertex);
         }
 
         public bool RemoveVertexFromCommunity(TVertex vertex)
@@ -77,18 +70,10 @@ namespace GraphClustering
             return false;
         }
 
-        // TODO
         public bool RemoveVertexFromCommunity(TVertex vertex, int communityNumber)
         {
-            try 
-            {
-                return _communities[communityNumber].Remove(vertex);
-            }
-            catch 
-            {
-                
-            }
-            return false;
+            validateCommunityNumber(communityNumber);
+            return _communities[communityNumber].Remove(vertex);
         } 
 
         public int UniteCommunities(int firstCommunityNumber, int secondCommunityNumber) 
@@ -139,7 +124,6 @@ namespace GraphClustering
             return minCommunityNumber.Value;
         }
 
-        // TODO
         public int GetEdgeCount(TVertex fromVertex, int toCommunityNumber) 
         {
             validateCommunityNumber(toCommunityNumber);
@@ -148,16 +132,8 @@ namespace GraphClustering
 
         public int GetEdgeCount(int fromCommunityNumber, int toCommunityNumber) 
         {
-            int edgeCount = 0;
-            try 
-            {
-                edgeCount = _communityManager.GetEdgeCount(_communities[fromCommunityNumber], _communities[toCommunityNumber]);
-            } 
-            catch
-            {
-
-            }
-            return edgeCount;
+            validateCommunityNumber(fromCommunityNumber);
+            return _communityManager.GetEdgeCount(_communities[fromCommunityNumber], _communities[toCommunityNumber]);
         }
 
         public IEnumerable<TVertex> GetCommunityVertices(int communityNumber) 
@@ -167,18 +143,6 @@ namespace GraphClustering
                 throw new ArgumentException("TODO");
             }
             return _communities[communityNumber].Vertices;
-        }
-
-        public IEnumerator<ICommunity<TVertex>> GetEnumerator() => _communities.Values.GetEnumerator();
-
-        public override string ToString()
-        {
-            var stringView = new System.Text.StringBuilder();
-            foreach(var community in _communities) 
-            {
-                stringView.Append($"Community {community.Key} -> {community.Value.ToString()} \n");
-            }
-            return stringView.ToString();
         }
 
         private void validateCommunityNumber(int communityNumber) 
@@ -194,6 +158,19 @@ namespace GraphClustering
             validateCommunityNumber(communityNumber);
             return _communities.Remove(communityNumber);
         }
+
+        public IEnumerator<ICommunity<TVertex>> GetEnumerator() => _communities.Values.GetEnumerator();
+
+        public override string ToString()
+        {
+            var stringView = new System.Text.StringBuilder();
+            foreach(var community in _communities) 
+            {
+                stringView.Append($"Community {community.Key} -> {community.Value.ToString()} \n");
+            }
+            return stringView.ToString();
+        }
+
     }
 
 }
