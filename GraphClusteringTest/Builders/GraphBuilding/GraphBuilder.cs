@@ -61,7 +61,7 @@ namespace GraphClustering.UnitTests.Builders
                 {
                     (0,1), (0,0), (1,2), (1,3),
                     (4,2), (4,0), (5,3), (1,5),
-                    (6,2), (6,7), (3,7), (3,3),
+                    (6,2), (6,7), (3,7),
                     (8,0), (8,4), (5,9)
                 },
                 false
@@ -74,7 +74,7 @@ namespace GraphClustering.UnitTests.Builders
                     (3,9), (0,9), (0,7), (7,6),
                     (4,6)
                 },
-                true
+                false
             ));
             _graphDict.Add("UGraph3",CreateGraph<int>(
                 new [] 
@@ -100,7 +100,7 @@ namespace GraphClustering.UnitTests.Builders
                      (17,2),  (0,24),
                      (0,18)
                 },
-                true
+                false
             ));
             _graphDict.Add("UGraph4",CreateGraph<int>(
                 new [] 
@@ -119,7 +119,7 @@ namespace GraphClustering.UnitTests.Builders
                      (21,22), (21,23),
                      (16,0),  (21,0)
                 },
-                true
+                false
             ));
             _graphDict.Add("UGraph5",CreateGraph<int>(
                 new [] 
@@ -136,7 +136,7 @@ namespace GraphClustering.UnitTests.Builders
                      (6,11),  (3,7),
                      (9,12)
                 },
-                true
+                false
             ));
             return _graphDict;
         }

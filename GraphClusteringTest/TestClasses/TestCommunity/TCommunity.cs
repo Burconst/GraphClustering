@@ -171,10 +171,6 @@ namespace GraphClustering.UnitTests
         {
             var communityOfInts = Builders.CommunityBuilder.Create<int>(new [] {1,2,3,4,5,6});
             Assert.IsFalse(communityOfInts.Remove(0), "A removal was successful if argument was found and removed.");
-
-            var communityOfStrings = Builders.CommunityBuilder.Create<string>(new []{ "one", "two", "three"});
-            var stringToRemove = new string("") + "one";
-            Assert.IsFalse(communityOfStrings.Remove(stringToRemove), "A removal must be by reference.");
         }
 
         [Test]

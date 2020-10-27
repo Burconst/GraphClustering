@@ -12,30 +12,37 @@ namespace GraphClustering.UnitTests
         public IEnumerable<TVertex> Vertices => _graph.Vertices;
         public int VertexCount => _graph.VertexCount;
         public int EdgeCount => _graph.EdgeCount;
+
+        public bool IsDirected => _graph.IsDirected;
+
         public bool AddVertex(TVertex vertex) => _graph.AddVertex(vertex);
         public bool AddVerticesAndEdge(IEdge<TVertex> edge) => _graph.AddVerticesAndEdge(new QuikGraph.Edge<TVertex>(edge.Source, edge.Target));
         public bool Contains(TVertex vertex) => _graph.ContainsVertex(vertex);
 
         public int EdgeCountBetween(TVertex source, TVertex target)
         {
-            if(_graph.AllowParallelEdges) 
+            if(_graph.TryGetEdge(source, target, out _)) 
             {
-                IEnumerable<QuikGraph.IEdge<TVertex>> edges = new List<QuikGraph.Edge<TVertex>>();
-                if(_graph.TryGetEdges(source,target, out edges)) 
+                if(_graph.TryGetEdge(target, source, out _)) 
                 {
-                    int counter = 0;
-                    foreach(var edge in edges) 
-                    {
-                        counter++;
-                    }
-                    return counter;
+                    return 2;
                 }
-            }
-            if(_graph.TryGetEdge(source,target, out _)) 
-            {
                 return 1;
             }
             return 0;
+        }
+
+        public int GetSelfloopCount()
+        {
+            int count = 0;
+            foreach (var edge in _graph.Edges)
+            {
+                if(edge.Source.Equals(edge.Target)) 
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public IEnumerable<IEdge<TVertex>> OutEdges(TVertex vertex) 

@@ -38,9 +38,11 @@ namespace GraphClustering
             {
                 throw new ArgumentNullException("Community shouldn't be null.");
             }
-            int edgeCount = 0;
-            
-
+            int edgeCount = GetEdgeCount(community,community);
+            if (!_graph.IsDirected) 
+            {
+                edgeCount = (edgeCount+_graph.GetSelfloopCount())/2;
+            }
             return edgeCount;
         }
 

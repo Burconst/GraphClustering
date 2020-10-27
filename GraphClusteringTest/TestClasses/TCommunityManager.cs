@@ -46,11 +46,11 @@ namespace GraphClustering.UnitTests
         [Test]
         public void CommunityManager_GetEdgeCountInCommunity_AreEqual() 
         {
-            foreach(var graph in _graphDict.Values) 
+            foreach(var graph in _graphDict) 
             {
-                var communityManager = Builders.CommunityManagerBuilder.Create<int>(graph);
-                var community = Builders.CommunityBuilder.Create<int>(graph.Vertices);
-                Assert.AreEqual(graph.EdgeCount, communityManager.GetEdgeCount(community));
+                var communityManager = Builders.CommunityManagerBuilder.Create<int>(graph.Value);
+                var community = Builders.CommunityBuilder.Create<int>(graph.Value.Vertices);
+                Assert.AreEqual(graph.Value.EdgeCount, communityManager.GetEdgeCount(community), $"In {graph.Key}");
             }
         }
 
@@ -82,7 +82,7 @@ namespace GraphClustering.UnitTests
             Assert.AreEqual(1, getEdgeCount(_graphDict["DGraph1"],verticesFrom: new []{ 0,1,5,7 },vertexTo: 5));
 
             Assert.AreEqual(2, getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 1,2,4,6 },vertexTo: 0));
-            Assert.AreEqual(4, getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 0,1,2,4,6 },vertexTo: 0));
+            Assert.AreEqual(4, getEdgeCount(_graphDict["UGraph1"],verticesFrom: new []{ 0,1,2,4,8 },vertexTo: 0));
  
             int getEdgeCount<TVertex>(IPartitionableGraph<TVertex,IEdge<TVertex>> graph,IEnumerable<TVertex> verticesFrom, TVertex vertexTo) 
             {
