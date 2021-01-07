@@ -1,11 +1,6 @@
 # Build files
-/GraphClustering/obj
-/GraphClustering/bin
-/GraphClusteringTest/TestResults/
-/GraphClusteringTest/obj
-/GraphClusteringTest/bin/
-C++ project
-unused code
+bin
+obj
 
 # VS Code files
 .vscode
