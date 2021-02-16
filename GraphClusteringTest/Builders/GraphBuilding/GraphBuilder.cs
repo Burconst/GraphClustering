@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GraphLibFacade;
 
 namespace GraphClustering.UnitTests.Builders
 {

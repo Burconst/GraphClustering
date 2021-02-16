@@ -1,14 +1,14 @@
 using System.Collections.Generic;
+using GraphClustering;
 
-namespace GraphClustering.UnitTests
+namespace GraphLibFacade
 {
-    public class UndirectedGraph<TVertex, TEdge> : IPartitionableGraph<TVertex, TEdge> where TEdge : IEdge<TVertex>
+    public class AdjacencyGraph<TVertex, TEdge> : IPartitionableGraph<TVertex, TEdge> where TEdge : IEdge<TVertex>
     {
-        private readonly QuikGraph.UndirectedGraph<TVertex, QuikGraph.IEdge<TVertex>> _graph;
-
-        public UndirectedGraph()
+        private readonly QuikGraph.AdjacencyGraph<TVertex, QuikGraph.IEdge<TVertex>> _graph;
+        public AdjacencyGraph() 
         {
-            _graph = new QuikGraph.UndirectedGraph<TVertex, QuikGraph.IEdge<TVertex>>();
+            _graph = new QuikGraph.AdjacencyGraph<TVertex, QuikGraph.IEdge<TVertex>>();
         }
         public IEnumerable<TVertex> Vertices => _graph.Vertices;
         public int VertexCount => _graph.VertexCount;
@@ -22,8 +22,12 @@ namespace GraphClustering.UnitTests
 
         public int EdgeCountBetween(TVertex source, TVertex target)
         {
-            if(_graph.TryGetEdge(source,target, out _) || _graph.TryGetEdge(target,source, out _)) 
+            if(_graph.TryGetEdge(source, target, out _)) 
             {
+                if(_graph.TryGetEdge(target, source, out _)) 
+                {
+                    return 2;
+                }
                 return 1;
             }
             return 0;
@@ -45,21 +49,12 @@ namespace GraphClustering.UnitTests
         public IEnumerable<IEdge<TVertex>> OutEdges(TVertex vertex) 
         {
             var outEdges = new List<IEdge<TVertex>>();
-            foreach(var edge in _graph.AdjacentEdges(vertex)) 
+            foreach(var edge in _graph.OutEdges(vertex)) 
             {
-                if(edge.Source.Equals(edge.Target) && edge.Source.Equals(vertex))
-                {
-                    outEdges.Add((IEdge<TVertex>)new Edge<TVertex>(edge.Target,edge.Source));
-                    continue;
-                }
-                if(edge.Source.Equals(vertex)) 
-                {
-                    outEdges.Add((IEdge<TVertex>)new Edge<TVertex>(edge.Source,edge.Target));
-                    continue;
-                }
-                outEdges.Add((IEdge<TVertex>)new Edge<TVertex>(edge.Target,edge.Source));
+                outEdges.Add((IEdge<TVertex>)new Edge<TVertex>(edge.Source,edge.Target));
             }
             return outEdges;
-        }
+        } 
+
     }
 }

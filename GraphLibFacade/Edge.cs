@@ -1,4 +1,6 @@
-namespace GraphClustering.UnitTests 
+using GraphClustering;
+
+namespace GraphLibFacade 
 {
     public class Edge<TVertex> : IEdge<TVertex>
     {

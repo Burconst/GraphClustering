@@ -1,4 +1,6 @@
-namespace GraphClustering 
+using GraphClustering;
+
+namespace GraphLibFacade 
 {
     public class WeightEdge<TVertex, TWeight> : IWeightedEdge<TVertex, TWeight>
     {

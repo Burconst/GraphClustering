@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-
 #if DEBUG
 [assembly: InternalsVisibleTo("GraphClusteringTest")]
 #endif
@@ -80,7 +79,6 @@ namespace GraphClustering
         public int GetEdgeCount(ICommunity<TVertex> fromCommunity, ICommunity<TVertex> toCommunity)
         {
             int edgeCount = 0;
-
             if(fromCommunity == null || toCommunity == null) 
             {
                 throw new ArgumentNullException("Community shouldn't be null.");
