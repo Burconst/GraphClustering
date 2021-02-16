@@ -1,16 +1,16 @@
 using System.Collections.Generic;
+using GraphClustering;
 using NUnit.Framework;
-using GraphLibFacade;
 
-namespace GraphClustering.UnitTests 
+namespace GraphLibFacade.UnitTests 
 {
     [TestFixture]
-    public class TIPartitionableGraph 
+    public class IPartitionableGraph 
     {
         private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
+        public void SetUp() => _graphDict = GraphBuilder.GetGraphsDict();
 
         [Test]
         public void IPartitionableGraph_IsDirected_ReturnsTrue()

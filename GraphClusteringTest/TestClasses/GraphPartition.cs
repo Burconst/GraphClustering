@@ -5,12 +5,12 @@ using System.Linq;
 namespace GraphClustering.UnitTests
 {
     [TestFixture]
-    public class TGraphPartition
+    public class GraphPartition
     {
         private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
+        public void SetUp() => _graphDict = GraphLibFacade.GraphBuilder.GetGraphsDict();
 
         [Test]
         public void GraphPartition_Constructor_ReturnTrue() 

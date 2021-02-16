@@ -5,4 +5,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GraphClustering\GraphClustering.csproj" />
+    <ProjectReference Include="..\GraphLibFacade\GraphLibFacade.csproj" />
+  </ItemGroup>
+
 </Project>

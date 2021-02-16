@@ -4,7 +4,7 @@ namespace GraphClustering.Algorithms
 {
     public static class Louvain<TVertex>
     {
-        public static IGraphPartition<TVertex> GetPartition(IPartitionableGraph<TVertex, IEdge<TVertex>> graph) 
+        public static IGraphPartition<TVertex> GetPartition(IPartitionableGraph<TVertex, IEdge<TVertex>> graph, Metrics.PartitionMetric<TVertex> metric) 
         {
             throw new NotImplementedException();
         }

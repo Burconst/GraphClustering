@@ -4,12 +4,12 @@ using NUnit.Framework;
 namespace GraphClustering.UnitTests
 {
     [TestFixture]
-    public class TCommunityManager
+    public class CommunityManager
     {
         private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = Builders.GraphBuilder.GetGraphsDict();
+        public void SetUp() => _graphDict = GraphLibFacade.GraphBuilder.GetGraphsDict();
 
         [Test]
         public void CommunityManager_Constructor_DoesNotThrowExeption() 

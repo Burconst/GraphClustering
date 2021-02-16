@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using GraphLibFacade;
+using GraphClustering;
 
-namespace GraphClustering.UnitTests.Builders
+namespace GraphLibFacade
 {
     public static class GraphBuilder
     {
