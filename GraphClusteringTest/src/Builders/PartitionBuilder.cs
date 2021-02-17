@@ -12,5 +12,10 @@ namespace GraphClustering.UnitTests.Builders
             return new GraphPartition<TVertex>(graph, type);
         }
 
+        public static Dictionary<string, List<IGraphPartition<TVertex>>> GetPArtitionsDict() 
+        {
+            
+        }
+
     }
 }

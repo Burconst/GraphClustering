@@ -11,7 +11,10 @@ namespace GraphClustering.UnitTests
         [SetUp]
         public void SetUp() => _graphDict = GraphLibFacade.GraphBuilder.GetGraphsDict();
 
-        
-
+        [Test]
+        public void Modularity_GetValue_ReturnTrue() 
+        {
+            
+        }
     }
 }
