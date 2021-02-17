@@ -10,7 +10,7 @@ namespace GraphLibFacade.UnitTests
         private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = GraphBuilder.GetGraphsDict();
+        public void SetUp() => _graphDict = GraphBuilder.GetGraphs();
 
         [Test]
         public void IPartitionableGraph_IsDirected_ReturnsTrue()

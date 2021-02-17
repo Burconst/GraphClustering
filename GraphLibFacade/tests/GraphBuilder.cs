@@ -5,7 +5,7 @@ namespace GraphLibFacade
 {
     public static class GraphBuilder
     {
-        public static Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> GetGraphsDict()
+        public static Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> GetGraphs()
         {   
             var _graphDict = new Dictionary<string, IPartitionableGraph<int?, GraphClustering.IEdge<int?>>>();
             _graphDict.Add("DGraph1", CreateGraph<int?>(

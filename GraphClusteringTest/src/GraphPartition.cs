@@ -10,7 +10,7 @@ namespace GraphClustering.UnitTests
         private Dictionary<string, IPartitionableGraph<int?, IEdge<int?>>> _graphDict;
 
         [SetUp]
-        public void SetUp() => _graphDict = GraphLibFacade.GraphBuilder.GetGraphsDict();
+        public void SetUp() => _graphDict = GraphLibFacade.GraphBuilder.GetGraphs();
 
         [Test]
         public void GraphPartition_Constructor_ReturnTrue() 

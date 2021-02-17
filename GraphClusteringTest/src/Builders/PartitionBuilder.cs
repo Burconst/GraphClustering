@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace GraphClustering.UnitTests.Builders
 {
     public static class PartitionBuilder 
@@ -12,9 +14,13 @@ namespace GraphClustering.UnitTests.Builders
             return new GraphPartition<TVertex>(graph, type);
         }
 
-        public static Dictionary<string, List<IGraphPartition<TVertex>>> GetPArtitionsDict() 
+        public static Dictionary<string, List<IGraphPartition<TVertex>>> GetPartitions<TVertex>() 
         {
-            
+            var graphs = GraphLibFacade.GraphBuilder.GetGraphs();
+            var partitions = new Dictionary<string, List<IGraphPartition<TVertex>>>();
+
+
+            return partitions;
         }
 
     }
