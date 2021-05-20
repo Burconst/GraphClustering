@@ -1,0 +1,25 @@
+version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image:
+# - Visual Studio 2019
+- Ubuntu
+platform: Any CPU
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  version_prefix: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+build:
+  project: GraphClustering.sln
+  publish_nuget: true
+  include_nuget_references: true
+  verbosity: minimal
+test_script:
+- sh: dotnet test --collect:"XPlat Code Coverage" ./GraphClusteringTest/GraphClusteringTest.csproj
+
+
